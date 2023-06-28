@@ -4,22 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af8125d7-6521-4a45-8aa6-6ded62a218e8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/HeroPackage/Knight/FirstKnight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/HeroPackage/Knight/SecondKnight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/HeroPackage/Knight/ThirdKnight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/HeroPackage/Warrior/FirstWarrior.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/HeroPackage/Warrior/SecondWarrior.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/HeroPackage/elves/FirstElf.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/HeroPackage/elves/SecondElf.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/HeroPackage/elves/ThirdElf.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+    <list default="true" id="af8125d7-6521-4a45-8aa6-6ded62a218e8" name="Changes" comment="add all pictures of characters !">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/game/DataBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/HeroPackage/KiramTooGit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/HeroPackage/Heroes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/game/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/game/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +46,28 @@
       <option name="presentableId" value="Default" />
       <updated>1687962442542</updated>
     </task>
+    <task id="LOCAL-00001" summary="create characters ,create the class , specify the photo of them">
+      <option name="closed" value="true" />
+      <created>1687991178819</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1687991178819</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add all pictures of characters !">
+      <option name="closed" value="true" />
+      <created>1687991202328</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1687991202328</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="create characters ,create the class , specify the photo of them" />
+    <MESSAGE value="add all pictures of characters !" />
+    <option name="LAST_COMMIT_MESSAGE" value="add all pictures of characters !" />
   </component>
 </project>

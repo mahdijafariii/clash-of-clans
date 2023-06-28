@@ -5,8 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af8125d7-6521-4a45-8aa6-6ded62a218e8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../FinalProject-GAME.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/HeroPackage/Knight/FirstKnight.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/HeroPackage/Knight/SecondKnight.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/HeroPackage/Knight/ThirdKnight.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/HeroPackage/Warrior/FirstWarrior.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/HeroPackage/Warrior/SecondWarrior.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/HeroPackage/elves/FirstElf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/HeroPackage/elves/SecondElf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/HeroPackage/elves/ThirdElf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/HeroPackage/KiramTooGit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/HeroPackage/Heroes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/game/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/game/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/game/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +29,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -32,7 +45,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Mahdi/AppData/Local/SceneBuilder/SceneBuilder.exe"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/Mahdi/Desktop/game 2/final-project-game-maya/game"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

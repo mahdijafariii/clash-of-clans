@@ -22,6 +22,9 @@ public class FirstKnight extends Heroes {
         super.power=10 ;
 
         super.speed = 1;
+        super.info="German spearman\n" +
+                "This warrior was in the Assassins family\n" +
+                "It has the ability to destroy the battalion with each spear strike";
 
         setImage(new Image(img_main));
 
@@ -33,8 +36,6 @@ public class FirstKnight extends Heroes {
     }
 
     public void walkForLogin(){
-
-
         action++;
         setTranslateX(getTranslateX()+speed);
         if(action%2==0){
@@ -44,6 +45,28 @@ public class FirstKnight extends Heroes {
             setImage(new Image(img_walk2));
         }
 
+    }
+
+
+    public String toString(){
+        return "German Spearman:\n" +
+                "Health = 200 \n " +
+                "Power = 10 \n " +
+                "Speed = 1 \n" ;
+    }
+
+    public void showCharacterInfoAttack(){
+        for(int i = 0 ; i < 90 ; i ++){
+            if(i%3==0){
+                setImage(new Image(img_Attack1));
+            }
+            else if (i%3==1){
+                setImage(new Image(img_Attack2));
+            }
+            else if (i%3==2){
+                setImage(new Image(img_Attack3));
+            }
+        }
     }
 
 

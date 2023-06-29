@@ -21,13 +21,27 @@ public class AfterLoginController {
     }
 
     @FXML
-    void characterPage(ActionEvent event) {
-
+    void characterPage(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("character-page-controller.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = (Stage) ((Node) (event.getSource())).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
-    void profilePage(ActionEvent event) {
+    void groupGame(ActionEvent event) {
 
+    }
+
+
+    @FXML
+    void profilePage(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("profile-info.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = (Stage) ((Node) (event.getSource())).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML

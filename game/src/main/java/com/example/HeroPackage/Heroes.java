@@ -6,6 +6,7 @@ abstract public class Heroes extends ImageView {
     public int power;
     public int speed ;
     public int health ;
+    public String info;
 
 
     //Getter and Setter ------------------------------------------------
@@ -34,5 +35,13 @@ abstract public class Heroes extends ImageView {
 
     public void setSpeed(int speed) {
         this.speed = speed;
+    }
+
+    public String getInfo() {
+        return info;
+    }
+
+    public void setInfo(String info) {
+        this.info = info;
     }
 }

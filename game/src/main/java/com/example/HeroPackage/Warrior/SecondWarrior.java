@@ -18,6 +18,10 @@ public class SecondWarrior extends Heroes {
         super.power=7 ;
 
         super.speed = 2;
+        super.info="Knife woman\n" +
+                "Our warrior woman is very dangerous\n" +
+                "He is an extremely skilled knife thrower\n" +
+                "He is thirsty for the blood of his enemies!!";
 
         setImage(new Image(img_main));
 
@@ -27,4 +31,37 @@ public class SecondWarrior extends Heroes {
         setTranslateX(x);
         setTranslateY(y);
     }
+    public String toString(){
+        return "Knife woman:\n" +
+                "Health = 140 \n " +
+                "Power = 7 \n " +
+                "Speed = 2 \n" ;
+    }
+
+    public void walkForLogin(){
+        action++;
+        setTranslateX(getTranslateX()+speed);
+        if(action%2==0){
+            setImage(new Image(img_walk1));
+        }
+        else {
+            setImage(new Image(img_walk2));
+        }
+
+    }
+
+    public void showCharacterInfoAttack(){
+        for(int i = 0 ; i < 90 ; i ++){
+            if(i%3==0){
+                setImage(new Image(img_Attack1));
+            }
+            else if (i%3==1){
+                setImage(new Image(img_Attack2));
+            }
+            else if (i%3==2){
+                setImage(new Image(img_Attack3));
+            }
+        }
+    }
+
 }

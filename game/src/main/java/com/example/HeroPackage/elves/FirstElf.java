@@ -19,6 +19,9 @@ public class FirstElf extends Heroes {
         super.power=8 ;
 
         super.speed = 3;
+        super.info="ELf shooter\n" +
+                "The best archer in the whole world is undoubtedly him\n" +
+                "He has the ability to shoot from a long distance and easily destroys his enemies";
 
         setImage(new Image(img_main));
 
@@ -27,6 +30,39 @@ public class FirstElf extends Heroes {
 
         setTranslateX(x);
         setTranslateY(y);
+    }
+
+    public String toString(){
+        return "Elf Shooter:\n" +
+                "Health = 50 \n " +
+                "Power = 8 \n " +
+                "Speed = 3 \n" ;
+    }
+
+    public void showCharacterInfoAttack(){
+        for(int i = 0 ; i < 90 ; i ++){
+            if(i%3==0){
+                setImage(new Image(img_Attack1));
+            }
+            else if (i%3==1){
+                setImage(new Image(img_Attack2));
+            }
+            else if (i%3==2){
+                setImage(new Image(img_Attack3));
+            }
+        }
+    }
+
+    public void walkForLogin(){
+        action++;
+        setTranslateX(getTranslateX()+speed);
+        if(action%2==0){
+            setImage(new Image(img_walk1));
+        }
+        else {
+            setImage(new Image(img_walk2));
+        }
+
     }
 
 

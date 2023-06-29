@@ -8,7 +8,6 @@
 <?import javafx.scene.shape.Ellipse?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="481.0" prefWidth="804.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ViewPackage.CharacterPageController">
    <children>
       <ImageView fitHeight="564.0" fitWidth="865.0" layoutX="-8.0" layoutY="-35.0" pickOnBounds="true" preserveRatio="true">
@@ -21,7 +20,7 @@
             <Image url="@Images/Elf_01__Main.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="145.0" fitWidth="267.0" layoutX="13.0" layoutY="79.0" onMouseClicked="#elf_2" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="140.0" fitWidth="265.0" layoutX="13.0" layoutY="79.0" onMouseClicked="#elf_2" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/Elf_02__Main.png" />
          </image>
@@ -36,7 +35,7 @@
             <Image url="@Images/Knight_01__Main.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="140.0" fitWidth="242.0" layoutX="98.0" layoutY="368.0" onMouseClicked="#Knight_2" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="140.0" fitWidth="242.0" layoutX="93.0" layoutY="368.0" onMouseClicked="#Knight_2" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/Knight_02__Main.png" />
          </image>

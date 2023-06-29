@@ -5,16 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af8125d7-6521-4a45-8aa6-6ded62a218e8" name="Changes" comment="make database online">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/AfterLoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/game/after-login-controller.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/HeroPackage/Heroes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/HeroPackage/Heroes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/HeroPackage/Knight/FirstKnight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/HeroPackage/Knight/FirstKnight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/HeroPackage/Knight/SecondKnight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/HeroPackage/Knight/SecondKnight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/HeroPackage/Knight/ThirdKnight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/HeroPackage/Knight/ThirdKnight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/HeroPackage/Warrior/FirstWarrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/HeroPackage/Warrior/FirstWarrior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/HeroPackage/Warrior/SecondWarrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/HeroPackage/Warrior/SecondWarrior.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/HeroPackage/elves/FirstElf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/HeroPackage/elves/FirstElf.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/HeroPackage/elves/SecondElf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/HeroPackage/elves/SecondElf.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/HeroPackage/elves/ThirdElf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/HeroPackage/elves/ThirdElf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/UserPackage/GohBeGhabreGit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/UserPackage/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/CreateAccController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/CreateAccController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/game/create-acc-controller.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/game/create-acc-controller.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/game/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/game/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>

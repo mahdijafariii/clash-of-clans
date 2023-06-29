@@ -1,7 +1,10 @@
 package com.example.HeroPackage.Knight;
 
 import com.example.HeroPackage.Heroes;
+import javafx.scene.Node;
 import javafx.scene.image.Image;
+
+import javax.xml.stream.events.StartDocument;
 
 public class FirstKnight extends Heroes {
     String img_walk1 = this.getClass().getResource("/com/example/game/Images/Knight_01__WALK_000.png").toString();
@@ -28,6 +31,23 @@ public class FirstKnight extends Heroes {
         setTranslateX(x);
         setTranslateY(y);
     }
+
+    public void walkForLogin(){
+
+
+        action++;
+        setTranslateX(getTranslateX()+speed);
+        if(action%2==0){
+            setImage(new Image(img_walk1));
+        }
+        else {
+            setImage(new Image(img_walk2));
+        }
+
+    }
+
+
+
 
 
 

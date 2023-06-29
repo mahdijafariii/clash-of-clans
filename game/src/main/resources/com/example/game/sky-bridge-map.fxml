@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="457.0" prefWidth="814.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="458.0" fitWidth="828.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/SkyBridgeBackground.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="91.0" fitWidth="56.0" layoutX="304.0" layoutY="171.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/SkyBridgeDoor1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="91.0" fitWidth="56.0" layoutX="316.0" layoutY="186.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/SkyBridgeDoor1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="91.0" fitWidth="56.0" layoutX="328.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/SkyBridgeDoor1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="91.0" fitWidth="56.0" layoutX="340.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/SkyBridgeDoor1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="91.0" fitWidth="56.0" layoutX="352.0" layoutY="231.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/SkyBridgeDoor1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="155.0" fitWidth="51.0" layoutX="258.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/SkyBridgeTower1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="172.0" fitWidth="70.0" layoutX="394.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/SkyBridgeTower1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="230.0" fitWidth="270.0" layoutX="14.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/SkyBridgeCastle1.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

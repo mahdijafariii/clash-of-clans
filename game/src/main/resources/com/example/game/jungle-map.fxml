@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="458.0" prefWidth="819.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ViewPackage.JungleMapController">
+   <children>
+      <ImageView fitHeight="566.0" fitWidth="819.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/LightJungleBackground.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="164.0" fitWidth="68.0" layoutX="98.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/JungleTower1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="56.0" layoutX="113.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Bush_blue_flowers1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="56.0" layoutX="579.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Bush_orange_flowers1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="56.0" layoutX="687.0" layoutY="353.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Bush_orange_flowers1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="56.0" layoutX="88.0" layoutY="384.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Bush_orange_flowers1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="56.0" layoutX="321.0" layoutY="394.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Bush_blue_flowers1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="56.0" layoutX="410.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Bush_blue_flowers1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="76.0" fitWidth="79.0" layoutX="73.0" layoutY="311.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/JungleWallFront1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="74.0" fitWidth="66.0" layoutX="47.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/JungleWallBehind1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="74.0" fitWidth="66.0" layoutX="105.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/JungleWallBehind1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="74.0" fitWidth="66.0" layoutX="163.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/JungleWallBehind1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="164.0" fitWidth="57.0" layoutX="56.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/JungleTower1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="76.0" fitWidth="79.0" layoutX="138.0" layoutY="311.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/JungleWallFront1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="120.0" fitWidth="66.0" layoutX="223.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/JungleDoor1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="120.0" fitWidth="66.0" layoutX="256.0" layoutY="273.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/JungleDoor1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="76.0" fitWidth="79.0" layoutX="202.0" layoutY="311.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/JungleWallFront1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="56.0" layoutX="305.0" layoutY="186.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Bush_blue_flowers1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="56.0" layoutX="460.0" layoutY="328.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Bush_orange_flowers1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="56.0" layoutX="524.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Bush_orange_flowers1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="56.0" layoutX="14.0" layoutY="286.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Bush_orange_flowers1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="217.0" fitWidth="252.0" layoutX="549.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/JungleCastle1.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

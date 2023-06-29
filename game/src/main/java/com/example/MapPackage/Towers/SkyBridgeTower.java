@@ -16,7 +16,7 @@ public class SkyBridgeTower extends Building
     {
         this.x = imageView.getX();
         this.y = imageView.getY();
-        super.health = 1000;
-        super.damage = 30;
+        super.health = 600;
+        super.damage = 20;
     }
 }

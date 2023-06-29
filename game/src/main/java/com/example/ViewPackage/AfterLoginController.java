@@ -37,7 +37,7 @@ public class AfterLoginController {
 
     @FXML
     void profilePage(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(""));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("profile-info.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = (Stage) ((Node) (event.getSource())).getScene().getWindow();
         stage.setScene(scene);

@@ -10,9 +10,10 @@ public class JungleCastle extends Building
     String img_3 = this.getClass().getResource("/com/example/game/Images/JungleCastle3.png").toString();
     String img_main = this.getClass().getResource("/com/example/game/Images/JungleCastle1.png").toString();
 
+    int multiplier = 3;
     double x , y;
 
-    JungleCastle (ImageView imageView)
+    public JungleCastle(ImageView imageView)
     {
         this.x = imageView.getX();
         this.y = imageView.getY();

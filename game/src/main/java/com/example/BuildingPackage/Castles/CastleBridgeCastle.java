@@ -10,9 +10,10 @@ public class CastleBridgeCastle extends Building
     String img_3 = this.getClass().getResource("/com/example/game/Images/CastleBridgeCastle3.png").toString();
     String img_main = this.getClass().getResource("/com/example/game/Images/CastleBridgeCastle1.png").toString();
 
+    int multiplier = 3;
     double x , y;
 
-    CastleBridgeCastle (ImageView imageView)
+    public CastleBridgeCastle (ImageView imageView)
     {
         this.x = imageView.getX();
         this.y = imageView.getY();

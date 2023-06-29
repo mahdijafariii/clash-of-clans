@@ -36,17 +36,17 @@
             <Image url="@Images/SkyBridgeDoor1.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="155.0" fitWidth="51.0" layoutX="258.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="tower_1" fitHeight="155.0" fitWidth="51.0" layoutX="258.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/SkyBridgeTower1.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="172.0" fitWidth="70.0" layoutX="394.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="tower_2" fitHeight="172.0" fitWidth="70.0" layoutX="394.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/SkyBridgeTower1.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="230.0" fitWidth="270.0" layoutX="14.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="castle_1" fitHeight="230.0" fitWidth="270.0" layoutX="14.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/SkyBridgeCastle1.png" />
          </image>

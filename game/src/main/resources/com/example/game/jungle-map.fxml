@@ -11,7 +11,7 @@
             <Image url="@Images/LightJungleBackground.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="164.0" fitWidth="68.0" layoutX="98.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="tower_2" fitHeight="164.0" fitWidth="68.0" layoutX="98.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/JungleTower1.png" />
          </image>
@@ -66,7 +66,7 @@
             <Image url="@Images/JungleWallBehind1.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="164.0" fitWidth="57.0" layoutX="56.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="tower_1" fitHeight="164.0" fitWidth="57.0" layoutX="56.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/JungleTower1.png" />
          </image>
@@ -76,12 +76,12 @@
             <Image url="@Images/JungleWallFront1.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="120.0" fitWidth="66.0" layoutX="223.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="door_1" fitHeight="120.0" fitWidth="66.0" layoutX="223.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/JungleDoor1.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="120.0" fitWidth="66.0" layoutX="256.0" layoutY="273.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="door_2" fitHeight="120.0" fitWidth="66.0" layoutX="256.0" layoutY="273.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/JungleDoor1.png" />
          </image>
@@ -91,7 +91,7 @@
             <Image url="@Images/JungleWallFront1.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="50.0" fitWidth="56.0" layoutX="305.0" layoutY="186.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="50.0" fitWidth="56.0" layoutX="281.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/Bush_blue_flowers1.png" />
          </image>
@@ -111,9 +111,34 @@
             <Image url="@Images/Bush_orange_flowers1.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="217.0" fitWidth="252.0" layoutX="549.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="35.0" fitWidth="36.0" layoutX="744.0" layoutY="311.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Images/JungleCastle1.png" />
+            <Image url="@Images/Die-3.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="36.0" layoutX="288.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/29.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="36.0" layoutX="337.0" layoutY="361.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Die-2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="56.0" layoutX="744.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Bush_orange_flowers1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="56.0" layoutX="652.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Bush_blue_flowers1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="36.0" layoutX="418.0" layoutY="231.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Lose2.png" />
          </image>
       </ImageView>
    </children>

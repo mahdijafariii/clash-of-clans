@@ -10,9 +10,10 @@ public class SkyBridgeTower extends Building
     String img_3 = this.getClass().getResource("/com/example/game/Images/SkyBridgeTower3.png").toString();
     String img_main = this.getClass().getResource("/com/example/game/Images/SkyBridgeTower1.png").toString();
 
+    int multiplier = 2;
     double x , y;
 
-    SkyBridgeTower (ImageView imageView)
+    public SkyBridgeTower(ImageView imageView)
     {
         this.x = imageView.getX();
         this.y = imageView.getY();

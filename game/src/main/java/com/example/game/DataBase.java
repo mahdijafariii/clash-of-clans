@@ -52,7 +52,7 @@ public class DataBase {
 
     public String updateLevel(String username , int level){
         try {
-            String URL = "jdbc:mysql://localhost/mayagame";
+            String URL = "jdbc:mysql://192.168.1.106/mayagame";
             String nameServer = "root";
             String passwordServer = "123";
             Class.forName("com.mysql.cj.jdbc.Driver"); // connect to database

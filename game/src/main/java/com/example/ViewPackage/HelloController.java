@@ -1,9 +1,11 @@
 package com.example.ViewPackage;
 
+import com.example.HeroPackage.Knight.FirstKnight;
 import com.example.game.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -11,13 +13,19 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.transform.Translate;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.Objects;
+import java.util.ResourceBundle;
 
-public class HelloController {
+public class HelloController extends Thread implements Initializable {
 
+    @FXML
+    private AnchorPane loginAnchor;
 
     @FXML
     private PasswordField passwordInput;
@@ -43,4 +51,29 @@ public class HelloController {
     }
 
 
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        FirstKnight firstKnight = new FirstKnight(10,380);
+        loginAnchor.getChildren().add(firstKnight);
+        new Thread(()->{
+            try {
+                Thread.sleep(4000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            while (firstKnight.getTranslateX()<220){
+                firstKnight.walkForLogin();
+            }
+
+
+
+        }).start();
+
+
+
+
+
+
+    }
 }

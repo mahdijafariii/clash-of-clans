@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="481.0" prefWidth="804.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ViewPackage.AfterLoginController">
+   <children>
+      <ImageView fitHeight="495.0" fitWidth="862.0" layoutX="-14.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/3_game_background.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="348.0" layoutY="24.0" mnemonicParsing="false" onAction="#startBattlePage" prefHeight="89.0" prefWidth="166.0" style="-fx-background-color: #526681; -fx-background-radius: 200;" text="Start Battele">
+         <font>
+            <Font name="Freestyle Script" size="33.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="63.0" fitWidth="36.0" layoutX="413.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/13.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="348.0" layoutY="138.0" mnemonicParsing="false" onAction="#profilePage" prefHeight="89.0" prefWidth="166.0" style="-fx-background-color: #526681; -fx-background-radius: 200;" text="Profile">
+         <font>
+            <Font name="Freestyle Script" size="33.0" />
+         </font>
+      </Button>
+      <Button layoutX="348.0" layoutY="257.0" mnemonicParsing="false" onAction="#characterPage" prefHeight="89.0" prefWidth="166.0" style="-fx-background-color: #526681; -fx-background-radius: 200;" text="Characters">
+         <font>
+            <Font name="Freestyle Script" size="33.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="63.0" fitWidth="36.0" layoutX="413.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/29.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="56.0" fitWidth="100.0" layoutX="381.0" layoutY="303.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Elf_03__Main.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="348.0" layoutY="372.0" mnemonicParsing="false" onAction="#backPage" prefHeight="89.0" prefWidth="166.0" style="-fx-background-color: #526681; -fx-background-radius: 200;" text="Back">
+         <font>
+            <Font name="Freestyle Script" size="33.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="17.0" fitWidth="28.0" layoutX="417.0" layoutY="445.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/signUp.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

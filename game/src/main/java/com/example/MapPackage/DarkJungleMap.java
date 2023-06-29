@@ -3,24 +3,24 @@ package com.example.MapPackage;
 import com.example.BuildingPackage.Castles.JungleCastle;
 import com.example.BuildingPackage.Doors.JungleDoor;
 import com.example.BuildingPackage.Towers.JungleTower;
-import com.example.ViewPackage.JungleMapController;
+import com.example.ViewPackage.DarkJungleMapController;
 import javafx.scene.image.ImageView;
 import java.util.ArrayList;
 
-public class JungleMap extends Map
+public class DarkJungleMap extends Map
 {
-    JungleMap()
+    DarkJungleMap()
     {
-        super.fxmlPageName = "jungle-map.fxml";
-        super.heroLimit = 25;
+        super.fxmlPageName = "dark-jungle-map.fxml";
+        super.heroLimit = 40;
         super.buildings = new ArrayList<>();
         setBuildings();
     }
 
     private void setBuildings()
     {
-        JungleMapController jungleMapController = new JungleMapController();
-        ArrayList<ImageView> images = jungleMapController.getImages();
+        DarkJungleMapController darkJungleMapController = new DarkJungleMapController();
+        ArrayList<ImageView> images = darkJungleMapController.getImages();
 
         for (ImageView imageView : images)
         {

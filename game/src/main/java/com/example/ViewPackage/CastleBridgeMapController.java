@@ -1,29 +1,24 @@
 package com.example.ViewPackage;
 
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.Node;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
 
 import java.util.ArrayList;
 
-public class DarkJungleMapController
+public class CastleBridgeMapController
 {
     @FXML
     private ImageView castle_1;
-    @FXML
-    private ImageView castle_2;
     @FXML
     private ImageView door_1;
     @FXML
     private ImageView door_2;
     @FXML
+    private ImageView door_3;
+    @FXML
     private ImageView tower_1;
     @FXML
     private ImageView tower_2;
-    @FXML
-    private ImageView tower_3;
 
     @FXML
     public ArrayList<ImageView> getImages()
@@ -34,8 +29,7 @@ public class DarkJungleMapController
         images.add(tower_2);
         images.add(door_1);
         images.add(door_2);
-        images.add(tower_3);
-        images.add(castle_2);
+        images.add(door_3);
 
         return images;
     }

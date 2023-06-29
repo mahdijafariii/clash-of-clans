@@ -13,8 +13,6 @@ public class DarkJungleMapController
     @FXML
     private ImageView castle_1;
     @FXML
-    private ImageView castle_2;
-    @FXML
     private ImageView door_1;
     @FXML
     private ImageView door_2;
@@ -35,7 +33,6 @@ public class DarkJungleMapController
         images.add(door_1);
         images.add(door_2);
         images.add(tower_3);
-        images.add(castle_2);
 
         return images;
     }

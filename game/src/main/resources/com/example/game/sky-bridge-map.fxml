@@ -11,44 +11,39 @@
             <Image url="@Images/SkyBridgeBackground.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="91.0" fitWidth="56.0" layoutX="304.0" layoutY="171.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="door_3" fitHeight="98.0" fitWidth="59.0" layoutX="480.0" layoutY="278.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/SkyBridgeDoor1.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="91.0" fitWidth="56.0" layoutX="316.0" layoutY="186.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="door_4" fitHeight="98.0" fitWidth="64.0" layoutX="492.0" layoutY="293.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/SkyBridgeDoor1.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="91.0" fitWidth="56.0" layoutX="328.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="door_2" fitHeight="91.0" fitWidth="56.0" layoutX="424.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/SkyBridgeDoor1.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="91.0" fitWidth="56.0" layoutX="340.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="door_1" fitHeight="91.0" fitWidth="56.0" layoutX="436.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/SkyBridgeDoor1.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="91.0" fitWidth="56.0" layoutX="352.0" layoutY="231.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Images/SkyBridgeDoor1.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="tower_1" fitHeight="155.0" fitWidth="51.0" layoutX="258.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="tower_1" fitHeight="155.0" fitWidth="51.0" layoutX="491.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/SkyBridgeTower1.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="tower_2" fitHeight="172.0" fitWidth="70.0" layoutX="394.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Images/SkyBridgeTower1.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="castle_1" fitHeight="230.0" fitWidth="270.0" layoutX="14.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="castle_1" fitHeight="230.0" fitWidth="270.0" layoutX="530.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/SkyBridgeCastle1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="tower_2" fitHeight="191.0" fitWidth="64.0" layoutX="560.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/SkyBridgeTower1.png" />
          </image>
       </ImageView>
    </children>

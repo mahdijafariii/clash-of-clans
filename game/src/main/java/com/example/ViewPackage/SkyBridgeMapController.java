@@ -18,6 +18,14 @@ public class SkyBridgeMapController
     private ImageView tower_1;
     @FXML
     private ImageView tower_2;
+    @FXML
+    private ImageView door_1;
+    @FXML
+    private ImageView door_2;
+    @FXML
+    private ImageView door_3;
+    @FXML
+    private ImageView door_4;
 
     @FXML
     public ArrayList<ImageView> getImages()
@@ -26,6 +34,10 @@ public class SkyBridgeMapController
         images.add(castle_1);
         images.add(tower_1);
         images.add(tower_2);
+        images.add(door_1);
+        images.add(door_2);
+        images.add(door_3);
+        images.add(door_4);
 
         return images;
     }

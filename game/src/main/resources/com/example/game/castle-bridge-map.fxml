@@ -4,7 +4,6 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="446.0" prefWidth="784.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ViewPackage.CastleBridgeMapController">
    <children>
       <ImageView fitHeight="474.0" fitWidth="812.0" pickOnBounds="true" preserveRatio="true">
@@ -12,17 +11,12 @@
             <Image url="@Images/CastleBrigeBackground.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="castle_1" fitHeight="184.0" fitWidth="226.0" layoutX="14.0" layoutY="153.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="castle_1" fitHeight="184.0" fitWidth="226.0" layoutX="574.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/CastleBridgeCastle1.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="tower_1" fitHeight="150.0" fitWidth="200.0" layoutX="565.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Images/CastleBridgeTower1.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="tower_2" fitHeight="173.0" fitWidth="81.0" layoutX="671.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="tower_1" fitHeight="150.0" fitWidth="200.0" layoutX="393.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/CastleBridgeTower1.png" />
          </image>
@@ -42,19 +36,24 @@
             <Image url="@Images/Win.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="door_3" fitHeight="75.0" fitWidth="52.0" layoutX="201.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="door_3" fitHeight="75.0" fitWidth="52.0" layoutX="457.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/CastleBridgeDoor1.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="door_2" fitHeight="75.0" fitWidth="52.0" layoutX="248.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="door_2" fitHeight="75.0" fitWidth="52.0" layoutX="504.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/CastleBridgeDoor1.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="door_1" fitHeight="75.0" fitWidth="52.0" layoutX="295.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="door_1" fitHeight="75.0" fitWidth="52.0" layoutX="551.0" layoutY="290.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/CastleBridgeDoor1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="tower_2" fitHeight="173.0" fitWidth="81.0" layoutX="470.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/CastleBridgeTower1.png" />
          </image>
       </ImageView>
    </children>

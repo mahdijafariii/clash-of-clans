@@ -13,13 +13,14 @@ public class DataBase {
             String passwordServer = "123";
             Class.forName("com.mysql.cj.jdbc.Driver"); // connect to database
             Connection connection = DriverManager.getConnection(URL, nameServer, passwordServer);
-            String command = String.format("Insert INTO information (username , password , level , map , win , lose ) " +
+            String command = String.format("INSERT INTO information (username , password , level , map , win , lose ) " +
                     "VALUES ('%s' , '%s' , '%d', '%d', '%d', '%d')" , name,password,1,numberMap,0,0);
             Statement statement = connection.prepareStatement(command);
-            statement.executeQuery(command);  // send info to database
+            statement.execute(command);  // send info to database
         }
         catch (Exception e) {
-            return "Error in save User!!!";
+            System.out.println(e.getMessage());
+            return "Error in save User!!!   --> " + e.getMessage();
         }
         return "You are saved:)";
     }
@@ -58,7 +59,7 @@ public class DataBase {
             Connection connection = DriverManager.getConnection(URL, nameServer, passwordServer);
             String sql =String.format( "UPDATE `information` SET level='%d' WHERE username='%s'" , level ,username );
             Statement s = connection.prepareStatement(sql);
-            s.executeQuery(sql);
+            s.execute(sql);
         }
         catch (Exception e){
             return "we could not update the level ! ";

@@ -4,8 +4,10 @@ import com.example.game.DataBase;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 
 public class CreateAccController {
     @FXML
@@ -24,7 +26,7 @@ public class CreateAccController {
     private TextField numberMap;
 
     @FXML
-    private TextField password;
+    private PasswordField password;
 
     @FXML
     private TextField userName;
@@ -34,7 +36,12 @@ public class CreateAccController {
         DataBase dataBase = new DataBase();
         String check = dataBase.checkUserName(userName.getText());
         if (check.equals("checked")){
-            dataBase.saveUser(userName.getText(),password.getText(),Integer.valueOf(numberMap.getText()));
+            String saveUser = dataBase.saveUser(userName.getText(),password.getText(),Integer.valueOf(numberMap.getText()));
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Notification!!!");
+            alert.setHeaderText(null);
+            alert.setContentText(saveUser);
+            alert.show();
         }
         else{
             Alert alert = new Alert(Alert.AlertType.ERROR);

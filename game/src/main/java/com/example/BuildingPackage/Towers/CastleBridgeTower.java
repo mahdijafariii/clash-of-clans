@@ -17,7 +17,7 @@ public class CastleBridgeTower extends Building
     {
         this.x = imageView.getX();
         this.y = imageView.getY();
-        super.health = 600;
+        super.health = 400;
         super.damage = 20;
     }
 }

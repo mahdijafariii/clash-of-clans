@@ -1,6 +1,6 @@
-package com.example.MapPackage.Towers;
+package com.example.BuildingPackage.Towers;
 
-import com.example.MapPackage.Building;
+import com.example.BuildingPackage.Building;
 import javafx.scene.image.ImageView;
 
 public class JungleTower extends Building

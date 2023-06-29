@@ -4,8 +4,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="458.0" prefWidth="819.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ViewPackage.JungleMapController">
+<AnchorPane fx:id="mainAnchor" prefHeight="458.0" prefWidth="819.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ViewPackage.JungleMapController">
    <children>
       <ImageView fitHeight="566.0" fitWidth="819.0" pickOnBounds="true" preserveRatio="true">
          <image>

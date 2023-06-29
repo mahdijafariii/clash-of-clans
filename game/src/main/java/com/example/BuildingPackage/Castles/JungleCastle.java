@@ -1,6 +1,6 @@
-package com.example.MapPackage.Castles;
+package com.example.BuildingPackage.Castles;
 
-import com.example.MapPackage.Building;
+import com.example.BuildingPackage.Building;
 import javafx.scene.image.ImageView;
 
 public class JungleCastle extends Building

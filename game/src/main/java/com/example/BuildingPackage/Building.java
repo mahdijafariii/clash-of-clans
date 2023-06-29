@@ -1,4 +1,4 @@
-package com.example.MapPackage;
+package com.example.BuildingPackage;
 
 import javafx.scene.image.ImageView;
 

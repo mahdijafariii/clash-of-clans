@@ -22,6 +22,9 @@ public class ThirdElf extends Heroes {
         super.power=6 ;
 
         super.speed = 3;
+        super.info="Elf magician\n" +
+                "With his magic, he destroys and destroys his enemies\n" +
+                "Stay away from him";
 
         setImage(new Image(img_main));
 
@@ -30,5 +33,41 @@ public class ThirdElf extends Heroes {
 
         setTranslateX(x);
         setTranslateY(y);
+    }
+
+    public String toString(){
+        return "Elf Magician:\n" +
+                "Health = 80 \n " +
+                "Power = 6 \n " +
+                "Speed = 3 \n" ;
+    }
+
+    public void showCharacterInfoAttack(){
+        for(int i = 0 ; i < 120 ; i ++){
+            if(i%4==0){
+                setImage(new Image(img_Attack1));
+            }
+            else if (i%4==1){
+                setImage(new Image(img_Attack2));
+            }
+            else if (i%4==2){
+                setImage(new Image(img_Attack3));
+            }
+            else if (i%4==3){
+                setImage(new Image(img_Attack4));
+            }
+        }
+    }
+
+    public void walkForLogin(){
+        action++;
+        setTranslateX(getTranslateX()+speed);
+        if(action%2==0){
+            setImage(new Image(img_walk1));
+        }
+        else {
+            setImage(new Image(img_walk2));
+        }
+
     }
 }

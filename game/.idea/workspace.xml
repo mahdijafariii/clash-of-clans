@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af8125d7-6521-4a45-8aa6-6ded62a218e8" name="Changes" comment="choose map for battle">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/ChooseCharacterBattleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/game/choose-character-battle-controller.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/UserPackage/Administrator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/UserPackage/Administrator.java" afterDir="false" />
+    <list default="true" id="af8125d7-6521-4a45-8aa6-6ded62a218e8" name="Changes" comment="edit layout of hero">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/AfterStartBattleButtonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/AfterStartBattleButtonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/ChooseCharacterBattleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/ChooseCharacterBattleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/ProfileInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/ProfileInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/ShowCharacterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/ShowCharacterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/game/profile-info.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/game/profile-info.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +173,23 @@
       <option name="project" value="LOCAL" />
       <updated>1688125849677</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="choose character page is complete!">
+      <option name="closed" value="true" />
+      <created>1688133408869</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1688133408869</updated>
+    </task>
+    <task id="LOCAL-00014" summary="edit layout of hero">
+      <option name="closed" value="true" />
+      <created>1688133456147</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1688133456147</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,6 +218,8 @@
     <MESSAGE value="profile is complete !! (just should set map )!!" />
     <MESSAGE value="edit 2 map , add image of map to create acc page , add photo of map of user to profile page" />
     <MESSAGE value="choose map for battle" />
-    <option name="LAST_COMMIT_MESSAGE" value="choose map for battle" />
+    <MESSAGE value="choose character page is complete!" />
+    <MESSAGE value="edit layout of hero" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit layout of hero" />
   </component>
 </project>

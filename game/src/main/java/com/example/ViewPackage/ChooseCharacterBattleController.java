@@ -44,7 +44,7 @@ public class ChooseCharacterBattleController {
     @FXML
     void backFromChooseHero(ActionEvent event) throws IOException {
         Administrator.setCharacters(null);
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("AfterLoginController"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("AfterLoginController.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = (Stage) ((Node) (event.getSource())).getScene().getWindow();
         stage.setScene(scene);

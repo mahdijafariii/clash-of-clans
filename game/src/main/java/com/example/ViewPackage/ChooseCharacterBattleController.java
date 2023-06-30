@@ -43,7 +43,9 @@ public class ChooseCharacterBattleController {
 
     @FXML
     void backFromChooseHero(ActionEvent event) throws IOException {
-        Administrator.setCharacters(null);
+        for(int i = 0 ; i <Administrator.getCharacters().size() ; i++){
+            Administrator.getCharacters().remove(i);
+        }
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("AfterLoginController.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = (Stage) ((Node) (event.getSource())).getScene().getWindow();
@@ -57,25 +59,27 @@ public class ChooseCharacterBattleController {
     character2.setImage(null);
     character3.setImage(null);
     character4.setImage(null);
-    Administrator.setCharacters(null);
+    for(int i = 0 ; i <Administrator.getCharacters().size() ; i++){
+        Administrator.getCharacters().remove(i);
+    }
     }
 
 
     @FXML
     void elf1(MouseEvent event) {
-        if(character1.getImage()!=null){
+        if(character1.getImage()==null){
             character1.setImage(new Image(img_main_elf1));
             Administrator.getCharacters().add("Elf1");
         }
-        else if (character2.getImage()!=null){
+        else if (character2.getImage()==null){
             character2.setImage(new Image(img_main_elf1));
             Administrator.getCharacters().add("Elf1");
         }
-        else if (character3.getImage()!=null){
+        else if (character3.getImage()==null){
             character3.setImage(new Image(img_main_elf1));
             Administrator.getCharacters().add("Elf1");
         }
-        else if (character4.getImage()!=null){
+        else if (character4.getImage()==null){
             character4.setImage(new Image(img_main_elf1));
             Administrator.getCharacters().add("Elf1");
         }
@@ -91,19 +95,19 @@ public class ChooseCharacterBattleController {
 
     @FXML
     void elf2(MouseEvent event) {
-        if(character1.getImage()!=null){
+        if(character1.getImage()==null){
             character1.setImage(new Image(img_main_elf2));
             Administrator.getCharacters().add("Elf2");
         }
-        else if (character2.getImage()!=null){
+        else if (character2.getImage()==null){
             character2.setImage(new Image(img_main_elf2));
             Administrator.getCharacters().add("Elf2");
         }
-        else if (character3.getImage()!=null){
+        else if (character3.getImage()==null){
             character3.setImage(new Image(img_main_elf2));
             Administrator.getCharacters().add("Elf2");
         }
-        else if (character4.getImage()!=null){
+        else if (character4.getImage()==null){
             character4.setImage(new Image(img_main_elf2));
             Administrator.getCharacters().add("Elf2");
         }
@@ -118,19 +122,19 @@ public class ChooseCharacterBattleController {
 
     @FXML
     void elf3(MouseEvent event) {
-        if(character1.getImage()!=null){
+        if(character1.getImage()==null){
             character1.setImage(new Image(img_main_elf3));
             Administrator.getCharacters().add("Elf3");
         }
-        else if (character2.getImage()!=null){
+        else if (character2.getImage()==null){
             character2.setImage(new Image(img_main_elf3));
             Administrator.getCharacters().add("Elf3");
         }
-        else if (character3.getImage()!=null){
+        else if (character3.getImage()==null){
             character3.setImage(new Image(img_main_elf3));
             Administrator.getCharacters().add("Elf3");
         }
-        else if (character4.getImage()!=null){
+        else if (character4.getImage()==null){
             character4.setImage(new Image(img_main_elf3));
             Administrator.getCharacters().add("Elf3");
         }
@@ -146,19 +150,19 @@ public class ChooseCharacterBattleController {
     @FXML
     void knight1(MouseEvent event) {
         if(Administrator.getUser().getLevel()>=3){
-            if(character1.getImage()!=null){
+            if(character1.getImage()==null){
                 character1.setImage(new Image(img_main_Knight1));
                 Administrator.getCharacters().add("Knight1");
             }
-            else if (character2.getImage()!=null){
+            else if (character2.getImage()==null){
                 character2.setImage(new Image(img_main_Knight1));
                 Administrator.getCharacters().add("Knight1");
             }
-            else if (character3.getImage()!=null){
+            else if (character3.getImage()==null){
                 character3.setImage(new Image(img_main_Knight1));
                 Administrator.getCharacters().add("Knight1");
             }
-            else if (character4.getImage()!=null){
+            else if (character4.getImage()==null){
                 character4.setImage(new Image(img_main_Knight1));
                 Administrator.getCharacters().add("Knight1");
             }
@@ -184,19 +188,19 @@ public class ChooseCharacterBattleController {
     @FXML
     void knight2(MouseEvent event) {
         if(Administrator.getUser().getLevel()>=3){
-            if(character1.getImage()!=null){
+            if(character1.getImage()==null){
                 character1.setImage(new Image(img_main_Knight2));
                 Administrator.getCharacters().add("Knight2");
             }
-            else if (character2.getImage()!=null){
+            else if (character2.getImage()==null){
                 character2.setImage(new Image(img_main_Knight2));
                 Administrator.getCharacters().add("Knight2");
             }
-            else if (character3.getImage()!=null){
+            else if (character3.getImage()==null){
                 character3.setImage(new Image(img_main_Knight2));
                 Administrator.getCharacters().add("Knight2");
             }
-            else if (character4.getImage()!=null){
+            else if (character4.getImage()==null){
                 character4.setImage(new Image(img_main_Knight2));
                 Administrator.getCharacters().add("Knight2");
             }
@@ -221,19 +225,19 @@ public class ChooseCharacterBattleController {
     @FXML
     void knight3(MouseEvent event) {
         if(Administrator.getUser().getLevel()>=3){
-            if(character1.getImage()!=null){
+            if(character1.getImage()==null){
                 character1.setImage(new Image(img_main_Knight3));
                 Administrator.getCharacters().add("Knight3");
             }
-            else if (character2.getImage()!=null){
+            else if (character2.getImage()==null){
                 character2.setImage(new Image(img_main_Knight3));
                 Administrator.getCharacters().add("Knight3");
             }
-            else if (character3.getImage()!=null){
+            else if (character3.getImage()==null){
                 character3.setImage(new Image(img_main_Knight3));
                 Administrator.getCharacters().add("Knight3");
             }
-            else if (character4.getImage()!=null){
+            else if (character4.getImage()==null){
                 character4.setImage(new Image(img_main_Knight3));
                 Administrator.getCharacters().add("Knight3");
             }
@@ -263,19 +267,19 @@ public class ChooseCharacterBattleController {
     @FXML
     void warrior1(MouseEvent event) {
         if(Administrator.getUser().getLevel()>=2){
-            if(character1.getImage()!=null){
+            if(character1.getImage()==null){
                 character1.setImage(new Image(img_main_Warrior1));
                 Administrator.getCharacters().add("Warrior1");
             }
-            else if (character2.getImage()!=null){
+            else if (character2.getImage()==null){
                 character2.setImage(new Image(img_main_Warrior1));
                 Administrator.getCharacters().add("Warrior1");
             }
-            else if (character3.getImage()!=null){
+            else if (character3.getImage()==null){
                 character3.setImage(new Image(img_main_Warrior1));
                 Administrator.getCharacters().add("Warrior1");
             }
-            else if (character4.getImage()!=null){
+            else if (character4.getImage()==null){
                 character4.setImage(new Image(img_main_Warrior1));
                 Administrator.getCharacters().add("Warrior1");
             }
@@ -299,19 +303,19 @@ public class ChooseCharacterBattleController {
 
     @FXML
     void warrior2(MouseEvent event) {
-        if(character1.getImage()!=null){
+        if(character1.getImage()==null){
             character1.setImage(new Image(img_main_Warrior2));
             Administrator.getCharacters().add("Warrior2");
         }
-        else if (character2.getImage()!=null){
+        else if (character2.getImage()==null){
             character2.setImage(new Image(img_main_Warrior2));
             Administrator.getCharacters().add("Warrior2");
         }
-        else if (character3.getImage()!=null){
+        else if (character3.getImage()==null){
             character3.setImage(new Image(img_main_Warrior2));
             Administrator.getCharacters().add("Warrior2");
         }
-        else if (character4.getImage()!=null){
+        else if (character4.getImage()==null){
             character4.setImage(new Image(img_main_Warrior2));
             Administrator.getCharacters().add("Warrior2");
         }

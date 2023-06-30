@@ -81,114 +81,114 @@ public class SkyBridgeMapController implements Initializable
     public void initialize(URL url, ResourceBundle resourceBundle) {
         for(int i = 0 ; i < 4 ; i++){
             if(Administrator.getCharacters().get(i).equals("Elf1")){
-                if(hero_1.getImage()!=null){
+                if(hero_1.getImage()==null){
                     hero_1.setImage(new Image(elf1_head));
                 }
-                else if (hero_2.getImage()!=null){
+                else if (hero_2.getImage()==null){
                     hero_2.setImage(new Image(elf1_head));
                 }
-                else if(hero_3.getImage()!=null){
+                else if(hero_3.getImage()==null){
                     hero_3.setImage(new Image(elf1_head));
                 }
-                else if(hero_4.getImage()!=null){
+                else if(hero_4.getImage()==null){
                     hero_4.setImage(new Image(elf1_head));
                 }
             }
             if(Administrator.getCharacters().get(i).equals("Elf2")){
-                if(hero_1.getImage()!=null){
+                if(hero_1.getImage()==null){
                     hero_1.setImage(new Image(elf2_head));
                 }
-                else if (hero_2.getImage()!=null){
+                else if (hero_2.getImage()==null){
                     hero_2.setImage(new Image(elf2_head));
                 }
-                else if(hero_3.getImage()!=null){
+                else if(hero_3.getImage()==null){
                     hero_3.setImage(new Image(elf2_head));
                 }
-                else if(hero_4.getImage()!=null){
+                else if(hero_4.getImage()==null){
                     hero_4.setImage(new Image(elf2_head));
                 }
             }
             if(Administrator.getCharacters().get(i).equals("Elf3")){
-                if(hero_1.getImage()!=null){
+                if(hero_1.getImage()==null){
                     hero_1.setImage(new Image(elf3_head));
                 }
-                else if (hero_2.getImage()!=null){
+                else if (hero_2.getImage()==null){
                     hero_2.setImage(new Image(elf3_head));
                 }
-                else if(hero_3.getImage()!=null){
+                else if(hero_3.getImage()==null){
                     hero_3.setImage(new Image(elf3_head));
                 }
-                else if(hero_4.getImage()!=null){
+                else if(hero_4.getImage()==null){
                     hero_4.setImage(new Image(elf3_head));
                 }
             }
             if(Administrator.getCharacters().get(i).equals("Knight1")){
-                if(hero_1.getImage()!=null){
+                if(hero_1.getImage()==null){
                     hero_1.setImage(new Image(knight1_head));
                 }
-                else if (hero_2.getImage()!=null){
+                else if (hero_2.getImage()==null){
                     hero_2.setImage(new Image(knight1_head));
                 }
-                else if(hero_3.getImage()!=null){
+                else if(hero_3.getImage()==null){
                     hero_3.setImage(new Image(knight1_head));
                 }
-                else if(hero_4.getImage()!=null){
+                else if(hero_4.getImage()==null){
                     hero_4.setImage(new Image(knight1_head));
                 }
             }
             if(Administrator.getCharacters().get(i).equals("Knight2")){
-                if(hero_1.getImage()!=null){
+                if(hero_1.getImage()==null){
                     hero_1.setImage(new Image(knight2_head));
                 }
-                else if (hero_2.getImage()!=null){
+                else if (hero_2.getImage()==null){
                     hero_2.setImage(new Image(knight2_head));
                 }
-                else if(hero_3.getImage()!=null){
+                else if(hero_3.getImage()==null){
                     hero_3.setImage(new Image(knight2_head));
                 }
-                else if(hero_4.getImage()!=null){
+                else if(hero_4.getImage()==null){
                     hero_4.setImage(new Image(knight2_head));
                 }
             }
             if(Administrator.getCharacters().get(i).equals("Knight3")){
-                if(hero_1.getImage()!=null){
+                if(hero_1.getImage()==null){
                     hero_1.setImage(new Image(knight3_head));
                 }
-                else if (hero_2.getImage()!=null){
+                else if (hero_2.getImage()==null){
                     hero_2.setImage(new Image(knight3_head));
                 }
-                else if(hero_3.getImage()!=null){
+                else if(hero_3.getImage()==null){
                     hero_3.setImage(new Image(knight3_head));
                 }
-                else if(hero_4.getImage()!=null){
+                else if(hero_4.getImage()==null){
                     hero_4.setImage(new Image(knight3_head));
                 }
             }
             if(Administrator.getCharacters().get(i).equals("Warrior1")){
-                if(hero_1.getImage()!=null){
+                if(hero_1.getImage()==null){
                     hero_1.setImage(new Image(warrior1_head));
                 }
-                else if (hero_2.getImage()!=null){
+                else if (hero_2.getImage()==null){
                     hero_2.setImage(new Image(warrior1_head));
                 }
-                else if(hero_3.getImage()!=null){
+                else if(hero_3.getImage()==null){
                     hero_3.setImage(new Image(warrior1_head));
                 }
-                else if(hero_4.getImage()!=null){
+                else if(hero_4.getImage()==null){
                     hero_4.setImage(new Image(warrior1_head));
                 }
             }
             if(Administrator.getCharacters().get(i).equals("Warrior2")){
-                if(hero_1.getImage()!=null){
+                if(hero_1.getImage()==null){
                     hero_1.setImage(new Image(warrior2_head));
                 }
-                else if (hero_2.getImage()!=null){
+                else if (hero_2.getImage()==null){
                     hero_2.setImage(new Image(warrior2_head));
                 }
-                else if(hero_3.getImage()!=null){
+                else if(hero_3.getImage()==null){
                     hero_3.setImage(new Image(warrior2_head));
                 }
-                else if(hero_4.getImage()!=null){
+                else if(hero_4.getImage()==null){
                     hero_4.setImage(new Image(warrior2_head));
                 }
             }
@@ -199,4 +199,5 @@ public class SkyBridgeMapController implements Initializable
         }
 
     }
+
 }

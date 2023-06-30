@@ -1,6 +1,8 @@
 package com.example.ViewPackage;
 
 import com.example.HeroPackage.Knight.FirstKnight;
+import com.example.UserPackage.Administrator;
+import com.example.UserPackage.User;
 import com.example.game.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

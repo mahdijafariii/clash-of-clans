@@ -67,7 +67,7 @@
             <Image url="@Images/Knight_02__Main.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="90.0" fitWidth="162.0" layoutX="327.0" layoutY="282.0" onMouseClicked="#knight3" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="90.0" fitWidth="162.0" layoutX="455.0" layoutY="219.0" onMouseClicked="#knight3" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/Knight_03__Main.png" />
          </image>
@@ -141,7 +141,7 @@
             <Font name="Freestyle Script" size="21.0" />
          </font>
       </Label>
-      <Label layoutX="371.0" layoutY="371.0" text="your choose " textFill="#969595">
+      <Label layoutX="371.0" layoutY="367.0" text="your choose " textFill="#969595">
          <font>
             <Font name="Freestyle Script" size="26.0" />
          </font>

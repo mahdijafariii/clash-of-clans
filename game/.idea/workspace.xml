@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af8125d7-6521-4a45-8aa6-6ded62a218e8" name="Changes" comment="edit layout of hero">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/AfterStartBattleButtonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/AfterStartBattleButtonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/ChooseCharacterBattleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/ChooseCharacterBattleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/ProfileInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/ProfileInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/game/profile-info.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/game/profile-info.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/CastleBridgeMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/CastleBridgeMapController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/DarkJungleMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/DarkJungleMapController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/JungleMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/JungleMapController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/SkyBridgeMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/SkyBridgeMapController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

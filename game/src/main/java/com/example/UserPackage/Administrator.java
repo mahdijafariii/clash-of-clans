@@ -10,7 +10,17 @@ public class Administrator {
     public static User user ;
     //when the user login successfully we save user hear and use it everywhere we need!!
 
+    public static String selectedMap;
+
     public static void setShowCharacter(String showCharacter) {
         Administrator.showCharacter = showCharacter;
+    }
+
+    public static void setSelectedMap(String selectedMap) {
+        Administrator.selectedMap = selectedMap;
+    }
+
+    public static String getSelectedMap() {
+        return selectedMap;
     }
 }

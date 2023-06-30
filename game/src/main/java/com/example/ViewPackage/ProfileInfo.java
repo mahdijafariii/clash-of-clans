@@ -28,9 +28,9 @@ public class ProfileInfo implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        lose.setText(String.valueOf(Administrator.user.getLose()));
-        win.setText(String.valueOf(Administrator.user.getWin()));
-        UserName.setText(Administrator.user.getUserName());
+        lose.setText(String.valueOf(Administrator.getUser().getLose()));
+        win.setText(String.valueOf(Administrator.getUser().getWin()));
+        UserName.setText(Administrator.getUser().getUserName());
 
         String img_map_1 = this.getClass().getResource("/com/example/game/Images/Map_1.png").toString();
         String img_map_2 = this.getClass().getResource("/com/example/game/Images/Map_2.png").toString();
@@ -39,16 +39,16 @@ public class ProfileInfo implements Initializable {
 
 
 
-        if(Administrator.user.getMap()==1){
+        if(Administrator.getUser().getMap()==1){
             mapImage.setImage(new Image(img_map_1));
         }
-        else if(Administrator.user.getMap()==2){
+        else if(Administrator.getUser().getMap()==2){
             mapImage.setImage(new Image(img_map_2));
         }
-        else if(Administrator.user.getMap()==3){
+        else if(Administrator.getUser().getMap()==3){
             mapImage.setImage(new Image(img_map_3));
         }
-        else if(Administrator.user.getMap()==4){
+        else if(Administrator.getUser().getMap()==4){
             mapImage.setImage(new Image(img_map_4));
         }
 

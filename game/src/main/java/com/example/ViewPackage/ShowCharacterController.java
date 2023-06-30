@@ -84,7 +84,7 @@ public class ShowCharacterController implements Initializable {
 
 
 
-        if(Administrator.showCharacter.equals("warrior_2")){
+        if(Administrator.getShowCharacter().equals("warrior_2")){
             SecondWarrior secondWarrior = new SecondWarrior(10,300);
             showCharacterAnchor.getChildren().add(secondWarrior);
             imageCharacter1.setImage(new Image(warrior2_1));
@@ -110,7 +110,7 @@ public class ShowCharacterController implements Initializable {
         }
 
 
-        else if(Administrator.showCharacter.equals("warrior_1")){
+        else if(Administrator.getShowCharacter().equals("warrior_1")){
 
         FirstWarrior firstWarrior = new FirstWarrior(10,300);
         showCharacterAnchor.getChildren().add(firstWarrior);
@@ -136,7 +136,7 @@ public class ShowCharacterController implements Initializable {
         }).start();
 
         }
-        else if(Administrator.showCharacter.equals("knight_3")){
+        else if(Administrator.getShowCharacter().equals("knight_3")){
         ThirdKnight thirdKnight = new ThirdKnight(10,300);
         showCharacterAnchor.getChildren().add(thirdKnight);
 
@@ -162,7 +162,7 @@ public class ShowCharacterController implements Initializable {
 
 
         }
-        else if(Administrator.showCharacter.equals("knight_1")){
+        else if(Administrator.getShowCharacter().equals("knight_1")){
         FirstKnight firstKnight = new FirstKnight(10,300);
         showCharacterAnchor.getChildren().add(firstKnight);
 
@@ -190,7 +190,7 @@ public class ShowCharacterController implements Initializable {
 
         }
 
-        else if(Administrator.showCharacter.equals("elf_3")){
+        else if(Administrator.getShowCharacter().equals("elf_3")){
         ThirdElf thirdElf = new ThirdElf(10,300);
         showCharacterAnchor.getChildren().add(thirdElf);
 
@@ -216,7 +216,7 @@ public class ShowCharacterController implements Initializable {
 
 
         }
-        else if(Administrator.showCharacter.equals("elf_2")){
+        else if(Administrator.getShowCharacter().equals("elf_2")){
         SecondElf secondElf = new SecondElf(10,300);
         showCharacterAnchor.getChildren().add(secondElf);
 
@@ -243,7 +243,7 @@ public class ShowCharacterController implements Initializable {
 
 
         }
-        else if(Administrator.showCharacter.equals("elf_1")){
+        else if(Administrator.getShowCharacter().equals("elf_1")){
         FirstElf firstElf = new FirstElf(10,300);
         showCharacterAnchor.getChildren().add(firstElf);
 
@@ -270,7 +270,7 @@ public class ShowCharacterController implements Initializable {
 
         }
 
-        else if(Administrator.showCharacter.equals("Knight_2")){
+        else if(Administrator.getShowCharacter().equals("Knight_2")){
         SecondKnight secondKnight = new SecondKnight(10,300);
         showCharacterAnchor.getChildren().add(secondKnight);
 

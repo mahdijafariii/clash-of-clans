@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af8125d7-6521-4a45-8aa6-6ded62a218e8" name="Changes" comment="profile is complete !! (just should set map )!!">
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/game/Images/CardFrame.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/game/Images/MidGameBackground.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/ProfileInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/ProfileInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/game/castle-bridge-map.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/game/castle-bridge-map.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/game/create-acc-controller.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/game/create-acc-controller.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/JungleMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/JungleMapController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/SkyBridgeMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/SkyBridgeMapController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/game/jungle-map.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/game/jungle-map.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/game/sky-bridge-map.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/game/sky-bridge-map.fxml" afterDir="false" />
     </list>
@@ -34,12 +35,17 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2Rq0jS4shLMEAXLlJFLB4d4QtK3" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
@@ -79,6 +85,7 @@
       <option name="presentableId" value="Default" />
       <updated>1687962442542</updated>
       <workItem from="1688078727440" duration="1704000" />
+      <workItem from="1688121708159" duration="6703000" />
     </task>
     <task id="LOCAL-00001" summary="create characters ,create the class , specify the photo of them">
       <option name="closed" value="true" />
@@ -178,6 +185,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="create characters ,create the class , specify the photo of them" />
     <MESSAGE value="add all pictures of characters !" />
     <MESSAGE value="database class is complete for test" />

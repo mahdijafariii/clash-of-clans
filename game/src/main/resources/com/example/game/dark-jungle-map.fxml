@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="443.0" prefWidth="803.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ViewPackage.DarkJungleMapController">
+<AnchorPane prefHeight="607.0" prefWidth="819.0" style="-fx-background-color: #050226;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ViewPackage.DarkJungleMapController">
    <children>
       <ImageView fitHeight="469.0" fitWidth="827.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -111,5 +114,58 @@
             <Image url="@Images/Burned_tree1.png" />
          </image>
       </ImageView>
+      <ImageView fitHeight="146.0" fitWidth="152.0" layoutX="152.0" layoutY="466.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/CardFrame.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="146.0" fitWidth="152.0" layoutX="302.0" layoutY="465.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/CardFrame.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="146.0" fitWidth="152.0" layoutX="3.0" layoutY="465.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/CardFrame.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="hero_1" fitHeight="62.0" fitWidth="69.0" layoutX="42.0" layoutY="509.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="146.0" fitWidth="152.0" layoutX="452.0" layoutY="465.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/CardFrame.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="hero_2" fitHeight="62.0" fitWidth="69.0" layoutX="191.0" layoutY="509.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="hero_3" fitHeight="62.0" fitWidth="69.0" layoutX="341.0" layoutY="507.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="hero_4" fitHeight="62.0" fitWidth="69.0" layoutX="491.0" layoutY="509.0" pickOnBounds="true" preserveRatio="true" />
+      <ProgressBar fx:id="progress" layoutX="640.0" layoutY="499.0" prefHeight="18.0" prefWidth="146.0" progress="0.0" />
+      <Label alignment="CENTER" layoutX="661.0" layoutY="472.0" prefHeight="26.0" prefWidth="104.0" text="Progress" textFill="WHITE">
+         <font>
+            <Font name="Segoe Script" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="star_1" fitHeight="51.0" fitWidth="56.0" layoutX="636.0" layoutY="545.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="star_3" fitHeight="51.0" fitWidth="56.0" layoutX="688.0" layoutY="522.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="star_2" fitHeight="51.0" fitWidth="56.0" layoutX="740.0" layoutY="545.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="name_1" alignment="CENTER" layoutX="38.0" layoutY="466.0" prefHeight="26.0" prefWidth="74.0" textFill="WHITE">
+         <font>
+            <Font name="Segoe Script" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="name_2" alignment="CENTER" layoutX="187.0" layoutY="466.0" prefHeight="26.0" prefWidth="74.0" textFill="WHITE">
+         <font>
+            <Font name="Segoe Script" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="name_3" alignment="CENTER" layoutX="337.0" layoutY="466.0" prefHeight="26.0" prefWidth="74.0" textFill="WHITE">
+         <font>
+            <Font name="Segoe Script" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="name_4" alignment="CENTER" layoutX="484.0" layoutY="466.0" prefHeight="26.0" prefWidth="74.0" textFill="WHITE">
+         <font>
+            <Font name="Segoe Script" size="14.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

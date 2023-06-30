@@ -32,18 +32,24 @@ public class ProfileInfo implements Initializable {
         win.setText(String.valueOf(Administrator.user.getWin()));
         UserName.setText(Administrator.user.getUserName());
 
+        String img_map_1 = this.getClass().getResource("/com/example/game/Images/Map_1.png").toString();
+        String img_map_2 = this.getClass().getResource("/com/example/game/Images/Map_2.png").toString();
+        String img_map_3 = this.getClass().getResource("/com/example/game/Images/Map_3.png").toString();
+        String img_map_4 = this.getClass().getResource("/com/example/game/Images/Map_4.png").toString();
+
+
 
         if(Administrator.user.getMap()==1){
-            mapImage.setImage(new Image(""));
+            mapImage.setImage(new Image(img_map_1));
         }
         else if(Administrator.user.getMap()==2){
-            mapImage.setImage(new Image(""));
+            mapImage.setImage(new Image(img_map_2));
         }
         else if(Administrator.user.getMap()==3){
-            mapImage.setImage(new Image(""));
+            mapImage.setImage(new Image(img_map_3));
         }
         else if(Administrator.user.getMap()==4){
-            mapImage.setImage(new Image(""));
+            mapImage.setImage(new Image(img_map_4));
         }
 
 

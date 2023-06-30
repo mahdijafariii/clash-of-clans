@@ -31,7 +31,7 @@
             <Image url="@Images/31.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="30.0" fitWidth="26.0" layoutX="380.0" layoutY="368.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="35.0" fitWidth="32.0" layoutX="380.0" layoutY="368.0" pickOnBounds="true" preserveRatio="true" style="-fx-rotate: 20;">
          <image>
             <Image url="@Images/Win.png" />
          </image>

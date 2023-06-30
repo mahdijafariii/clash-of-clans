@@ -43,26 +43,38 @@
             <Font name="Brush Script MT Italic" size="13.0" />
          </font>
       </Button>
-      <ImageView fx:id="map1" fitHeight="81.0" fitWidth="103.0" layoutX="659.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fx:id="map2" fitHeight="81.0" fitWidth="103.0" layoutX="659.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fx:id="map3" fitHeight="81.0" fitWidth="103.0" layoutX="659.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fx:id="map4" fitHeight="81.0" fitWidth="103.0" layoutX="659.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true" />
-      <Label layoutX="625.0" layoutY="53.0" text="1" textFill="WHITE">
+      <ImageView fx:id="map1" fitHeight="90.0" fitWidth="161.0" layoutX="626.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Map_1.png" />
+         </image></ImageView>
+      <ImageView fx:id="map2" fitHeight="91.0" fitWidth="170.0" layoutX="626.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Map_2.png" />
+         </image></ImageView>
+      <ImageView fx:id="map3" fitHeight="91.0" fitWidth="161.0" layoutX="626.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Map_3.png" />
+         </image></ImageView>
+      <ImageView fx:id="map4" fitHeight="91.0" fitWidth="161.0" layoutX="626.0" layoutY="313.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Map_4.png" />
+         </image></ImageView>
+      <Label layoutX="594.0" layoutY="45.0" text="1" textFill="WHITE">
          <font>
             <Font name="Brush Script MT Italic" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="621.0" layoutY="149.0" text="2" textFill="WHITE">
+      <Label layoutX="593.0" layoutY="144.0" text="2" textFill="WHITE">
          <font>
             <Font name="Brush Script MT Italic" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="620.0" layoutY="244.0" text="3" textFill="WHITE">
+      <Label layoutX="596.0" layoutY="244.0" text="3" textFill="WHITE">
          <font>
             <Font name="Brush Script MT Italic" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="621.0" layoutY="339.0" text="4" textFill="WHITE">
+      <Label layoutX="598.0" layoutY="348.0" text="4" textFill="WHITE">
          <font>
             <Font name="Brush Script MT Italic" size="16.0" />
          </font>

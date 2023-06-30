@@ -46,5 +46,25 @@
             <Image url="@Images/SkyBridgeTower1.png" />
          </image>
       </ImageView>
+      <ImageView fitHeight="44.0" fitWidth="46.0" layoutX="380.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Lose2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="36.0" layoutX="135.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Die-3.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="36.0" layoutX="322.0" layoutY="193.0" pickOnBounds="true" preserveRatio="true" style="-fx-rotate: 60;">
+         <image>
+            <Image url="@Images/Die-3.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="36.0" layoutX="104.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true" style="-fx-rotate: 0;">
+         <image>
+            <Image url="@Images/Die-1.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

@@ -14,6 +14,7 @@ public class DarkJungleMap extends Map
         super.fxmlPageName = "dark-jungle-map.fxml";
         super.heroLimit = 40;
         super.buildings = new ArrayList<>();
+        super.heroes = new ArrayList<>();
         setBuildings();
     }
 

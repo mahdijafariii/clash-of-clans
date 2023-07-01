@@ -19,6 +19,7 @@ public class SkyBridgeMap extends Map
         super.fxmlPageName = "sky-bridge-map.fxml";
         super.heroLimit = 25;
         super.buildings = new ArrayList<>();
+        super.heroes = new ArrayList<>();
         setBuildings();
     }
 

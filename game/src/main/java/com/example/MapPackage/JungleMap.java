@@ -14,6 +14,7 @@ public class JungleMap extends Map
         super.fxmlPageName = "jungle-map.fxml";
         super.heroLimit = 25;
         super.buildings = new ArrayList<>();
+        super.heroes = new ArrayList<>();
         setBuildings();
     }
 

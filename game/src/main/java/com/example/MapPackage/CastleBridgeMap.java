@@ -14,6 +14,7 @@ public class CastleBridgeMap extends Map
         super.fxmlPageName = "castle-bridge-map.fxml";
         super.heroLimit = 40;
         super.buildings = new ArrayList<>();
+        super.heroes = new ArrayList<>();
         setBuildings();
     }
 

@@ -217,5 +217,25 @@
             <Font name="Segoe Script" size="14.0" />
          </font>
       </Label>
+      <Label fx:id="numberHero" alignment="CENTER" layoutX="48.0" layoutY="581.0" prefHeight="16.0" prefWidth="50.0" textFill="WHITE">
+         <font>
+            <Font name="Segoe Script" size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="numberHero" alignment="CENTER" layoutX="196.0" layoutY="581.0" prefHeight="16.0" prefWidth="50.0" textFill="WHITE">
+         <font>
+            <Font name="Segoe Script" size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="numberHero" alignment="CENTER" layoutX="347.0" layoutY="581.0" prefHeight="16.0" prefWidth="50.0" textFill="WHITE">
+         <font>
+            <Font name="Segoe Script" size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="numberHero" alignment="CENTER" layoutX="500.0" layoutY="581.0" prefHeight="16.0" prefWidth="50.0" textFill="WHITE">
+         <font>
+            <Font name="Segoe Script" size="11.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

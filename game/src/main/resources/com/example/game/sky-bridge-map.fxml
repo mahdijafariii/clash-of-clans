@@ -123,5 +123,25 @@
       <ImageView fx:id="star_1" fitHeight="51.0" fitWidth="56.0" layoutX="623.0" layoutY="531.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="star_3" fitHeight="51.0" fitWidth="56.0" layoutX="675.0" layoutY="508.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="star_2" fitHeight="51.0" fitWidth="56.0" layoutX="727.0" layoutY="531.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="numberHero" alignment="CENTER" layoutX="46.0" layoutY="582.0" prefHeight="7.0" prefWidth="59.0" textFill="WHITE">
+         <font>
+            <Font name="Segoe Script" size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="numberHero" alignment="CENTER" layoutX="195.0" layoutY="582.0" prefHeight="7.0" prefWidth="59.0" textFill="WHITE">
+         <font>
+            <Font name="Segoe Script" size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="numberHero" alignment="CENTER" layoutX="345.0" layoutY="582.0" prefHeight="7.0" prefWidth="59.0" textFill="WHITE">
+         <font>
+            <Font name="Segoe Script" size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="numberHero" alignment="CENTER" layoutX="500.0" layoutY="582.0" prefHeight="7.0" prefWidth="59.0" textFill="WHITE">
+         <font>
+            <Font name="Segoe Script" size="11.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

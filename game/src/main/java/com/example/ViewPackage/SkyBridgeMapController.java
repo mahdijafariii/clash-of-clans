@@ -24,6 +24,9 @@ public class SkyBridgeMapController implements Initializable
     String elf3_head = this.getClass().getResource("/com/example/game/Images/Elf1_head.png").toString();
 
 
+
+    @FXML
+    private Label numberHero;
     @FXML
     private ImageView castle_1;
     @FXML
@@ -83,113 +86,177 @@ public class SkyBridgeMapController implements Initializable
             if(Administrator.getCharacters().get(i).equals("Elf1")){
                 if(hero_1.getImage()==null){
                     hero_1.setImage(new Image(elf1_head));
+                    name_1.setText("Elf Shooter");
+
                 }
                 else if (hero_2.getImage()==null){
                     hero_2.setImage(new Image(elf1_head));
+                    name_2.setText("Elf Shooter");
+
                 }
                 else if(hero_3.getImage()==null){
                     hero_3.setImage(new Image(elf1_head));
+                    name_3.setText("Elf Shooter");
+
                 }
                 else if(hero_4.getImage()==null){
                     hero_4.setImage(new Image(elf1_head));
+                    name_4.setText("Elf Shooter");
+
                 }
             }
             if(Administrator.getCharacters().get(i).equals("Elf2")){
                 if(hero_1.getImage()==null){
                     hero_1.setImage(new Image(elf2_head));
+                    name_1.setText("Elf Swordsman");
+
                 }
                 else if (hero_2.getImage()==null){
                     hero_2.setImage(new Image(elf2_head));
+                    name_2.setText("Elf Swordsman");
+
                 }
                 else if(hero_3.getImage()==null){
                     hero_3.setImage(new Image(elf2_head));
+                    name_3.setText("Elf Swordsman");
+
                 }
                 else if(hero_4.getImage()==null){
                     hero_4.setImage(new Image(elf2_head));
+                    name_4.setText("Elf Swordsman");
+
                 }
             }
             if(Administrator.getCharacters().get(i).equals("Elf3")){
                 if(hero_1.getImage()==null){
                     hero_1.setImage(new Image(elf3_head));
+                    name_1.setText("Elf Magician");
+
                 }
                 else if (hero_2.getImage()==null){
                     hero_2.setImage(new Image(elf3_head));
+                    name_2.setText("Elf Magician");
+
                 }
                 else if(hero_3.getImage()==null){
                     hero_3.setImage(new Image(elf3_head));
+                    name_3.setText("Elf Magician");
+
                 }
                 else if(hero_4.getImage()==null){
                     hero_4.setImage(new Image(elf3_head));
+                    name_4.setText("Elf Magician");
+
                 }
             }
             if(Administrator.getCharacters().get(i).equals("Knight1")){
                 if(hero_1.getImage()==null){
                     hero_1.setImage(new Image(knight1_head));
+                    name_1.setText("German Spearman");
+
                 }
                 else if (hero_2.getImage()==null){
                     hero_2.setImage(new Image(knight1_head));
+                    name_2.setText("German Spearman");
+
                 }
                 else if(hero_3.getImage()==null){
                     hero_3.setImage(new Image(knight1_head));
+                    name_3.setText("German Spearman");
+
                 }
                 else if(hero_4.getImage()==null){
                     hero_4.setImage(new Image(knight1_head));
+                    name_4.setText("German Spearman");
+
                 }
             }
             if(Administrator.getCharacters().get(i).equals("Knight2")){
                 if(hero_1.getImage()==null){
                     hero_1.setImage(new Image(knight2_head));
+                    name_1.setText("Arab Warrior");
+
                 }
                 else if (hero_2.getImage()==null){
                     hero_2.setImage(new Image(knight2_head));
+                    name_2.setText("Arab Warrior");
+
                 }
                 else if(hero_3.getImage()==null){
                     hero_3.setImage(new Image(knight2_head));
+                    name_3.setText("Arab Warrior");
+
                 }
                 else if(hero_4.getImage()==null){
                     hero_4.setImage(new Image(knight2_head));
+                    name_4.setText("Arab Warrior");
+
                 }
             }
             if(Administrator.getCharacters().get(i).equals("Knight3")){
                 if(hero_1.getImage()==null){
                     hero_1.setImage(new Image(knight3_head));
+                    name_1.setText("Armored Iron");
+
                 }
                 else if (hero_2.getImage()==null){
                     hero_2.setImage(new Image(knight3_head));
+                    name_2.setText("Armored Iron");
+
                 }
                 else if(hero_3.getImage()==null){
                     hero_3.setImage(new Image(knight3_head));
+                    name_3.setText("Armored Iron");
+
                 }
                 else if(hero_4.getImage()==null){
                     hero_4.setImage(new Image(knight3_head));
+                    name_4.setText("Armored Iron");
+
                 }
             }
             if(Administrator.getCharacters().get(i).equals("Warrior1")){
                 if(hero_1.getImage()==null){
                     hero_1.setImage(new Image(warrior1_head));
+                    name_1.setText("Woman Warrior");
+
                 }
                 else if (hero_2.getImage()==null){
                     hero_2.setImage(new Image(warrior1_head));
+                    name_2.setText("Woman Warrior");
+
                 }
                 else if(hero_3.getImage()==null){
                     hero_3.setImage(new Image(warrior1_head));
+                    name_3.setText("Woman Warrior");
+
                 }
                 else if(hero_4.getImage()==null){
                     hero_4.setImage(new Image(warrior1_head));
+                    name_4.setText("Woman Warrior");
+
                 }
             }
             if(Administrator.getCharacters().get(i).equals("Warrior2")){
                 if(hero_1.getImage()==null){
                     hero_1.setImage(new Image(warrior2_head));
+                    name_1.setText("Knife Woman");
+
                 }
                 else if (hero_2.getImage()==null){
                     hero_2.setImage(new Image(warrior2_head));
+                    name_2.setText("Knife Woman");
+
                 }
                 else if(hero_3.getImage()==null){
                     hero_3.setImage(new Image(warrior2_head));
+                    name_3.setText("Knife Woman");
+
                 }
                 else if(hero_4.getImage()==null){
                     hero_4.setImage(new Image(warrior2_head));
+                    name_4.setText("Knife Woman");
+
                 }
             }
 

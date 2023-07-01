@@ -297,18 +297,26 @@ public class ChooseCharacterBattleController {
         if(Administrator.getUser().getLevel()>=2){
             if(character1.getImage()==null){
                 character1.setImage(new Image(img_main_Warrior1));
+                character1.setFitHeight(80);
+                character1.setFitWidth(110);
                 Administrator.getCharacters().add("Warrior1");
             }
             else if (character2.getImage()==null){
                 character2.setImage(new Image(img_main_Warrior1));
+                character2.setFitHeight(80);
+                character2.setFitWidth(110);
                 Administrator.getCharacters().add("Warrior1");
             }
             else if (character3.getImage()==null){
                 character3.setImage(new Image(img_main_Warrior1));
+                character3.setFitHeight(80);
+                character3.setFitWidth(110);
                 Administrator.getCharacters().add("Warrior1");
             }
             else if (character4.getImage()==null){
                 character4.setImage(new Image(img_main_Warrior1));
+                character4.setFitHeight(80);
+                character4.setFitWidth(110);
                 Administrator.getCharacters().add("Warrior1");
             }
             else{
@@ -333,18 +341,26 @@ public class ChooseCharacterBattleController {
     void warrior2(MouseEvent event) {
         if(character1.getImage()==null){
             character1.setImage(new Image(img_main_Warrior2));
+            character1.setFitHeight(80);
+            character1.setFitWidth(110);
             Administrator.getCharacters().add("Warrior2");
         }
         else if (character2.getImage()==null){
             character2.setImage(new Image(img_main_Warrior2));
+            character2.setFitHeight(80);
+            character2.setFitWidth(110);
             Administrator.getCharacters().add("Warrior2");
         }
         else if (character3.getImage()==null){
             character3.setImage(new Image(img_main_Warrior2));
+            character3.setFitHeight(80);
+            character3.setFitWidth(110);
             Administrator.getCharacters().add("Warrior2");
         }
         else if (character4.getImage()==null){
             character4.setImage(new Image(img_main_Warrior2));
+            character4.setFitHeight(80);
+            character4.setFitWidth(110);
             Administrator.getCharacters().add("Warrior2");
         }
         else{

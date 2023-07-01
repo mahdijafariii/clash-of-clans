@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af8125d7-6521-4a45-8aa6-6ded62a218e8" name="Changes" comment="change image of elf and add Test User for start Attack Test">
+    <list default="true" id="af8125d7-6521-4a45-8aa6-6ded62a218e8" name="Changes" comment="fix some bugs of map controller and edit fxml file of them&#10;add drag and drop test for light jungle map">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/CastleBridgeMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/CastleBridgeMapController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/ChooseCharacterBattleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/ChooseCharacterBattleController.java" afterDir="false" />
@@ -12,8 +12,8 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/JungleMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/JungleMapController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/SkyBridgeMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/SkyBridgeMapController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/game/castle-bridge-map.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/game/castle-bridge-map.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/game/choose-character-battle-controller.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/game/choose-character-battle-controller.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/game/dark-jungle-map.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/game/dark-jungle-map.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/game/jungle-map.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/game/jungle-map.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/game/sky-bridge-map.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/game/sky-bridge-map.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -211,7 +211,15 @@
       <option name="project" value="LOCAL" />
       <updated>1688224034243</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="fix some bugs of map controller and edit fxml file of them&#10;add drag and drop test for light jungle map">
+      <option name="closed" value="true" />
+      <created>1688236533456</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1688236533456</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,6 +252,7 @@
     <MESSAGE value="edit layout of hero" />
     <MESSAGE value="add picture of heroes to fxml file of map" />
     <MESSAGE value="change image of elf and add Test User for start Attack Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="change image of elf and add Test User for start Attack Test" />
+    <MESSAGE value="fix some bugs of map controller and edit fxml file of them&#10;add drag and drop test for light jungle map" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix some bugs of map controller and edit fxml file of them&#10;add drag and drop test for light jungle map" />
   </component>
 </project>

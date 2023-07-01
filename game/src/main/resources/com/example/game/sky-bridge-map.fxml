@@ -94,24 +94,24 @@
       <ImageView fx:id="hero_2" fitHeight="62.0" fitWidth="69.0" layoutX="190.0" layoutY="502.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="hero_3" fitHeight="62.0" fitWidth="69.0" layoutX="340.0" layoutY="500.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="hero_4" fitHeight="62.0" fitWidth="69.0" layoutX="490.0" layoutY="502.0" pickOnBounds="true" preserveRatio="true" />
-      <Label fx:id="name_1" alignment="CENTER" layoutX="38.0" layoutY="458.0" prefHeight="26.0" prefWidth="74.0" textFill="WHITE">
+      <Label fx:id="name_1" alignment="CENTER" layoutX="-4.0" layoutY="458.0" prefHeight="26.0" prefWidth="153.0" textFill="WHITE">
          <font>
-            <Font name="Segoe Script" size="14.0" />
+            <Font name="Segoe Script" size="10.0" />
          </font>
       </Label>
-      <Label fx:id="name_2" alignment="CENTER" layoutX="187.0" layoutY="458.0" prefHeight="26.0" prefWidth="74.0" textFill="WHITE">
+      <Label fx:id="name_2" alignment="CENTER" layoutX="145.0" layoutY="458.0" prefHeight="26.0" prefWidth="146.0" textFill="WHITE">
          <font>
-            <Font name="Segoe Script" size="14.0" />
+            <Font name="Segoe Script" size="10.0" />
          </font>
       </Label>
-      <Label fx:id="name_3" alignment="CENTER" layoutX="337.0" layoutY="458.0" prefHeight="26.0" prefWidth="74.0" textFill="WHITE">
+      <Label fx:id="name_3" alignment="CENTER" layoutX="299.0" layoutY="458.0" prefHeight="26.0" prefWidth="154.0" textFill="WHITE">
          <font>
-            <Font name="Segoe Script" size="14.0" />
+            <Font name="Segoe Script" size="10.0" />
          </font>
       </Label>
-      <Label fx:id="name_4" alignment="CENTER" layoutX="484.0" layoutY="458.0" prefHeight="26.0" prefWidth="74.0" textFill="WHITE">
+      <Label fx:id="name_4" alignment="CENTER" layoutX="454.0" layoutY="458.0" prefHeight="26.0" prefWidth="146.0" textFill="WHITE">
          <font>
-            <Font name="Segoe Script" size="14.0" />
+            <Font name="Segoe Script" size="10.0" />
          </font>
       </Label>
       <ProgressBar fx:id="progress" layoutX="627.0" layoutY="485.0" prefHeight="18.0" prefWidth="146.0" progress="0.0" />

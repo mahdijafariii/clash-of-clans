@@ -1,5 +1,6 @@
 package com.example.ViewPackage;
 
+import com.example.HeroPackage.Warrior.FirstWarrior;
 import com.example.UserPackage.Administrator;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -11,6 +12,7 @@ import javafx.scene.image.ImageView;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.concurrent.atomic.AtomicReference;
 
 public class JungleMapController implements Initializable
 {
@@ -20,8 +22,8 @@ public class JungleMapController implements Initializable
     String warrior1_head = this.getClass().getResource("/com/example/game/Images/Warrior1_Head.png").toString();
     String warrior2_head = this.getClass().getResource("/com/example/game/Images/Warrior2_Head.png").toString();
     String elf1_head = this.getClass().getResource("/com/example/game/Images/Elf1_head.png").toString();
-    String elf2_head = this.getClass().getResource("/com/example/game/Images/Elf1_head.png").toString();
-    String elf3_head = this.getClass().getResource("/com/example/game/Images/Elf1_head.png").toString();
+    String elf2_head = this.getClass().getResource("/com/example/game/Images/Elf2_head.png").toString();
+    String elf3_head = this.getClass().getResource("/com/example/game/Images/Elf3_head.png").toString();
 
 
     @FXML
@@ -275,6 +277,51 @@ public class JungleMapController implements Initializable
 
 
         }
+
+    }
+
+
+
+
+
+
+    ImageView getCopy(ImageView image){
+        ImageView ImageView = new ImageView();
+        ImageView = image;
+        return ImageView;
+    }
+    void dragHero(){
+        AtomicReference<ImageView> test = new AtomicReference<>();
+
+
+
+
+        for(ImageView hero : getImages()){
+            test.set(getCopy(hero));
+            hero.setOnMousePressed(e ->{
+
+
+
+            });
+
+            hero.setOnMouseDragged(e ->{
+                test.get().setTranslateX(e.getSceneX());
+                test.get().setTranslateY(e.getSceneY());
+            });
+
+            hero.setOnMouseReleased(e ->{
+                FirstWarrior firstWarrior= new FirstWarrior(test.get().getX(),test.get().getY());
+
+            });
+
+
+
+
+
+
+        }
+
+
 
     }
 

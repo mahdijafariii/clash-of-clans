@@ -43,6 +43,17 @@ public class AfterStartBattleButtonController {
 
     @FXML
     void map1Clicked(MouseEvent event) {
+
+        //// just for test items will be deleted sooon
+        User user = new User();
+        user.setLevel(3);
+        user.setUserName("mahdi");
+        user.setPassword("mahdi");
+        user.setMap(1);
+        user.setWin(0);
+        user.setLose(0);
+        Administrator.setUser(user);
+        //--------------------------------------------------
         selectedMap.setImage(new Image(img_map_1));
         Administrator.setSelectedMap("map_1");
     }

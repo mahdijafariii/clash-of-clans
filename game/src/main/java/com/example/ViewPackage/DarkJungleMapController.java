@@ -79,8 +79,8 @@ public class DarkJungleMapController implements Initializable
     String warrior1_head = this.getClass().getResource("/com/example/game/Images/Warrior1_Head.png").toString();
     String warrior2_head = this.getClass().getResource("/com/example/game/Images/Warrior2_Head.png").toString();
     String elf1_head = this.getClass().getResource("/com/example/game/Images/Elf1_head.png").toString();
-    String elf2_head = this.getClass().getResource("/com/example/game/Images/Elf1_head.png").toString();
-    String elf3_head = this.getClass().getResource("/com/example/game/Images/Elf1_head.png").toString();
+    String elf2_head = this.getClass().getResource("/com/example/game/Images/Elf2_head.png").toString();
+    String elf3_head = this.getClass().getResource("/com/example/game/Images/Elf3_head.png").toString();
 
 
     @FXML

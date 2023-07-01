@@ -260,8 +260,12 @@ public class ChooseCharacterBattleController {
     }
 
     @FXML
-    void startBattle(ActionEvent event) {
-
+    void startBattle(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("jungle-map.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = (Stage) ((Node) (event.getSource())).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML

@@ -147,24 +147,24 @@
       <ImageView fx:id="star_1" fitHeight="51.0" fitWidth="56.0" layoutX="636.0" layoutY="545.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="star_3" fitHeight="51.0" fitWidth="56.0" layoutX="688.0" layoutY="522.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="star_2" fitHeight="51.0" fitWidth="56.0" layoutX="740.0" layoutY="545.0" pickOnBounds="true" preserveRatio="true" />
-      <Label fx:id="name_1" alignment="CENTER" layoutX="38.0" layoutY="466.0" prefHeight="26.0" prefWidth="74.0" textFill="WHITE">
+      <Label fx:id="name_1" alignment="CENTER" layoutX="8.0" layoutY="466.0" prefHeight="26.0" prefWidth="134.0" textFill="WHITE">
          <font>
-            <Font name="Segoe Script" size="14.0" />
+            <Font name="Segoe Script" size="10.0" />
          </font>
       </Label>
-      <Label fx:id="name_2" alignment="CENTER" layoutX="187.0" layoutY="466.0" prefHeight="26.0" prefWidth="74.0" textFill="WHITE">
+      <Label fx:id="name_2" alignment="CENTER" layoutX="151.0" layoutY="466.0" prefHeight="26.0" prefWidth="134.0" textFill="WHITE">
          <font>
-            <Font name="Segoe Script" size="14.0" />
+            <Font name="Segoe Script" size="10.0" />
          </font>
       </Label>
-      <Label fx:id="name_3" alignment="CENTER" layoutX="337.0" layoutY="466.0" prefHeight="26.0" prefWidth="74.0" textFill="WHITE">
+      <Label fx:id="name_3" alignment="CENTER" layoutX="301.0" layoutY="466.0" prefHeight="26.0" prefWidth="146.0" textFill="WHITE">
          <font>
-            <Font name="Segoe Script" size="14.0" />
+            <Font name="Segoe Script" size="10.0" />
          </font>
       </Label>
-      <Label fx:id="name_4" alignment="CENTER" layoutX="484.0" layoutY="466.0" prefHeight="26.0" prefWidth="74.0" textFill="WHITE">
+      <Label fx:id="name_4" alignment="CENTER" layoutX="461.0" layoutY="466.0" prefHeight="26.0" prefWidth="127.0" textFill="WHITE">
          <font>
-            <Font name="Segoe Script" size="14.0" />
+            <Font name="Segoe Script" size="10.0" />
          </font>
       </Label>
       <Label fx:id="numberHero" alignment="CENTER" layoutX="45.0" layoutY="582.0" prefHeight="26.0" prefWidth="62.0" textFill="WHITE">

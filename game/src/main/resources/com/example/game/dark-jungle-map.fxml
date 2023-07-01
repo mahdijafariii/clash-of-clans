@@ -172,17 +172,17 @@
             <Font name="Segoe Script" size="11.0" />
          </font>
       </Label>
-      <Label fx:id="numberHero" alignment="CENTER" layoutX="194.0" layoutY="582.0" prefHeight="26.0" prefWidth="62.0" textFill="WHITE">
+      <Label fx:id="numberHero2" alignment="CENTER" layoutX="195.0" layoutY="582.0" prefHeight="26.0" prefWidth="62.0" textFill="WHITE">
          <font>
             <Font name="Segoe Script" size="11.0" />
          </font>
       </Label>
-      <Label fx:id="numberHero" alignment="CENTER" layoutX="343.0" layoutY="583.0" prefHeight="26.0" prefWidth="62.0" textFill="WHITE">
+      <Label fx:id="numberHero3" alignment="CENTER" layoutX="343.0" layoutY="583.0" prefHeight="26.0" prefWidth="62.0" textFill="WHITE">
          <font>
             <Font name="Segoe Script" size="11.0" />
          </font>
       </Label>
-      <Label fx:id="numberHero" alignment="CENTER" layoutX="498.0" layoutY="582.0" prefHeight="26.0" prefWidth="62.0" textFill="WHITE">
+      <Label fx:id="numberHero4" alignment="CENTER" layoutX="498.0" layoutY="582.0" prefHeight="26.0" prefWidth="62.0" textFill="WHITE">
          <font>
             <Font name="Segoe Script" size="11.0" />
          </font>

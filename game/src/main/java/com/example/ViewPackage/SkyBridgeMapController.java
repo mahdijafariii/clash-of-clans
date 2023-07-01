@@ -28,6 +28,15 @@ public class SkyBridgeMapController implements Initializable
     @FXML
     private Label numberHero;
     @FXML
+    private Label numberHero2;
+
+    @FXML
+    private Label numberHero3;
+
+    @FXML
+    private Label numberHero4;
+
+    @FXML
     private ImageView castle_1;
     @FXML
     private ImageView door_1;
@@ -79,6 +88,7 @@ public class SkyBridgeMapController implements Initializable
 
         return images;
     }
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -264,7 +274,5 @@ public class SkyBridgeMapController implements Initializable
 
 
         }
-
     }
-
 }

@@ -21,6 +21,14 @@ public class DarkJungleMapController implements Initializable
     private ImageView castle_1;
     @FXML
     private Label numberHero;
+    @FXML
+    private Label numberHero2;
+
+    @FXML
+    private Label numberHero3;
+
+    @FXML
+    private Label numberHero4;
 
     @FXML
     private ImageView door_1;

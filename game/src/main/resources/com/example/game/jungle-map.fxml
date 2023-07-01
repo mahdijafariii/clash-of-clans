@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="607.0" prefWidth="819.0" style="-fx-background-color: #050226;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ViewPackage.JungleMapController">
+<AnchorPane fx:id="anchor" prefHeight="607.0" prefWidth="819.0" style="-fx-background-color: #050226;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ViewPackage.JungleMapController">
    <children>
       <ImageView fitHeight="566.0" fitWidth="819.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -222,17 +222,17 @@
             <Font name="Segoe Script" size="11.0" />
          </font>
       </Label>
-      <Label fx:id="numberHero" alignment="CENTER" layoutX="196.0" layoutY="581.0" prefHeight="16.0" prefWidth="50.0" textFill="WHITE">
+      <Label fx:id="numberHero2" alignment="CENTER" layoutX="196.0" layoutY="581.0" prefHeight="16.0" prefWidth="50.0" textFill="WHITE">
          <font>
             <Font name="Segoe Script" size="11.0" />
          </font>
       </Label>
-      <Label fx:id="numberHero" alignment="CENTER" layoutX="347.0" layoutY="581.0" prefHeight="16.0" prefWidth="50.0" textFill="WHITE">
+      <Label fx:id="numberHero3" alignment="CENTER" layoutX="347.0" layoutY="581.0" prefHeight="16.0" prefWidth="50.0" textFill="WHITE">
          <font>
             <Font name="Segoe Script" size="11.0" />
          </font>
       </Label>
-      <Label fx:id="numberHero" alignment="CENTER" layoutX="500.0" layoutY="581.0" prefHeight="16.0" prefWidth="50.0" textFill="WHITE">
+      <Label fx:id="numberHero4" alignment="CENTER" layoutX="498.0" layoutY="581.0" prefHeight="16.0" prefWidth="50.0" textFill="WHITE">
          <font>
             <Font name="Segoe Script" size="11.0" />
          </font>

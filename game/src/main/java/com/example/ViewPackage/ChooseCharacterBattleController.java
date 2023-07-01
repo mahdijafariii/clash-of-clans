@@ -261,11 +261,35 @@ public class ChooseCharacterBattleController {
 
     @FXML
     void startBattle(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("jungle-map.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
-        Stage stage = (Stage) ((Node) (event.getSource())).getScene().getWindow();
-        stage.setScene(scene);
-        stage.show();
+        if(Administrator.getSelectedMap().equals("map_1")) {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("jungle-map.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage stage = (Stage) ((Node) (event.getSource())).getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+        }
+        else if (Administrator.getSelectedMap().equals("map_2")){
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("sky-bridge-map.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage stage = (Stage) ((Node) (event.getSource())).getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+        }
+        else if (Administrator.getSelectedMap().equals("map_3")){
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("dark-jungle-map.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage stage = (Stage) ((Node) (event.getSource())).getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+        }
+        else if (Administrator.getSelectedMap().equals("map_4")){
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("castle-bridge-map.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage stage = (Stage) ((Node) (event.getSource())).getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+        }
+
     }
 
     @FXML

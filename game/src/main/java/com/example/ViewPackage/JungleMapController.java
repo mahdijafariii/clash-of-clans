@@ -1,13 +1,16 @@
 package com.example.ViewPackage;
 
 import com.example.HeroPackage.Warrior.FirstWarrior;
+import com.example.HeroPackage.elves.FirstElf;
 import com.example.UserPackage.Administrator;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -24,6 +27,11 @@ public class JungleMapController implements Initializable
     String elf1_head = this.getClass().getResource("/com/example/game/Images/Elf1_head.png").toString();
     String elf2_head = this.getClass().getResource("/com/example/game/Images/Elf2_head.png").toString();
     String elf3_head = this.getClass().getResource("/com/example/game/Images/Elf3_head.png").toString();
+
+    ArrayList<ImageView> imageViews = new ArrayList<>();
+
+    @FXML
+    private AnchorPane anchor;
 
 
     @FXML
@@ -61,6 +69,15 @@ public class JungleMapController implements Initializable
 
     @FXML
     private Label numberHero;
+
+    @FXML
+    private Label numberHero2;
+
+    @FXML
+    private Label numberHero3;
+
+    @FXML
+    private Label numberHero4;
 
     @FXML
     private ProgressBar progress;
@@ -278,6 +295,14 @@ public class JungleMapController implements Initializable
 
         }
 
+
+        imageViews.add(hero_1);
+        imageViews.add(hero_2);
+        imageViews.add(hero_3);
+        imageViews.add(hero_4);
+
+        dragHero();
+
     }
 
 
@@ -286,39 +311,29 @@ public class JungleMapController implements Initializable
 
 
     ImageView getCopy(ImageView image){
-        ImageView ImageView = new ImageView();
+        ImageView ImageView ;
         ImageView = image;
         return ImageView;
     }
     void dragHero(){
-        AtomicReference<ImageView> test = new AtomicReference<>();
-
-
-
-
-        for(ImageView hero : getImages()){
-            test.set(getCopy(hero));
+        for(Node hero : imageViews){
+            AtomicReference<ImageView> test = new AtomicReference<>();
             hero.setOnMousePressed(e ->{
-
+                test.set(getCopy((ImageView) hero));
+                anchor.getChildren().add(test.get());
 
 
             });
-
             hero.setOnMouseDragged(e ->{
                 test.get().setTranslateX(e.getSceneX());
                 test.get().setTranslateY(e.getSceneY());
             });
-
             hero.setOnMouseReleased(e ->{
-                FirstWarrior firstWarrior= new FirstWarrior(test.get().getX(),test.get().getY());
+                FirstElf firstElf = new FirstElf(e.getSceneX()-100,e.getSceneY()-50);
+
+                anchor.getChildren().add(firstElf);
 
             });
-
-
-
-
-
-
         }
 
 

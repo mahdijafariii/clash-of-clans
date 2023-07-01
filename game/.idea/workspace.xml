@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af8125d7-6521-4a45-8aa6-6ded62a218e8" name="Changes" comment="add picture of heroes to fxml file of map">
+    <list default="true" id="af8125d7-6521-4a45-8aa6-6ded62a218e8" name="Changes" comment="change image of elf and add Test User for start Attack Test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/AfterStartBattleButtonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/AfterStartBattleButtonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/CastleBridgeMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/CastleBridgeMapController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/ChooseCharacterBattleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/ChooseCharacterBattleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/DarkJungleMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/DarkJungleMapController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/JungleMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/JungleMapController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/SkyBridgeMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/SkyBridgeMapController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/game/castle-bridge-map.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/game/castle-bridge-map.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/game/dark-jungle-map.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/game/dark-jungle-map.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/game/jungle-map.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/game/jungle-map.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/game/sky-bridge-map.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/game/sky-bridge-map.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -198,7 +203,15 @@
       <option name="project" value="LOCAL" />
       <updated>1688161451682</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="change image of elf and add Test User for start Attack Test">
+      <option name="closed" value="true" />
+      <created>1688224034243</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1688224034243</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,6 +243,7 @@
     <MESSAGE value="choose character page is complete!" />
     <MESSAGE value="edit layout of hero" />
     <MESSAGE value="add picture of heroes to fxml file of map" />
-    <option name="LAST_COMMIT_MESSAGE" value="add picture of heroes to fxml file of map" />
+    <MESSAGE value="change image of elf and add Test User for start Attack Test" />
+    <option name="LAST_COMMIT_MESSAGE" value="change image of elf and add Test User for start Attack Test" />
   </component>
 </project>

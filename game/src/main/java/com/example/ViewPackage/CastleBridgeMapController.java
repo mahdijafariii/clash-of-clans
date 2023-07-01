@@ -34,6 +34,14 @@ public class CastleBridgeMapController implements Initializable
     private ImageView door_2;
     @FXML
     private Label numberHero;
+    @FXML
+    private Label numberHero2;
+
+    @FXML
+    private Label numberHero3;
+
+    @FXML
+    private Label numberHero4;
 
     @FXML
     private ImageView door_3;

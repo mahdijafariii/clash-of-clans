@@ -1,6 +1,10 @@
 package com.example.BuildingPackage;
 
+import com.example.HeroPackage.Heroes;
 import javafx.scene.image.ImageView;
+import java.lang.Math;
+
+import java.util.ArrayList;
 
 public abstract class Building extends ImageView
 {

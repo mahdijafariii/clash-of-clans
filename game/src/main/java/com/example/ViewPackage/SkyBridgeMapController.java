@@ -7,6 +7,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -25,6 +26,8 @@ public class SkyBridgeMapController implements Initializable
 
 
 
+    @FXML
+    private AnchorPane anchor;
     @FXML
     private Label numberHero;
     @FXML
@@ -87,6 +90,12 @@ public class SkyBridgeMapController implements Initializable
         images.add(door_4);
 
         return images;
+    }
+
+    @FXML
+    public AnchorPane getAnchor()
+    {
+        return anchor;
     }
 
 

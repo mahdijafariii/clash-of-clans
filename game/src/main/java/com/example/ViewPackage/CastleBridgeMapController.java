@@ -7,6 +7,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -87,6 +88,14 @@ public class CastleBridgeMapController implements Initializable
 
     @FXML
     private ImageView tower_2;
+    @FXML
+    private AnchorPane anchor;
+
+    @FXML
+    public AnchorPane getAnchor()
+    {
+        return anchor;
+    }
 
     @FXML
     public ArrayList<ImageView> getImages()

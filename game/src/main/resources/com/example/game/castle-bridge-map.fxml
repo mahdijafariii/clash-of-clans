@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="607.0" prefWidth="819.0" style="-fx-background-color: #050226;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ViewPackage.CastleBridgeMapController">
+<AnchorPane fx:id="anchor" prefHeight="607.0" prefWidth="819.0" style="-fx-background-color: #050226;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ViewPackage.CastleBridgeMapController">
    <children>
       <ImageView fitHeight="473.0" fitWidth="819.0" pickOnBounds="true" preserveRatio="true">
          <image>

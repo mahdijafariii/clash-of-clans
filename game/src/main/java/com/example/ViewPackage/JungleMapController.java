@@ -29,11 +29,6 @@ public class JungleMapController implements Initializable
     String elf3_head = this.getClass().getResource("/com/example/game/Images/Elf3_head.png").toString();
 
     ArrayList<ImageView> imageViews = new ArrayList<>();
-
-    @FXML
-    private AnchorPane anchor;
-
-
     @FXML
     private ImageView castle_1;
 
@@ -96,6 +91,15 @@ public class JungleMapController implements Initializable
 
     @FXML
     private ImageView tower_2;
+
+    @FXML
+    private AnchorPane anchor;
+
+    @FXML
+    public AnchorPane getAnchor()
+    {
+        return anchor;
+    }
 
     @FXML
     public ArrayList<ImageView> getImages()

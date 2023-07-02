@@ -11,7 +11,7 @@
 
 <AnchorPane prefHeight="485.0" prefWidth="804.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ViewPackage.ChooseCharacterBattleController">
    <children>
-      <ImageView fitHeight="596.0" fitWidth="828.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="558.0" fitWidth="881.0" layoutX="-53.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/signUp.png" />
          </image>
@@ -24,12 +24,12 @@
       <Ellipse fill="#020f1b" layoutX="272.0" layoutY="286.0" radiusX="57.0" radiusY="3.0" stroke="BLACK" strokeType="INSIDE" />
       <Ellipse fill="#020f1b" layoutX="406.0" layoutY="286.0" radiusX="57.0" radiusY="3.0" stroke="BLACK" strokeType="INSIDE" />
       <Ellipse fill="#020f1b" layoutX="542.0" layoutY="285.0" radiusX="57.0" radiusY="3.0" stroke="BLACK" strokeType="INSIDE" />
-      <HBox layoutX="162.0" layoutY="404.0" prefHeight="108.0" prefWidth="470.0">
+      <HBox layoutX="136.0" layoutY="426.0" prefHeight="119.0" prefWidth="526.0">
          <children>
-            <ImageView fx:id="character1" fitHeight="108.0" fitWidth="122.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="character2" fitHeight="108.0" fitWidth="122.0" layoutX="132.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="character3" fitHeight="108.0" fitWidth="122.0" layoutX="255.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="character4" fitHeight="108.0" fitWidth="122.0" layoutX="255.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="character1" fitHeight="116.0" fitWidth="143.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="character2" fitHeight="115.0" fitWidth="155.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="character3" fitHeight="119.0" fitWidth="135.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="character4" fitHeight="108.0" fitWidth="122.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </HBox>
       <ImageView fitHeight="98.0" fitWidth="172.0" layoutX="46.0" layoutY="108.0" onMouseClicked="#elf1" pickOnBounds="true" preserveRatio="true">
@@ -77,7 +77,7 @@
             <Font name="Freestyle Script" size="51.0" />
          </font>
       </Label>
-      <Button layoutX="740.0" layoutY="442.0" mnemonicParsing="false" onAction="#startBattle" prefHeight="54.0" prefWidth="66.0" style="-fx-background-color: #000000;">
+      <Button layoutX="740.0" layoutY="473.0" mnemonicParsing="false" onAction="#startBattle" prefHeight="54.0" prefWidth="66.0" style="-fx-background-color: #000000;">
          <graphic>
             <ImageView fitHeight="53.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -86,17 +86,17 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="14.0" layoutY="473.0" mnemonicParsing="false" onAction="#backFromChooseHero" style="-fx-background-radius: 20;" text="Back">
+      <Button layoutX="14.0" layoutY="504.0" mnemonicParsing="false" onAction="#backFromChooseHero" style="-fx-background-radius: 20;" text="Back">
          <font>
             <Font name="Bodoni MT Condensed" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="104.0" layoutY="440.0" mnemonicParsing="false" onAction="#deleteChoose" style="-fx-background-radius: 20;" text="Delete">
+      <Button layoutX="104.0" layoutY="468.0" mnemonicParsing="false" onAction="#deleteChoose" style="-fx-background-radius: 20;" text="Delete">
          <font>
             <Font name="Bodoni MT Condensed" size="18.0" />
          </font>
       </Button>
-      <Label layoutX="753.0" layoutY="402.0" prefHeight="55.0" prefWidth="48.0" text="Start" textFill="#969595">
+      <Label layoutX="753.0" layoutY="420.0" prefHeight="55.0" prefWidth="48.0" text="Start" textFill="#969595">
          <font>
             <Font name="Freestyle Script" size="29.0" />
          </font>

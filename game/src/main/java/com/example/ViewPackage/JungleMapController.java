@@ -1,5 +1,7 @@
 package com.example.ViewPackage;
 
+import com.example.BuildingPackage.Building;
+import com.example.BuildingPackage.Towers.JungleTower;
 import com.example.HeroPackage.Heroes;
 import com.example.HeroPackage.Knight.FirstKnight;
 import com.example.HeroPackage.Knight.SecondKnight;
@@ -129,6 +131,15 @@ public class JungleMapController implements Initializable
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        for (Building building : Administrator.getCurrentMap().getBuildings())
+        {
+            if (building instanceof JungleTower)
+            {
+                ((JungleTower) building).run();
+            }
+        }
+
         for(int i = 0 ; i < 4 ; i++){
             if(Administrator.getCharacters().get(i).equals("Elf1")){
                 if(hero_1.getImage()==null){

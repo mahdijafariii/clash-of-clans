@@ -10,18 +10,17 @@ import java.util.ArrayList;
 
 public class JungleMap extends Map
 {
-    JungleMap()
+    public JungleMap(JungleMapController jungleMapController)
     {
         super.setFxmlPageName("jungle-map.fxml");
         super.setHeroLimit(25);
         super.setBuildings(new ArrayList<>());
         super.setHeroes(new ArrayList<>());
-        setBuildings();
+        setBuildings(jungleMapController);
     }
 
-    private void setBuildings()
+    private void setBuildings(JungleMapController jungleMapController)
     {
-        JungleMapController jungleMapController = new JungleMapController();
         ArrayList<ImageView> images = jungleMapController.getImages();
 
         for (ImageView imageView : images)

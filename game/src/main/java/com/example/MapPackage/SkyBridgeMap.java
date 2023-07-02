@@ -14,18 +14,17 @@ import java.util.ArrayList;
 
 public class SkyBridgeMap extends Map
 {
-    SkyBridgeMap()
+    public SkyBridgeMap(SkyBridgeMapController skyBridgeMapController)
     {
         super.setFxmlPageName("sky-bridge-map.fxml");
         super.setHeroLimit(25);
         super.setBuildings(new ArrayList<>());
         super.setHeroes(new ArrayList<>());
-        setBuildings();
+        setBuildings(skyBridgeMapController);
     }
 
-    private void setBuildings()
+    private void setBuildings(SkyBridgeMapController skyBridgeMapController)
     {
-        SkyBridgeMapController skyBridgeMapController = new SkyBridgeMapController();
         ArrayList<ImageView> images = skyBridgeMapController.getImages();
 
         for (ImageView imageView : images)

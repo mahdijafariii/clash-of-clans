@@ -9,18 +9,17 @@ import java.util.ArrayList;
 
 public class CastleBridgeMap extends Map
 {
-    CastleBridgeMap()
+    public CastleBridgeMap(CastleBridgeMapController castleBridgeMapController)
     {
         super.setFxmlPageName("castle-bridge-map.fxml");
         super.setHeroLimit(40);
         super.setBuildings(new ArrayList<>());
         super.setHeroes(new ArrayList<>());
-        setBuildings();
+        setBuildings(castleBridgeMapController);
     }
 
-    private void setBuildings()
+    private void setBuildings(CastleBridgeMapController castleBridgeMapController)
     {
-        CastleBridgeMapController castleBridgeMapController = new CastleBridgeMapController();
         ArrayList<ImageView> images = castleBridgeMapController.getImages();
 
         for (ImageView imageView : images)

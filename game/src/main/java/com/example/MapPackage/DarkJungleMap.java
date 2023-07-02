@@ -9,18 +9,17 @@ import java.util.ArrayList;
 
 public class DarkJungleMap extends Map
 {
-    DarkJungleMap()
+    public DarkJungleMap(DarkJungleMapController darkJungleMapController)
     {
         super.setFxmlPageName("dark-jungle-map.fxml");
         super.setHeroLimit(40);
         super.setBuildings(new ArrayList<>());
         super.setHeroes(new ArrayList<>());
-        setBuildings();
+        setBuildings(darkJungleMapController);
     }
 
-    private void setBuildings()
+    private void setBuildings(DarkJungleMapController darkJungleMapController)
     {
-        DarkJungleMapController darkJungleMapController = new DarkJungleMapController();
         ArrayList<ImageView> images = darkJungleMapController.getImages();
 
         for (ImageView imageView : images)

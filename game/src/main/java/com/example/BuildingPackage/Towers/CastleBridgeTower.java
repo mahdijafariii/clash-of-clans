@@ -2,16 +2,18 @@ package com.example.BuildingPackage.Towers;
 
 import com.example.BuildingPackage.Building;
 import com.example.HeroPackage.Heroes;
+import com.example.UserPackage.Administrator;
 import com.example.ViewPackage.CastleBridgeMapController;
 import com.example.ViewPackage.JungleMapController;
 import com.example.ViewPackage.SkyBridgeMapController;
 import javafx.animation.TranslateTransition;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.util.Duration;
 
 import java.util.ArrayList;
 
-public class CastleBridgeTower extends Building
+public class CastleBridgeTower extends Building implements Runnable
 {
     String img_1 = this.getClass().getResource("/com/example/game/Images/CastleBridgeTower1.png").toString();
     String img_2 = this.getClass().getResource("/com/example/game/Images/CastleBridgeTower2/.png").toString();
@@ -19,12 +21,11 @@ public class CastleBridgeTower extends Building
     String img_main = this.getClass().getResource("/com/example/game/Images/CastleBridgeTower1.png").toString();
 
     int multiplier = 2;
-    double x , y;
 
+    boolean hasAttacked;
     public CastleBridgeTower (ImageView imageView)
     {
-        this.x = imageView.getX();
-        this.y = imageView.getY();
+        hasAttacked = false;
         super.health = 400;
         super.damage = 20;
     }
@@ -41,7 +42,6 @@ public class CastleBridgeTower extends Building
                 attack(hero , castleBridgeMapController);
             }
         }
-
     }
 
     //-----------------ATTACK FUNCTION--------------------
@@ -52,13 +52,68 @@ public class CastleBridgeTower extends Building
         castleBridgeMapController.getAnchor().getChildren().add(imageView);
         TranslateTransition transition = new TranslateTransition();
         transition.setNode(imageView);
-        transition.setFromX(this.x);
-        transition.setFromY(this.y);
+        transition.setFromX(this.getTranslateX());
+        transition.setFromY(this.getTranslateY());
         transition.setToX(hero.getTranslateX());
         transition.setToY(hero.getTranslateY());
         transition.setDuration(new Duration(2000));
         transition.play();
         castleBridgeMapController.getAnchor().getChildren().remove(imageView);
-        hero.setHealth(hero.getHealth() - 20);
+        hero.setHealth(hero.getHealth() - getDamage());
+        hasAttacked = true;
+    }
+
+    //-----------------CHECK FOR TOWER HEALTH FUNCTION--------------------
+
+    public void checkForHealth(CastleBridgeMapController castleBridgeMapController)
+    {
+        if (this.getHealth() <= 200)
+        {
+            if (this.getHealth() == 0)
+            {
+                for (ImageView imageView : castleBridgeMapController.getImages())
+                {
+                    if (imageView.getTranslateX() == this.getTranslateX() && imageView.getTranslateY() == this.getTranslateY())
+                    {
+                        Image image = new Image(img_3);
+                        imageView.setImage(image);
+                    }
+                }
+            }
+            else
+            {
+                for (ImageView imageView : castleBridgeMapController.getImages())
+                {
+                    if (imageView.getTranslateX() == this.getTranslateX() && imageView.getTranslateY() == this.getTranslateY())
+                    {
+                        Image image = new Image(img_2);
+                        imageView.setImage(image);
+                    }
+                }
+            }
+        }
+    }
+
+    //-----------------RUN METHOD--------------------
+    @Override
+    public void run()
+    {
+        while (true)
+        {
+            checkForHealth(Administrator.getCastleBridgeMapController());
+            checkForEnemies(Administrator.getCurrentMap().getHeroes(), Administrator.getCastleBridgeMapController());
+            if (hasAttacked)
+            {
+                try
+                {
+                    Thread.sleep(2000);
+                    hasAttacked = false;
+                }
+                catch (InterruptedException e)
+                {
+                    throw new RuntimeException(e);
+                }
+            }
+        }
     }
 }

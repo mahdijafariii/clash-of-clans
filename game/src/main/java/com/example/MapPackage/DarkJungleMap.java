@@ -11,10 +11,10 @@ public class DarkJungleMap extends Map
 {
     DarkJungleMap()
     {
-        super.fxmlPageName = "dark-jungle-map.fxml";
-        super.heroLimit = 40;
-        super.buildings = new ArrayList<>();
-        super.heroes = new ArrayList<>();
+        super.setFxmlPageName("dark-jungle-map.fxml");
+        super.setHeroLimit(40);
+        super.setBuildings(new ArrayList<>());
+        super.setHeroes(new ArrayList<>());
         setBuildings();
     }
 
@@ -28,17 +28,17 @@ public class DarkJungleMap extends Map
             if (imageView.getId().startsWith("tower"))
             {
                 JungleTower jungleTower = new JungleTower(imageView);
-                super.buildings.add(jungleTower);
+                super.getBuildings().add(jungleTower);
             }
             else if (imageView.getId().startsWith("door"))
             {
                 JungleDoor jungleDoor = new JungleDoor(imageView);
-                super.buildings.add(jungleDoor);
+                super.getBuildings().add(jungleDoor);
             }
             else if (imageView.getId().startsWith("castle"))
             {
                 JungleCastle jungleCastle = new JungleCastle(imageView);
-                super.buildings.add(jungleCastle);
+                super.getBuildings().add(jungleCastle);
             }
         }
     }

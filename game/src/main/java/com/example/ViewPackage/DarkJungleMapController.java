@@ -106,10 +106,6 @@ public class DarkJungleMapController implements Initializable
     String elf1_head = this.getClass().getResource("/com/example/game/Images/Elf1_head.png").toString();
     String elf2_head = this.getClass().getResource("/com/example/game/Images/Elf2_head.png").toString();
     String elf3_head = this.getClass().getResource("/com/example/game/Images/Elf3_head.png").toString();
-
-    @FXML
-    private AnchorPane anchor;
-
     @FXML
     public AnchorPane getAnchor()
     {

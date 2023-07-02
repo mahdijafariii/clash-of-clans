@@ -11,10 +11,10 @@ public class CastleBridgeMap extends Map
 {
     CastleBridgeMap()
     {
-        super.fxmlPageName = "castle-bridge-map.fxml";
-        super.heroLimit = 40;
-        super.buildings = new ArrayList<>();
-        super.heroes = new ArrayList<>();
+        super.setFxmlPageName("castle-bridge-map.fxml");
+        super.setHeroLimit(40);
+        super.setBuildings(new ArrayList<>());
+        super.setHeroes(new ArrayList<>());
         setBuildings();
     }
 
@@ -28,17 +28,17 @@ public class CastleBridgeMap extends Map
             if (imageView.getId().startsWith("tower"))
             {
                 CastleBridgeTower castleBridgeTower = new CastleBridgeTower(imageView);
-                super.buildings.add(castleBridgeTower);
+                super.getBuildings().add(castleBridgeTower);
             }
             else if (imageView.getId().startsWith("door"))
             {
                 CastleBridgeDoor castleBridgeDoor = new CastleBridgeDoor(imageView);
-                super.buildings.add(castleBridgeDoor);
+                super.getBuildings().add(castleBridgeDoor);
             }
             else if (imageView.getId().startsWith("castle"))
             {
                 CastleBridgeCastle castleBridgeCastle = new CastleBridgeCastle(imageView);
-                super.buildings.add(castleBridgeCastle);
+                super.getBuildings().add(castleBridgeCastle);
             }
         }
     }

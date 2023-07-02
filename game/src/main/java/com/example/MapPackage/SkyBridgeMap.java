@@ -16,10 +16,10 @@ public class SkyBridgeMap extends Map
 {
     SkyBridgeMap()
     {
-        super.fxmlPageName = "sky-bridge-map.fxml";
-        super.heroLimit = 25;
-        super.buildings = new ArrayList<>();
-        super.heroes = new ArrayList<>();
+        super.setFxmlPageName("sky-bridge-map.fxml");
+        super.setHeroLimit(25);
+        super.setBuildings(new ArrayList<>());
+        super.setHeroes(new ArrayList<>());
         setBuildings();
     }
 
@@ -33,17 +33,17 @@ public class SkyBridgeMap extends Map
             if (imageView.getId().startsWith("tower"))
             {
                 SkyBridgeTower skyBridgeTower = new SkyBridgeTower(imageView);
-                super.buildings.add(skyBridgeTower);
+                super.getBuildings().add(skyBridgeTower);
             }
             else if (imageView.getId().startsWith("door"))
             {
                 SkyBridgeDoor skyBridgeDoor = new SkyBridgeDoor(imageView);
-                super.buildings.add(skyBridgeDoor);
+                super.getBuildings().add(skyBridgeDoor);
             }
             else if (imageView.getId().startsWith("castle"))
             {
                 SkyBridgeCastle skyBridgeCastle = new SkyBridgeCastle(imageView);
-                super.buildings.add(skyBridgeCastle);
+                super.getBuildings().add(skyBridgeCastle);
             }
         }
     }

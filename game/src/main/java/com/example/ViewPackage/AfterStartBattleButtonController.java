@@ -60,35 +60,23 @@ public class AfterStartBattleButtonController {
         //--------------------------------------------------
         selectedMap.setImage(new Image(img_map_1));
         Administrator.setSelectedMap("map_1");
-        JungleMapController jungleMapController = new JungleMapController();
-        JungleMap jungleMap = new JungleMap(jungleMapController);
-        Administrator.setCurrentMap(jungleMap);
     }
 
     @FXML
     void map2Clicked(MouseEvent event) {
         selectedMap.setImage(new Image(img_map_2));
         Administrator.setSelectedMap("map_2");
-        SkyBridgeMapController skyBridgeMapController = new SkyBridgeMapController();
-        SkyBridgeMap skyBridgeMap = new SkyBridgeMap(skyBridgeMapController);
-        Administrator.setCurrentMap(skyBridgeMap);
     }
 
     @FXML
     void map3Clicked(MouseEvent event) {
         selectedMap.setImage(new Image(img_map_3));
         Administrator.setSelectedMap("map_3");
-        DarkJungleMapController darkJungleMapController = new DarkJungleMapController();
-        DarkJungleMap darkJungleMap = new DarkJungleMap(darkJungleMapController);
-        Administrator.setCurrentMap(darkJungleMap);
     }
 
     @FXML
     void map4Clicked(MouseEvent event) {
         selectedMap.setImage(new Image(img_map_4));
         Administrator.setSelectedMap("map_4");
-        CastleBridgeMapController castleBridgeMapController = new CastleBridgeMapController();
-        CastleBridgeMap castleBridgeMap = new CastleBridgeMap(castleBridgeMapController);
-        Administrator.setCurrentMap(castleBridgeMap);
     }
 }

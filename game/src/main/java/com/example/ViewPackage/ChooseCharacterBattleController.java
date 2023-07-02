@@ -1,5 +1,9 @@
 package com.example.ViewPackage;
 
+import com.example.MapPackage.CastleBridgeMap;
+import com.example.MapPackage.DarkJungleMap;
+import com.example.MapPackage.JungleMap;
+import com.example.MapPackage.SkyBridgeMap;
 import com.example.UserPackage.Administrator;
 import com.example.game.HelloApplication;
 import javafx.event.ActionEvent;
@@ -267,6 +271,9 @@ public class ChooseCharacterBattleController {
             Stage stage = (Stage) ((Node) (event.getSource())).getScene().getWindow();
             stage.setScene(scene);
             stage.show();
+            JungleMapController jungleMapController = new JungleMapController();
+            JungleMap jungleMap = new JungleMap(jungleMapController);
+            Administrator.setCurrentMap(jungleMap);
         }
         else if (Administrator.getSelectedMap().equals("map_2")){
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("sky-bridge-map.fxml"));
@@ -274,6 +281,9 @@ public class ChooseCharacterBattleController {
             Stage stage = (Stage) ((Node) (event.getSource())).getScene().getWindow();
             stage.setScene(scene);
             stage.show();
+            SkyBridgeMapController skyBridgeMapController = new SkyBridgeMapController();
+            SkyBridgeMap skyBridgeMap = new SkyBridgeMap(skyBridgeMapController);
+            Administrator.setCurrentMap(skyBridgeMap);
         }
         else if (Administrator.getSelectedMap().equals("map_3")){
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("dark-jungle-map.fxml"));
@@ -281,6 +291,9 @@ public class ChooseCharacterBattleController {
             Stage stage = (Stage) ((Node) (event.getSource())).getScene().getWindow();
             stage.setScene(scene);
             stage.show();
+            DarkJungleMapController darkJungleMapController = new DarkJungleMapController();
+            DarkJungleMap darkJungleMap = new DarkJungleMap(darkJungleMapController);
+            Administrator.setCurrentMap(darkJungleMap);
         }
         else if (Administrator.getSelectedMap().equals("map_4")){
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("castle-bridge-map.fxml"));
@@ -288,6 +301,9 @@ public class ChooseCharacterBattleController {
             Stage stage = (Stage) ((Node) (event.getSource())).getScene().getWindow();
             stage.setScene(scene);
             stage.show();
+            CastleBridgeMapController castleBridgeMapController = new CastleBridgeMapController();
+            CastleBridgeMap castleBridgeMap = new CastleBridgeMap(castleBridgeMapController);
+            Administrator.setCurrentMap(castleBridgeMap);
         }
 
     }

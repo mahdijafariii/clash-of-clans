@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class JungleMap extends Map
 {
-    JungleMap()
+    public JungleMap()
     {
         super.setFxmlPageName("jungle-map.fxml");
         super.setHeroLimit(25);

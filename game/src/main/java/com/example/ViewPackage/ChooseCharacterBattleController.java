@@ -271,9 +271,6 @@ public class ChooseCharacterBattleController {
             Stage stage = (Stage) ((Node) (event.getSource())).getScene().getWindow();
             stage.setScene(scene);
             stage.show();
-            JungleMapController jungleMapController = new JungleMapController();
-            JungleMap jungleMap = new JungleMap(jungleMapController);
-            Administrator.setCurrentMap(jungleMap);
         }
         else if (Administrator.getSelectedMap().equals("map_2")){
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("sky-bridge-map.fxml"));

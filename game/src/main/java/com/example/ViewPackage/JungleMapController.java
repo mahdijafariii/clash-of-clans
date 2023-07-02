@@ -355,11 +355,17 @@ public class JungleMapController implements Initializable
         //-------------------------------------------------------------------
 
         //starting Threads
+        if (Administrator.getCurrentMap() == null)
+        {
+            JungleMap jungleMap = new JungleMap(this);
+            Administrator.setCurrentMap(jungleMap);
+        }
         for (Building building : Administrator.getCurrentMap().getBuildings())
         {
             if (building instanceof JungleTower)
             {
                 ((JungleTower) building).run();
+                System.out.println("thread ran");
             }
         }
         //-------------------------------------------------------------------

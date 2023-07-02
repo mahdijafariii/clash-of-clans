@@ -354,49 +354,44 @@ public class SkyBridgeMapController implements Initializable
                 test.get().setTranslateY(e.getSceneY());
             });
             hero.setOnMouseReleased(e ->{
-                if(hero.getId().equals("elf1")){
-                    FirstElf firstElf = new FirstElf(e.getSceneX()-100,e.getSceneY()-50);
-                    anchor.getChildren().add(firstElf);
-                    allHeroes.add(firstElf);
-                }
-                else if (hero.getId().equals("elf2")){
-                    SecondElf secondElf = new SecondElf(e.getSceneX()-100,e.getSceneY()-50);
-                    anchor.getChildren().add(secondElf);
-                    allHeroes.add(secondElf);
-                }
-                else if (hero.getId().equals("elf3")){
-                    ThirdElf thirdElf = new ThirdElf(e.getSceneX()-100,e.getSceneY()-50);
-                    anchor.getChildren().add(thirdElf);
-                    allHeroes.add(thirdElf);
-                }
-                else if (hero.getId().equals("knight1")){
-                    FirstKnight firstKnight = new FirstKnight(e.getSceneX()-100,e.getSceneY()-50);
-                    anchor.getChildren().add(firstKnight);
-                    allHeroes.add(firstKnight);
-                }
-                else if (hero.getId().equals("knight2")){
-                    SecondKnight secondKnight = new SecondKnight(e.getSceneX()-100,e.getSceneY()-50);
-                    anchor.getChildren().add(secondKnight);
-                    allHeroes.add(secondKnight);
-                }
-                else if (hero.getId().equals("knight3")){
-                    ThirdKnight thirdKnight = new ThirdKnight(e.getSceneX()-100,e.getSceneY()-50);
-                    anchor.getChildren().add(thirdKnight);
-                    allHeroes.add(thirdKnight);
-                }
-                else if (hero.getId().equals("warrior1")){
-                    FirstWarrior firstWarrior = new FirstWarrior(e.getSceneX()-100,e.getSceneY()-50);
-                    firstWarrior.setFitWidth(110);
-                    firstWarrior.setFitHeight(70);
-                    anchor.getChildren().add(firstWarrior);
-                    allHeroes.add(firstWarrior);
-                }
-                else if (hero.getId().equals("warrior2")){
-                    SecondWarrior secondWarrior = new SecondWarrior(e.getSceneX()-100,e.getSceneY()-50);
-                    secondWarrior.setFitWidth(110);
-                    secondWarrior.setFitHeight(70);
-                    anchor.getChildren().add(secondWarrior);
-                    allHeroes.add(secondWarrior);
+                if(e.getSceneX()<350 && e.getSceneY()>140 && e.getSceneY()<380) {
+                    if (hero.getId().equals("elf1")) {
+                        FirstElf firstElf = new FirstElf(e.getSceneX() - 100, e.getSceneY() - 50);
+                        anchor.getChildren().add(firstElf);
+                        allHeroes.add(firstElf);
+                    } else if (hero.getId().equals("elf2")) {
+                        SecondElf secondElf = new SecondElf(e.getSceneX() - 100, e.getSceneY() - 50);
+                        anchor.getChildren().add(secondElf);
+                        allHeroes.add(secondElf);
+                    } else if (hero.getId().equals("elf3")) {
+                        ThirdElf thirdElf = new ThirdElf(e.getSceneX() - 100, e.getSceneY() - 50);
+                        anchor.getChildren().add(thirdElf);
+                        allHeroes.add(thirdElf);
+                    } else if (hero.getId().equals("knight1")) {
+                        FirstKnight firstKnight = new FirstKnight(e.getSceneX() - 100, e.getSceneY() - 50);
+                        anchor.getChildren().add(firstKnight);
+                        allHeroes.add(firstKnight);
+                    } else if (hero.getId().equals("knight2")) {
+                        SecondKnight secondKnight = new SecondKnight(e.getSceneX() - 100, e.getSceneY() - 50);
+                        anchor.getChildren().add(secondKnight);
+                        allHeroes.add(secondKnight);
+                    } else if (hero.getId().equals("knight3")) {
+                        ThirdKnight thirdKnight = new ThirdKnight(e.getSceneX() - 100, e.getSceneY() - 50);
+                        anchor.getChildren().add(thirdKnight);
+                        allHeroes.add(thirdKnight);
+                    } else if (hero.getId().equals("warrior1")) {
+                        FirstWarrior firstWarrior = new FirstWarrior(e.getSceneX() - 100, e.getSceneY() - 50);
+                        firstWarrior.setFitWidth(110);
+                        firstWarrior.setFitHeight(70);
+                        anchor.getChildren().add(firstWarrior);
+                        allHeroes.add(firstWarrior);
+                    } else if (hero.getId().equals("warrior2")) {
+                        SecondWarrior secondWarrior = new SecondWarrior(e.getSceneX() - 100, e.getSceneY() - 50);
+                        secondWarrior.setFitWidth(110);
+                        secondWarrior.setFitHeight(70);
+                        anchor.getChildren().add(secondWarrior);
+                        allHeroes.add(secondWarrior);
+                    }
                 }
 
             });

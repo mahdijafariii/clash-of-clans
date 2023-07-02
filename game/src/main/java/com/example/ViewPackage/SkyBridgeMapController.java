@@ -92,6 +92,11 @@ public class SkyBridgeMapController implements Initializable
     @FXML
     private ImageView star_3;
     @FXML
+    public AnchorPane getAnchor()
+    {
+        return anchor;
+    }
+    @FXML
     public ArrayList<ImageView> getImages()
     {
         ArrayList<ImageView> images = new ArrayList<>();

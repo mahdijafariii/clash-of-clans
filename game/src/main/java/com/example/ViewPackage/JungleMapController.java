@@ -105,6 +105,11 @@ public class JungleMapController implements Initializable
 
     @FXML
     private ImageView tower_2;
+    @FXML
+    public AnchorPane getAnchor()
+    {
+        return anchor;
+    }
 
     @FXML
     public ArrayList<ImageView> getImages()

@@ -2,6 +2,9 @@ package com.example.BuildingPackage.Towers;
 
 import com.example.BuildingPackage.Building;
 import com.example.HeroPackage.Heroes;
+import com.example.MapPackage.JungleMap;
+import com.example.MapPackage.Map;
+import com.example.ViewPackage.DarkJungleMapController;
 import com.example.ViewPackage.JungleMapController;
 import javafx.animation.TranslateTransition;
 import javafx.scene.image.ImageView;
@@ -29,14 +32,14 @@ public class JungleTower extends Building
 
     //-----------------CHECK FOR ENEMIES FUNCTION--------------------
 
-    public void checkForEnemies(ArrayList<Heroes> heroes , JungleMapController jungleMapController)
+    public void checkForEnemies(ArrayList<Heroes> heroes , Map map)
     {
         for (Heroes hero : heroes)
         {
             double distance = Math.pow((hero.getTranslateX() - this.getTranslateX()) , 2) + Math.pow((hero.getTranslateY() - this.getTranslateY()) , 2);
             if (distance <= 200)
             {
-                attack(hero , jungleMapController);
+                attack(hero , map);
             }
         }
 
@@ -44,19 +47,39 @@ public class JungleTower extends Building
 
     //-----------------ATTACK FUNCTION--------------------
 
-    public void attack(Heroes hero , JungleMapController jungleMapController)
+    public void attack(Heroes hero , Map map)
     {
-        ImageView imageView = new ImageView("C:\\Users\\OctavioX1\\IdeaProjects\\github-GameProject\\final-project-game-maya\\game\\src\\main\\resources\\com\\example\\game\\Images\\fireball.png");
-        jungleMapController.getAnchor().getChildren().add(imageView);
-        TranslateTransition transition = new TranslateTransition();
-        transition.setNode(imageView);
-        transition.setFromX(this.x);
-        transition.setFromY(this.y);
-        transition.setToX(hero.getTranslateX());
-        transition.setToY(hero.getTranslateY());
-        transition.setDuration(new Duration(2000));
-        transition.play();
-        jungleMapController.getAnchor().getChildren().remove(imageView);
-        hero.setHealth(hero.getHealth() - 20);
+        if (map instanceof JungleMap)
+        {
+            JungleMapController controller = new JungleMapController();
+            ImageView imageView = new ImageView("C:\\Users\\OctavioX1\\IdeaProjects\\github-GameProject\\final-project-game-maya\\game\\src\\main\\resources\\com\\example\\game\\Images\\fireball.png");
+            controller.getAnchor().getChildren().add(imageView);
+            TranslateTransition transition = new TranslateTransition();
+            transition.setNode(imageView);
+            transition.setFromX(this.x);
+            transition.setFromY(this.y);
+            transition.setToX(hero.getTranslateX());
+            transition.setToY(hero.getTranslateY());
+            transition.setDuration(new Duration(2000));
+            transition.play();
+            controller.getAnchor().getChildren().remove(imageView);
+            hero.setHealth(hero.getHealth() - 20);
+        }
+        else
+        {
+            DarkJungleMapController controller = new DarkJungleMapController();
+            ImageView imageView = new ImageView("C:\\Users\\OctavioX1\\IdeaProjects\\github-GameProject\\final-project-game-maya\\game\\src\\main\\resources\\com\\example\\game\\Images\\fireball.png");
+            controller.getAnchor().getChildren().add(imageView);
+            TranslateTransition transition = new TranslateTransition();
+            transition.setNode(imageView);
+            transition.setFromX(this.x);
+            transition.setFromY(this.y);
+            transition.setToX(hero.getTranslateX());
+            transition.setToY(hero.getTranslateY());
+            transition.setDuration(new Duration(2000));
+            transition.play();
+            controller.getAnchor().getChildren().remove(imageView);
+            hero.setHealth(hero.getHealth() - 20);
+        }
     }
 }

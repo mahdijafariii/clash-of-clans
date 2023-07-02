@@ -46,6 +46,11 @@ public class CastleBridgeMapController implements Initializable
     @FXML
     private AnchorPane anchor;
 
+    @FXML
+    public AnchorPane getAnchor()
+    {
+        return anchor;
+    }
 
     @FXML
     private ImageView castle_1;

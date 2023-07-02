@@ -116,15 +116,6 @@ public class SkyBridgeMapController implements Initializable
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
-        for (Building building : Administrator.getCurrentMap().getBuildings())
-        {
-            if (building instanceof SkyBridgeTower)
-            {
-                ((SkyBridgeTower) building).run();
-            }
-        }
-
         for(int i = 0 ; i < 4 ; i++){
             if(Administrator.getCharacters().get(i).equals("Elf1")){
                 if(hero_1.getImage()==null){
@@ -341,6 +332,17 @@ public class SkyBridgeMapController implements Initializable
         cardFrame.add(hero_3);
         cardFrame.add(hero_4);
         dragHero(); // make draggable of card frame of heroes !
+
+        //-------------------------------------------------------------------
+
+        //starting building threads
+        for (Building building : Administrator.getCurrentMap().getBuildings())
+        {
+            if (building instanceof SkyBridgeTower)
+            {
+                ((SkyBridgeTower) building).run();
+            }
+        }
 
         //-------------------------------------------------------------------
 

@@ -136,13 +136,7 @@ public class CastleBridgeMapController implements Initializable
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        for (Building building : Administrator.getCurrentMap().getBuildings())
-        {
-            if (building instanceof CastleBridgeTower)
-            {
-                ((CastleBridgeTower) building).run();
-            }
-        }
+
 
         for(int i = 0 ; i < 4 ; i++){
             if(Administrator.getCharacters().get(i).equals("Elf1")){
@@ -361,6 +355,16 @@ public class CastleBridgeMapController implements Initializable
         cardFrame.add(hero_4);
         dragHero(); // make draggable of card frame of heroes !
 
+        //-------------------------------------------------------------------
+        //starting Threads
+
+        for (Building building : Administrator.getCurrentMap().getBuildings())
+        {
+            if (building instanceof CastleBridgeTower)
+            {
+                ((CastleBridgeTower) building).run();
+            }
+        }
         //-------------------------------------------------------------------
 
     }

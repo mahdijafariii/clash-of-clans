@@ -132,13 +132,6 @@ public class DarkJungleMapController implements Initializable
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        for (Building building : Administrator.getCurrentMap().getBuildings())
-        {
-            if (building instanceof JungleTower)
-            {
-                ((JungleTower) building).run();
-            }
-        }
 
         for(int i = 0 ; i < 4 ; i++){
             if(Administrator.getCharacters().get(i).equals("Elf1")){
@@ -356,6 +349,17 @@ public class DarkJungleMapController implements Initializable
         cardFrame.add(hero_3);
         cardFrame.add(hero_4);
         dragHero(); // make draggable of card frame of heroes !
+
+        //-------------------------------------------------------------------
+        //starting Threads
+
+        for (Building building : Administrator.getCurrentMap().getBuildings())
+        {
+            if (building instanceof JungleTower)
+            {
+                ((JungleTower) building).run();
+            }
+        }
 
         //-------------------------------------------------------------------
 

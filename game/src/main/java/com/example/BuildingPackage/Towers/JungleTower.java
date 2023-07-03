@@ -39,16 +39,12 @@ public class JungleTower extends Building
     {
         if (!heroes.isEmpty())
         {
-            System.out.println("Size : " + heroes.size());
             for (Heroes hero : heroes)
             {
-                double distance = Math.pow(Math.pow((hero.getTranslateX() - this.getX()) , 2) + Math.pow((hero.getTranslateY() - this.getY()) , 2) ,  (double) 1 /2);
-                System.out.println("------------------------------------------------");
-                System.out.println(distance);
-                System.out.println("------------------------------------------------");
+                double distance = Math.sqrt(Math.pow((hero.getTranslateX() - this.getX()) , 2) + Math.pow((hero.getTranslateY() - this.getY()) , 2));
                 if (distance <= 250)
                 {
-                    System.out.println("ye adam nazdik mane");
+                    System.out.println("Enemy Found , Distance : " + distance);
                     attack(hero , jungleMapController , darkJungleMapController , map);
                 }
             }
@@ -61,6 +57,11 @@ public class JungleTower extends Building
     {
         if (map instanceof JungleMap)
         {
+            if (!hero.getImage().getUrl().equals(this.getClass().getResource("/com/example/game/Images/Die-1.png").toString()))
+            {
+                System.out.println("Attack!");
+                System.out.println(hero.getHealth());
+            /*
             ImageView imageView = new ImageView(img_fire);
             jungleMapController.getAnchor().getChildren().add(imageView);
             TranslateTransition transition = new TranslateTransition();
@@ -70,14 +71,24 @@ public class JungleTower extends Building
             transition.setToX(hero.getTranslateX());
             transition.play();
             jungleMapController.getAnchor().getChildren().remove(imageView);
-            hero.setHealth(hero.getHealth() - 20);
-            jungleMapController.checkHeroHealth();
-            if(hero.getHealth()<=0){
-                Administrator.getCurrentMap().getHeroes().remove(hero);
-                Administrator.getJungleMapController().getAnchor().getChildren().remove(hero);
+            */
+                hero.setHealth(hero.getHealth() - damage);
+                jungleMapController.checkHeroHealth();
+                if(hero.getHealth()<=0)
+                {
+                    hero.setImage(new Image(this.getClass().getResource("/com/example/game/Images/Die-1.png").toString()));
+                    hero.setFitHeight(30);
+                    hero.setFitWidth(30);
+                    hero.setTranslateX(hero.getTranslateX() + 40);
+                    hero.setTranslateY(hero.getTranslateY() + 20);
+                    hero = null;
+                }
+                hasAttacked = true;
             }
-            hasAttacked = true;
-
+            else
+            {
+                System.out.println("Hero Is Fuckin Dead");
+            }
         }
         else
         {
@@ -92,7 +103,12 @@ public class JungleTower extends Building
             transition.setDuration(new Duration(2000));
             transition.play();
             darkJungleMapController.getAnchor().getChildren().remove(imageView);
-            hero.setHealth(hero.getHealth() - 20);
+            hero.setHealth(hero.getHealth() - damage);
+
+            if(hero.getHealth()<=0)
+            {
+                hero = null;
+            }
             hasAttacked = true;
         }
     }
@@ -160,8 +176,9 @@ public class JungleTower extends Building
     }
 
     //-----------------RUN METHOD--------------------
-   public void startThread(){
-        Administrator.getJungleMapController().checkHeroHealth();
+   public void startThread()
+   {
+       Administrator.getJungleMapController().checkHeroHealth();
        new Thread(()->{
            while (true)
            {
@@ -171,8 +188,7 @@ public class JungleTower extends Building
                {
                    try
                    {
-                       Thread.sleep(2000);
-
+                       Thread.sleep(1000);
                        hasAttacked = false;
                    }
                    catch (InterruptedException e)
@@ -180,10 +196,12 @@ public class JungleTower extends Building
                        throw new RuntimeException(e);
                    }
                }
-
-               try {
-                   Thread.sleep(8000);
-               } catch (InterruptedException e) {
+               try
+               {
+                   Thread.sleep(1000);
+               }
+               catch (InterruptedException e)
+               {
                    throw new RuntimeException(e);
                }
            }

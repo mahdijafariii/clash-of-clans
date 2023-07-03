@@ -8,6 +8,7 @@ import com.example.UserPackage.Administrator;
 import com.example.ViewPackage.DarkJungleMapController;
 import com.example.ViewPackage.JungleMapController;
 import javafx.animation.TranslateTransition;
+import javafx.application.Platform;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.util.Duration;
@@ -59,19 +60,24 @@ public class JungleTower extends Building
     {
         if (map instanceof JungleMap)
         {
-            ImageView imageView = new ImageView(img_fire);
-            jungleMapController.getAnchor().getChildren().add(imageView);
-            TranslateTransition transition = new TranslateTransition();
-            transition.setNode(imageView);
-            transition.setFromX(this.getTranslateX());
-            transition.setFromY(this.getTranslateY());
-            transition.setToX(hero.getTranslateX());
-            transition.setToY(hero.getTranslateY());
-            transition.setDuration(new Duration(2000));
-            transition.play();
-            jungleMapController.getAnchor().getChildren().remove(imageView);
+//            ImageView imageView = new ImageView(img_fire);
+//            jungleMapController.getAnchor().getChildren().add(imageView);
+//            TranslateTransition transition = new TranslateTransition();
+//            transition.setNode(imageView);
+//            transition.setFromX(this.getTranslateX());
+//            transition.setFromY(this.getTranslateY());
+//            transition.setToX(hero.getTranslateX());
+//            transition.setToY(hero.getTranslateY());
+//            transition.setDuration(new Duration(2000));
+//            transition.play();
+//            jungleMapController.getAnchor().getChildren().remove(imageView);
             hero.setHealth(hero.getHealth() - 20);
+            jungleMapController.checkHeroHealth();
+            if(hero.getHealth()<=0){
+//                Administrator.getCurrentMap().getHeroes().remove(hero);
+            }
             hasAttacked = true;
+
         }
         else
         {
@@ -155,13 +161,12 @@ public class JungleTower extends Building
 
     //-----------------RUN METHOD--------------------
    public void startThread(){
+        Administrator.getJungleMapController().checkHeroHealth();
        new Thread(()->{
            while (true)
            {
                checkForHealth(Administrator.getDarkJungleMapController() , Administrator.getJungleMapController() , Administrator.getCurrentMap());
                checkForEnemies(Administrator.getCurrentMap().getHeroes(), Administrator.getJungleMapController() , Administrator.getDarkJungleMapController() , Administrator.getCurrentMap());
-               System.out.println("salam");
-               System.out.println(Administrator.getCurrentMap().getHeroes().size());
                if (hasAttacked)
                {
                    try

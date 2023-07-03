@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af8125d7-6521-4a45-8aa6-6ded62a218e8" name="Changes" comment="change some func">
+    <list default="true" id="af8125d7-6521-4a45-8aa6-6ded62a218e8" name="Changes" comment="change some item in jungle tower for attack on heroes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/BuildingPackage/Towers/JungleTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/BuildingPackage/Towers/JungleTower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/UserPackage/Administrator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/UserPackage/Administrator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/JungleMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/JungleMapController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -245,7 +244,15 @@
       <option name="project" value="LOCAL" />
       <updated>1688346447762</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="change some item in jungle tower for attack on heroes">
+      <option name="closed" value="true" />
+      <created>1688377947749</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1688377947749</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,6 +288,7 @@
     <MESSAGE value="fix some bugs of map controller and edit fxml file of them&#10;add drag and drop test for light jungle map" />
     <MESSAGE value="change thread and the function of tower !" />
     <MESSAGE value="change some func" />
-    <option name="LAST_COMMIT_MESSAGE" value="change some func" />
+    <MESSAGE value="change some item in jungle tower for attack on heroes" />
+    <option name="LAST_COMMIT_MESSAGE" value="change some item in jungle tower for attack on heroes" />
   </component>
 </project>

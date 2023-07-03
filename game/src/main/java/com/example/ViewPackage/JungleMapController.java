@@ -371,6 +371,13 @@ public class JungleMapController implements Initializable
         }
         //-------------------------------------------------------------------
 
+        checkHeroHealth();
+        System.out.println(allHeroes.size());
+
+    }
+
+    public void checkHeroHealth(){
+                    System.out.println(allHeroes.size());
     }
 
 

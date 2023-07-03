@@ -81,7 +81,7 @@ public class CastleBridgeTower extends Building
 
     //-----------------CHECK FOR TOWER HEALTH FUNCTION--------------------
 
-    /*
+
     public void checkForHealth(CastleBridgeMapController castleBridgeMapController)
     {
         if (this.getHealth() <= 200)
@@ -111,7 +111,7 @@ public class CastleBridgeTower extends Building
         }
     }
 
-     */
+
 
     //-----------------RUN METHOD--------------------
     public void startThread()

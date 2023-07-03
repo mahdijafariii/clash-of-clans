@@ -2,14 +2,17 @@ package com.example.BuildingPackage.Towers;
 
 import com.example.BuildingPackage.Building;
 import com.example.HeroPackage.Heroes;
+import com.example.MapPackage.TwoPlayerMap;
 import com.example.UserPackage.Administrator;
 import com.example.ViewPackage.SkyBridgeMapController;
+import com.example.ViewPackage.TwoPlayerMapController;
 import javafx.animation.TranslateTransition;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.util.Duration;
 
 import java.util.ArrayList;
+import java.util.Map;
 
 public class SkyBridgeTower extends Building
 {
@@ -80,37 +83,65 @@ public class SkyBridgeTower extends Building
 
     //-----------------CHECK FOR TOWER HEALTH FUNCTION--------------------
 
-    /*
-    public void checkForHealth(SkyBridgeMapController skyBridgeMapController)
+    public void checkForHealth(SkyBridgeMapController skyBridgeMapController , TwoPlayerMapController twoPlayerMapController , Map map)
     {
-        if (this.getHealth() <= 200)
+        if (map instanceof TwoPlayerMap)
         {
-            if (this.getHealth() == 0)
+            if (this.getHealth() <= 200)
             {
-                for (ImageView imageView : skyBridgeMapController.getImages())
+                if (this.getHealth() == 0)
                 {
-                    if (imageView.getTranslateX() == this.getTranslateX() && imageView.getTranslateY() == this.getTranslateY())
+                    for (ImageView imageView : twoPlayerMapController.getImages())
                     {
-                        Image image = new Image(img_3);
-                        imageView.setImage(image);
+                        if (imageView.getTranslateX() == this.getTranslateX() && imageView.getTranslateY() == this.getTranslateY())
+                        {
+                            Image image = new Image(img_3);
+                            imageView.setImage(image);
+                        }
+                    }
+                }
+                else
+                {
+                    for (ImageView imageView : twoPlayerMapController.getImages())
+                    {
+                        if (imageView.getTranslateX() == this.getTranslateX() && imageView.getTranslateY() == this.getTranslateY())
+                        {
+                            Image image = new Image(img_2);
+                            imageView.setImage(image);
+                        }
                     }
                 }
             }
-            else
+        }
+        else
+        {
+            if (this.getHealth() <= 200)
             {
-                for (ImageView imageView : skyBridgeMapController.getImages())
+                if (this.getHealth() == 0)
                 {
-                    if (imageView.getTranslateX() == this.getTranslateX() && imageView.getTranslateY() == this.getTranslateY())
+                    for (ImageView imageView : skyBridgeMapController.getImages())
                     {
-                        Image image = new Image(img_2);
-                        imageView.setImage(image);
+                        if (imageView.getTranslateX() == this.getTranslateX() && imageView.getTranslateY() == this.getTranslateY())
+                        {
+                            Image image = new Image(img_3);
+                            imageView.setImage(image);
+                        }
+                    }
+                }
+                else
+                {
+                    for (ImageView imageView : skyBridgeMapController.getImages())
+                    {
+                        if (imageView.getTranslateX() == this.getTranslateX() && imageView.getTranslateY() == this.getTranslateY())
+                        {
+                            Image image = new Image(img_2);
+                            imageView.setImage(image);
+                        }
                     }
                 }
             }
         }
     }
-
-     */
 
     //-----------------RUN METHOD--------------------
     public void startThread()

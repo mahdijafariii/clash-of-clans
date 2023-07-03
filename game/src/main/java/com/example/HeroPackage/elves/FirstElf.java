@@ -92,7 +92,7 @@ public class FirstElf extends Heroes {
     }
     public void walkForAttackY(){
         action++;
-        setTranslateY(getTranslateY()+speed);
+        setTranslateY(getTranslateY()-speed);
         if(action%2==0){
             setImage(new Image(img_walk1));
         }
@@ -122,17 +122,34 @@ public class FirstElf extends Heroes {
     //--------------------------------------------------- Attack and change attack picture
 
 
-    public void StartBattleAttacking(){
+    public void startBattleAttacking(){
         ArrayList<Building> castle = new ArrayList<>();
         ArrayList<Building> doors = new ArrayList<>();
         ArrayList<Building> towers = new ArrayList<>();
         castle=castle();
         doors=doors();
         towers=towers();
-        // fek konam inja bayad ye while bezarim haqiqata !!
+        double minDistance=0 ;
+        Building closest =null;
         for(int i = 0 ; i < towers.size() ; i++ ){
-//            if()
+            if(towers.get(i)!=null){
+                if(minDistance>getDistanceFromBuilding(this,towers.get(i)) ||minDistance==0){
+                    minDistance=getDistanceFromBuilding(this,towers.get(i));
+                    closest=towers.get(i);
+                }
+            }
 
+        }
+        if(minDistance!= 0 ){
+            while(closest.getX()>this.getTranslateX()+130){
+                walkForAttackX();
+            }
+            while (closest.getY()<this.getTranslateY()-80){
+                walkForAttackY();
+            }
+            while (closest.health>0){
+                attackInBattle();
+            }
         }
 
 
@@ -169,6 +186,12 @@ public class FirstElf extends Heroes {
             }
         }
         return doors;}
+
+    public double getDistanceFromBuilding(Heroes hero ,Building building ){
+        double distance = Math.sqrt(Math.pow((hero.getTranslateX() - building.getX()) , 2) + Math.pow((hero.getTranslateY() - building.getY()) , 2));
+    return distance;}
+
+
 
 
 }

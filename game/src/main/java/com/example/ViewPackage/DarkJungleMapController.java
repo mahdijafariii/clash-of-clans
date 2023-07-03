@@ -357,7 +357,7 @@ public class DarkJungleMapController implements Initializable
         {
             if (building instanceof JungleTower)
             {
-                ((JungleTower) building).run();
+//                ((JungleTower) building).run();
             }
         }
 

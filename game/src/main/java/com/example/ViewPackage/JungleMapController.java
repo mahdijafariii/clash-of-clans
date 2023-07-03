@@ -358,6 +358,7 @@ public class JungleMapController implements Initializable
         if (Administrator.getCurrentMap() == null)
         {
             JungleMap jungleMap = new JungleMap(this);
+            Administrator.setJungleMapController(this);
             Administrator.setCurrentMap(jungleMap);
         }
         for (Building building : Administrator.getCurrentMap().getBuildings())
@@ -393,7 +394,7 @@ public class JungleMapController implements Initializable
                 test.get().setTranslateY(e.getSceneY());
             });
             hero.setOnMouseReleased(e ->{
-                if(e.getSceneX()<300 && e.getSceneY()>140 && e.getSceneY()<440) {
+                if( e.getSceneY()>140 && e.getSceneY()<440) {
                     if (hero.getId().equals("elf1")) {
                         FirstElf firstElf = new FirstElf(e.getSceneX() - 100, e.getSceneY() - 50);
                         anchor.getChildren().add(firstElf);

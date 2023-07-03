@@ -27,10 +27,10 @@ public class Administrator {
     private static ArrayList<String> characters = new ArrayList<>();
     //when user choose character we save name of character here and use it in battle!!
 
-    private static final JungleMapController jungleMapController = new JungleMapController();
-    private static final CastleBridgeMapController castleBridgeMapController = new CastleBridgeMapController();
-    private static final SkyBridgeMapController skyBridgeMapController = new SkyBridgeMapController();
-    private static final DarkJungleMapController darkJungleMapController = new DarkJungleMapController();
+    private static  JungleMapController jungleMapController = new JungleMapController();
+    private static  CastleBridgeMapController castleBridgeMapController = new CastleBridgeMapController();
+    private static  SkyBridgeMapController skyBridgeMapController = new SkyBridgeMapController();
+    private static  DarkJungleMapController darkJungleMapController = new DarkJungleMapController();
     /*controllers for when towers or the code needs access to the controllers , creating a new instance each time
     will cause bugs and won't let program function correctly*/
 
@@ -65,6 +65,7 @@ public class Administrator {
     public static ArrayList<String> getCharacters() {
         return characters;
     }
+
     public static Map getCurrentMap() {
         return currentMap;
     }
@@ -74,6 +75,22 @@ public class Administrator {
 
     public static JungleMapController getJungleMapController() {
         return jungleMapController;
+    }
+
+    public static void setJungleMapController(JungleMapController jungleMapController) {
+        Administrator.jungleMapController = jungleMapController;
+    }
+
+    public static void setCastleBridgeMapController(CastleBridgeMapController castleBridgeMapController) {
+        Administrator.castleBridgeMapController = castleBridgeMapController;
+    }
+
+    public static void setDarkJungleMapController(DarkJungleMapController darkJungleMapController) {
+        Administrator.darkJungleMapController = darkJungleMapController;
+    }
+
+    public static void setSkyBridgeMapController(SkyBridgeMapController skyBridgeMapController) {
+        Administrator.skyBridgeMapController = skyBridgeMapController;
     }
 
     public static CastleBridgeMapController getCastleBridgeMapController() {
@@ -87,4 +104,5 @@ public class Administrator {
     public static DarkJungleMapController getDarkJungleMapController() {
         return darkJungleMapController;
     }
+
 }

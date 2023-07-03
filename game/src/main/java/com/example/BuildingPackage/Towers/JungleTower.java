@@ -19,11 +19,14 @@ public class JungleTower extends Building
     String img_2 = this.getClass().getResource("/com/example/game/Images/JungleTower2.png").toString();
     String img_3 = this.getClass().getResource("/com/example/game/Images/JungleTower3.png").toString();
     String img_main = this.getClass().getResource("/com/example/game/Images/JungleTower1.png").toString();
+    String img_fire = this.getClass().getResource("/com/example/game/Images/fireball.png").toString();
 
     int multiplier = 2;
     boolean hasAttacked;
     public JungleTower(ImageView imageView)
     {
+        super.setX(imageView.getLayoutX());
+        super.setY(imageView.getLayoutY());
         hasAttacked = false;
         super.health = 400;
         super.damage = 20;
@@ -36,15 +39,16 @@ public class JungleTower extends Building
         for (Heroes hero : heroes)
         {
             System.out.println("salam man toye halqam");
-            double distance = Math.pow(Math.pow((hero.getTranslateX() - this.getTranslateX()) , 2) + Math.pow((hero.getTranslateY() - this.getTranslateY()) , 2) , 1/2);
-            System.out.println(this.getScaleX());
-            System.out.println(this.getTranslateY());
+            double distance = Math.pow(Math.pow((hero.getTranslateX() - this.getX()) , 2) + Math.pow((hero.getTranslateY() - this.getY()) , 2) ,  (double) 1 /2);
+            System.out.println("------------------------------------------------");
+
             System.out.println(distance);
-//            if (distance <= 200)
-//            {
-//                System.out.println("ye koskesh nazdik mane");
-//                attack(hero , jungleMapController , darkJungleMapController , map);
-//            }
+            System.out.println("------------------------------------------------");
+            if (distance <= 250)
+            {
+                System.out.println("ye adam nazdik mane");
+                attack(hero , jungleMapController , darkJungleMapController , map);
+            }
         }
 
     }
@@ -55,7 +59,7 @@ public class JungleTower extends Building
     {
         if (map instanceof JungleMap)
         {
-            ImageView imageView = new ImageView("C:\\Users\\OctavioX1\\IdeaProjects\\github-GameProject\\final-project-game-maya\\game\\src\\main\\resources\\com\\example\\game\\Images\\fireball.png");
+            ImageView imageView = new ImageView(img_fire);
             jungleMapController.getAnchor().getChildren().add(imageView);
             TranslateTransition transition = new TranslateTransition();
             transition.setNode(imageView);
@@ -71,7 +75,7 @@ public class JungleTower extends Building
         }
         else
         {
-            ImageView imageView = new ImageView("C:\\Users\\OctavioX1\\IdeaProjects\\github-GameProject\\final-project-game-maya\\game\\src\\main\\resources\\com\\example\\game\\Images\\fireball.png");
+            ImageView imageView = new ImageView(img_fire);
             darkJungleMapController.getAnchor().getChildren().add(imageView);
             TranslateTransition transition = new TranslateTransition();
             transition.setNode(imageView);

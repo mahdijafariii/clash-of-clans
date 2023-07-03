@@ -2,6 +2,7 @@ package com.example.ViewPackage;
 
 import com.example.BuildingPackage.Building;
 import com.example.BuildingPackage.Towers.JungleTower;
+import com.example.BuildingPackage.Towers.SkyBridgeTower;
 import com.example.HeroPackage.Heroes;
 import com.example.HeroPackage.Knight.FirstKnight;
 import com.example.HeroPackage.Knight.SecondKnight;
@@ -11,7 +12,7 @@ import com.example.HeroPackage.Warrior.SecondWarrior;
 import com.example.HeroPackage.elves.FirstElf;
 import com.example.HeroPackage.elves.SecondElf;
 import com.example.HeroPackage.elves.ThirdElf;
-import com.example.MapPackage.JungleMap;
+import com.example.MapPackage.TwoPlayerMap;
 import com.example.UserPackage.Administrator;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -28,8 +29,69 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.concurrent.atomic.AtomicReference;
 
-public class JungleMapController implements Initializable
+public class TwoPlayerMapController implements Initializable
 {
+    @FXML
+    private AnchorPane anchor;
+    @FXML
+    private ImageView castle_1;
+    @FXML
+    private ImageView castle_2;
+    @FXML
+    private ImageView hero_1;
+    @FXML
+    private ImageView hero_2;
+    @FXML
+    private ImageView hero_3;
+    @FXML
+    private ImageView hero_4;
+    @FXML
+    private Label name_1;
+    @FXML
+    private Label name_2;
+    @FXML
+    private Label name_3;
+    @FXML
+    private Label name_4;
+    @FXML
+    private Label numberHero;
+    @FXML
+    private Label numberHero2;
+    @FXML
+    private Label numberHero3;
+    @FXML
+    private Label numberHero4;
+    @FXML
+    private ProgressBar progress;
+    @FXML
+    private ImageView star_1;
+    @FXML
+    private ImageView star_2;
+    @FXML
+    private ImageView star_3;
+    @FXML
+    private ImageView tower_1;
+    @FXML
+    private ImageView tower_2;
+    @FXML
+    private ImageView tower_3;
+    @FXML
+    private ImageView tower_4;
+
+    @FXML
+    public ArrayList<ImageView> getImages()
+    {
+        ArrayList<ImageView> images = new ArrayList<>();
+        images.add(tower_3);
+        images.add(tower_4);
+        images.add(tower_1);
+        images.add(tower_2);
+        images.add(castle_1);
+        images.add(castle_2);
+
+        return images;
+    }
+
     String knight1_head = this.getClass().getResource("/com/example/game/Images/Knight1_Head.png").toString();
     String knight2_head = this.getClass().getResource("/com/example/game/Images/Knight2_Head.png").toString();
     String knight3_head = this.getClass().getResource("/com/example/game/Images/Knight3_Head.png").toString();
@@ -42,96 +104,9 @@ public class JungleMapController implements Initializable
     ArrayList<ImageView> cardFrame = new ArrayList<>();
     ArrayList<Heroes> allHeroes = new ArrayList<>();
 
-
-
-    @FXML
-    private AnchorPane anchor;
-    @FXML
-    private ImageView castle_1;
-
-    @FXML
-    private ImageView door_1;
-
-    @FXML
-    private ImageView door_2;
-
-    @FXML
-    private ImageView hero_1;
-
-    @FXML
-    private ImageView hero_2;
-
-    @FXML
-    private ImageView hero_3;
-
-    @FXML
-    private ImageView hero_4;
-
-    @FXML
-    private Label name_1;
-
-    @FXML
-    private Label name_2;
-
-    @FXML
-    private Label name_3;
-
-    @FXML
-    private Label name_4;
-
-    @FXML
-    private Label numberHero;
-
-    @FXML
-    private Label numberHero2;
-
-    @FXML
-    private Label numberHero3;
-
-    @FXML
-    private Label numberHero4;
-
-    @FXML
-    private ProgressBar progress;
-
-    @FXML
-    private ImageView star_1;
-
-    @FXML
-    private ImageView star_2;
-
-    @FXML
-    private ImageView star_3;
-
-    @FXML
-    private ImageView tower_1;
-
-    @FXML
-    private ImageView tower_2;
-    @FXML
-    public AnchorPane getAnchor()
-    {
-        return anchor;
-    }
-
-    @FXML
-    public ArrayList<ImageView> getImages()
-    {
-        ArrayList<ImageView> images = new ArrayList<>();
-        images.add(door_1);
-        images.add(door_2);
-        images.add(tower_1);
-        images.add(tower_2);
-        images.add(castle_1);
-
-        return images;
-    }
-
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
-
-
+    public void initialize(URL url, ResourceBundle resourceBundle)
+    {
         for(int i = 0 ; i < 4 ; i++){
             if(Administrator.getCharacters().get(i).equals("Elf1")){
                 if(hero_1.getImage()==null){
@@ -355,34 +330,19 @@ public class JungleMapController implements Initializable
         //starting Threads
         if (Administrator.getCurrentMap() == null)
         {
-            JungleMap jungleMap = new JungleMap(this);
-            Administrator.setJungleMapController(this);
-            Administrator.setCurrentMap(jungleMap);
+            TwoPlayerMap twoPlayerMap = new TwoPlayerMap(this);
+            Administrator.setTwoPlayerMapController(this);
+            Administrator.setCurrentMap(twoPlayerMap);
         }
         for (Building building : Administrator.getCurrentMap().getBuildings())
         {
-            if (building instanceof JungleTower)
+            if (building instanceof SkyBridgeTower)
             {
                 ((JungleTower) building).startThread();
                 System.out.println("thread ran");
             }
         }
-        //-------------------------------------------------------------------
-
-        checkHeroHealth();
-        System.out.println(allHeroes.size());
-
     }
-
-    public void checkHeroHealth(){
-                    System.out.println(allHeroes.size());
-    }
-
-
-
-
-
-
     ImageView getCopy(ImageView image){
         ImageView ImageView = new ImageView(image.getImage()) ;
         return ImageView;
@@ -443,5 +403,4 @@ public class JungleMapController implements Initializable
             });
         }
     }//end make drag
-
 }

@@ -1,10 +1,7 @@
 package com.example.UserPackage;
 
 import com.example.MapPackage.Map;
-import com.example.ViewPackage.CastleBridgeMapController;
-import com.example.ViewPackage.DarkJungleMapController;
-import com.example.ViewPackage.JungleMapController;
-import com.example.ViewPackage.SkyBridgeMapController;
+import com.example.ViewPackage.*;
 
 import java.util.ArrayList;
 
@@ -31,6 +28,7 @@ public class Administrator {
     private static  CastleBridgeMapController castleBridgeMapController = new CastleBridgeMapController();
     private static  SkyBridgeMapController skyBridgeMapController = new SkyBridgeMapController();
     private static  DarkJungleMapController darkJungleMapController = new DarkJungleMapController();
+    private static TwoPlayerMapController twoPlayerMapController = new TwoPlayerMapController();
     /*controllers for when towers or the code needs access to the controllers , creating a new instance each time
     will cause bugs and won't let program function correctly*/
 
@@ -105,4 +103,11 @@ public class Administrator {
         return darkJungleMapController;
     }
 
+    public static TwoPlayerMapController getTwoPlayerMapController() {
+        return twoPlayerMapController;
+    }
+
+    public static void setTwoPlayerMapController(TwoPlayerMapController twoPlayerMapController) {
+        Administrator.twoPlayerMapController = twoPlayerMapController;
+    }
 }

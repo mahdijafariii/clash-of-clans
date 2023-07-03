@@ -37,21 +37,22 @@ public class JungleTower extends Building
 
     public void checkForEnemies(ArrayList<Heroes> heroes , JungleMapController jungleMapController , DarkJungleMapController darkJungleMapController , Map map)
     {
-        for (Heroes hero : heroes)
+        if (!heroes.isEmpty())
         {
-            System.out.println("salam man toye halqam");
-            double distance = Math.pow(Math.pow((hero.getTranslateX() - this.getX()) , 2) + Math.pow((hero.getTranslateY() - this.getY()) , 2) ,  (double) 1 /2);
-            System.out.println("------------------------------------------------");
-
-            System.out.println(distance);
-            System.out.println("------------------------------------------------");
-            if (distance <= 250)
+            System.out.println("Size : " + heroes.size());
+            for (Heroes hero : heroes)
             {
-                System.out.println("ye adam nazdik mane");
-                attack(hero , jungleMapController , darkJungleMapController , map);
+                double distance = Math.pow(Math.pow((hero.getTranslateX() - this.getX()) , 2) + Math.pow((hero.getTranslateY() - this.getY()) , 2) ,  (double) 1 /2);
+                System.out.println("------------------------------------------------");
+                System.out.println(distance);
+                System.out.println("------------------------------------------------");
+                if (distance <= 250)
+                {
+                    System.out.println("ye adam nazdik mane");
+                    attack(hero , jungleMapController , darkJungleMapController , map);
+                }
             }
         }
-
     }
 
     //-----------------ATTACK FUNCTION--------------------
@@ -60,21 +61,20 @@ public class JungleTower extends Building
     {
         if (map instanceof JungleMap)
         {
-//            ImageView imageView = new ImageView(img_fire);
-//            jungleMapController.getAnchor().getChildren().add(imageView);
-//            TranslateTransition transition = new TranslateTransition();
-//            transition.setNode(imageView);
-//            transition.setFromX(this.getTranslateX());
-//            transition.setFromY(this.getTranslateY());
-//            transition.setToX(hero.getTranslateX());
-//            transition.setToY(hero.getTranslateY());
-//            transition.setDuration(new Duration(2000));
-//            transition.play();
-//            jungleMapController.getAnchor().getChildren().remove(imageView);
+            ImageView imageView = new ImageView(img_fire);
+            jungleMapController.getAnchor().getChildren().add(imageView);
+            TranslateTransition transition = new TranslateTransition();
+            transition.setNode(imageView);
+            transition.setFromX(this.getTranslateX());
+            transition.setFromY(this.getTranslateY());
+            transition.setToX(hero.getTranslateX());
+            transition.play();
+            jungleMapController.getAnchor().getChildren().remove(imageView);
             hero.setHealth(hero.getHealth() - 20);
             jungleMapController.checkHeroHealth();
             if(hero.getHealth()<=0){
-//                Administrator.getCurrentMap().getHeroes().remove(hero);
+                Administrator.getCurrentMap().getHeroes().remove(hero);
+                Administrator.getJungleMapController().getAnchor().getChildren().remove(hero);
             }
             hasAttacked = true;
 

@@ -13,7 +13,7 @@ import javafx.util.Duration;
 
 import java.util.ArrayList;
 
-public class CastleBridgeTower extends Building implements Runnable
+public class CastleBridgeTower extends Building
 {
     String img_1 = this.getClass().getResource("/com/example/game/Images/CastleBridgeTower1.png").toString();
     String img_2 = this.getClass().getResource("/com/example/game/Images/CastleBridgeTower2/.png").toString();
@@ -34,12 +34,15 @@ public class CastleBridgeTower extends Building implements Runnable
 
     public void checkForEnemies(ArrayList<Heroes> heroes , CastleBridgeMapController castleBridgeMapController)
     {
-        for (Heroes hero : heroes)
+        if (!heroes.isEmpty())
         {
-            double distance = Math.pow((hero.getTranslateX() - this.getTranslateX()) , 2) + Math.pow((hero.getTranslateY() - this.getTranslateY()) , 2);
-            if (distance <= 200)
+            for (Heroes hero : heroes)
             {
-                attack(hero , castleBridgeMapController);
+                double distance = Math.sqrt(Math.pow((hero.getTranslateX() - this.getX()) , 2) + Math.pow((hero.getTranslateY() - this.getY()) , 2));
+                if (distance <= 250)
+                {
+                    attack(hero , castleBridgeMapController);
+                }
             }
         }
     }
@@ -48,6 +51,9 @@ public class CastleBridgeTower extends Building implements Runnable
 
     public void attack(Heroes hero , CastleBridgeMapController castleBridgeMapController)
     {
+        if (!hero.getImage().getUrl().equals(this.getClass().getResource("/com/example/game/Images/Die-1.png").toString()))
+        {
+            /*
         ImageView imageView = new ImageView("C:\\Users\\OctavioX1\\IdeaProjects\\github-GameProject\\final-project-game-maya\\game\\src\\main\\resources\\com\\example\\game\\Images\\fireball.png");
         castleBridgeMapController.getAnchor().getChildren().add(imageView);
         TranslateTransition transition = new TranslateTransition();
@@ -58,13 +64,24 @@ public class CastleBridgeTower extends Building implements Runnable
         transition.setToY(hero.getTranslateY());
         transition.setDuration(new Duration(2000));
         transition.play();
-        castleBridgeMapController.getAnchor().getChildren().remove(imageView);
-        hero.setHealth(hero.getHealth() - getDamage());
-        hasAttacked = true;
+         */
+            hero.setHealth(hero.getHealth() - getDamage());
+            if(hero.getHealth()<=0)
+            {
+                hero.setImage(new Image(this.getClass().getResource("/com/example/game/Images/Die-1.png").toString()));
+                hero.setFitHeight(30);
+                hero.setFitWidth(30);
+                hero.setTranslateX(hero.getTranslateX() + 40);
+                hero.setTranslateY(hero.getTranslateY() + 20);
+                hero = null;
+            }
+            hasAttacked = true;
+        }
     }
 
     //-----------------CHECK FOR TOWER HEALTH FUNCTION--------------------
 
+    /*
     public void checkForHealth(CastleBridgeMapController castleBridgeMapController)
     {
         if (this.getHealth() <= 200)
@@ -94,26 +111,29 @@ public class CastleBridgeTower extends Building implements Runnable
         }
     }
 
+     */
+
     //-----------------RUN METHOD--------------------
-    @Override
-    public void run()
+    public void startThread()
     {
-        while (true)
-        {
-            checkForHealth(Administrator.getCastleBridgeMapController());
-            checkForEnemies(Administrator.getCurrentMap().getHeroes(), Administrator.getCastleBridgeMapController());
-            if (hasAttacked)
+        new Thread(()->{
+            while (true)
             {
-                try
+                //checkForHealth(Administrator.getDarkJungleMapController() , Administrator.getJungleMapController() , Administrator.getCurrentMap());
+                checkForEnemies(Administrator.getCurrentMap().getHeroes(), Administrator.getCastleBridgeMapController());
+                if (hasAttacked)
                 {
-                    Thread.sleep(2000);
-                    hasAttacked = false;
-                }
-                catch (InterruptedException e)
-                {
-                    throw new RuntimeException(e);
+                    try
+                    {
+                        Thread.sleep(1000);
+                        hasAttacked = false;
+                    }
+                    catch (InterruptedException e)
+                    {
+                        throw new RuntimeException(e);
+                    }
                 }
             }
-        }
+        }).start();
     }
 }

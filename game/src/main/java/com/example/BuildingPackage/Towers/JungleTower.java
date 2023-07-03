@@ -35,7 +35,7 @@ public class JungleTower extends Building
 
     //-----------------CHECK FOR ENEMIES FUNCTION--------------------
 
-    public void checkForEnemies(ArrayList<Heroes> heroes , JungleMapController jungleMapController , DarkJungleMapController darkJungleMapController , Map map)
+    public void checkForEnemies(ArrayList<Heroes> heroes , JungleMapController jungleMapController , DarkJungleMapController darkJungleMapController , Map map) throws InterruptedException
     {
         if (!heroes.isEmpty())
         {
@@ -44,7 +44,6 @@ public class JungleTower extends Building
                 double distance = Math.sqrt(Math.pow((hero.getTranslateX() - this.getX()) , 2) + Math.pow((hero.getTranslateY() - this.getY()) , 2));
                 if (distance <= 250)
                 {
-                    System.out.println("Enemy Found , Distance : " + distance);
                     attack(this , hero , jungleMapController , darkJungleMapController , map);
                 }
             }
@@ -53,37 +52,34 @@ public class JungleTower extends Building
 
     //-----------------ATTACK FUNCTION--------------------
 
-    public void attack(JungleTower jungleTower , Heroes hero , JungleMapController jungleMapController , DarkJungleMapController darkJungleMapController , Map map)
-    {
+    public void attack(JungleTower jungleTower , Heroes hero , JungleMapController jungleMapController , DarkJungleMapController darkJungleMapController , Map map) throws InterruptedException {
         if (map instanceof JungleMap)
         {
             if (!hero.getImage().getUrl().equals(this.getClass().getResource("/com/example/game/Images/Die-1.png").toString()))
             {
+                /*
+                ImageView imageView = new ImageView(new Image(this.getClass().getResource("/com/example/game/Images/fireball.png").toString()));
                 Heroes finalHero = hero;
-                Platform.runLater(new Runnable()
+                Platform.runLater(() ->
                 {
-                    @Override
-                    public void run()
-                    {
-                        System.out.println("Attack!");
-                        System.out.println(finalHero.getHealth());
-                        ImageView imageView = new ImageView(new Image(this.getClass().getResource("/com/example/game/Images/fireball.png").toString()));
-                        imageView.setTranslateX(jungleTower.getTranslateX());
-                        imageView.setTranslateY(jungleTower.getTranslateY());
-                        jungleMapController.getAnchor().getChildren();
-                        jungleMapController.getAnchor().getChildren().add(imageView);
-                        TranslateTransition transition = new TranslateTransition();
-                        transition.setNode(imageView);
-                        transition.setByX(Math.abs(finalHero.getTranslateX() - jungleTower.getTranslateX()));
-                        transition.setByY(Math.abs(finalHero.getTranslateY() - jungleTower.getTranslateY()));
-                        transition.setDuration(new Duration(1000));
-                        transition.play();
-                        System.out.println("Play shod!");
-                        //jungleMapController.getAnchor().getChildren().remove(imageView);
-                    }
+                    jungleMapController.getAnchor().getChildren().add(imageView);
+                    TranslateTransition transition = new TranslateTransition();
+                    transition.setNode(imageView);
+                    transition.setToX(finalHero.getTranslateX());
+                    transition.setToY(finalHero.getTranslateY());
+                    transition.setDuration(new Duration(1000));
+                    transition.play();
                 });
+
+                Thread.sleep(1000);
+
+                Platform.runLater(() ->
+                {
+                    jungleMapController.getAnchor().getChildren().remove(imageView);
+                });
+
+                 */
                 hero.setHealth(hero.getHealth() - damage);
-                jungleMapController.checkHeroHealth();
                 if(hero.getHealth()<=0)
                 {
                     hero.setImage(new Image(this.getClass().getResource("/com/example/game/Images/Die-1.png").toString()));
@@ -95,41 +91,51 @@ public class JungleTower extends Building
                 }
                 hasAttacked = true;
             }
-            else
-            {
-                System.out.println("Hero Is Fuckin Dead");
-            }
         }
         else
         {
-            ImageView imageView = new ImageView(img_fire);
-            darkJungleMapController.getAnchor().getChildren().add(imageView);
-            TranslateTransition transition = new TranslateTransition();
-            transition.setNode(imageView);
-            transition.setFromX(this.getTranslateX());
-            transition.setFromY(this.getTranslateY());
-            transition.setToX(hero.getTranslateX());
-            transition.setToY(hero.getTranslateY());
-            transition.setDuration(new Duration(2000));
-            transition.play();
-            darkJungleMapController.getAnchor().getChildren().remove(imageView);
-            hero.setHealth(hero.getHealth() - damage);
-
-            if(hero.getHealth()<=0)
+            if (!hero.getImage().getUrl().equals(this.getClass().getResource("/com/example/game/Images/Die-1.png").toString()))
             {
-                hero.setImage(new Image(this.getClass().getResource("/com/example/game/Images/Die-1.png").toString()));
-                hero.setFitHeight(30);
-                hero.setFitWidth(30);
-                hero.setTranslateX(hero.getTranslateX() + 40);
-                hero.setTranslateY(hero.getTranslateY() + 20);
-                hero = null;
+                /*
+                ImageView imageView = new ImageView(new Image(this.getClass().getResource("/com/example/game/Images/fireball.png").toString()));
+                Heroes finalHero = hero;
+                Platform.runLater(() ->
+                {
+                    jungleMapController.getAnchor().getChildren().add(imageView);
+                    TranslateTransition transition = new TranslateTransition();
+                    transition.setNode(imageView);
+                    transition.setToX(finalHero.getTranslateX());
+                    transition.setToY(finalHero.getTranslateY());
+                    transition.setDuration(new Duration(1000));
+                    transition.play();
+                });
+
+                Thread.sleep(1000);
+
+                Platform.runLater(() ->
+                {
+                    jungleMapController.getAnchor().getChildren().remove(imageView);
+                });
+
+                 */
+                hero.setHealth(hero.getHealth() - damage);
+                if(hero.getHealth()<=0)
+                {
+                    hero.setImage(new Image(this.getClass().getResource("/com/example/game/Images/Die-1.png").toString()));
+                    hero.setFitHeight(30);
+                    hero.setFitWidth(30);
+                    hero.setTranslateX(hero.getTranslateX() + 40);
+                    hero.setTranslateY(hero.getTranslateY() + 20);
+                    hero = null;
+                }
+                hasAttacked = true;
             }
-            hasAttacked = true;
         }
     }
 
     //-----------------CHECK FOR TOWER HEALTH FUNCTION--------------------
 
+    /*
     public void checkForHealth(DarkJungleMapController darkJungleMapController , JungleMapController jungleMapController , Map map)
     {
         if (map instanceof JungleMap)
@@ -190,15 +196,22 @@ public class JungleTower extends Building
         }
     }
 
+     */
+
     //-----------------RUN METHOD--------------------
    public void startThread()
    {
-       Administrator.getJungleMapController().checkHeroHealth();
        new Thread(()->{
            while (true)
            {
-               checkForHealth(Administrator.getDarkJungleMapController() , Administrator.getJungleMapController() , Administrator.getCurrentMap());
-               checkForEnemies(Administrator.getCurrentMap().getHeroes(), Administrator.getJungleMapController() , Administrator.getDarkJungleMapController() , Administrator.getCurrentMap());
+               //checkForHealth(Administrator.getDarkJungleMapController() , Administrator.getJungleMapController() , Administrator.getCurrentMap());
+               try
+               {
+                   checkForEnemies(Administrator.getCurrentMap().getHeroes(), Administrator.getJungleMapController() , Administrator.getDarkJungleMapController() , Administrator.getCurrentMap());
+               }
+               catch (InterruptedException e) {
+                   throw new RuntimeException(e);
+               }
                if (hasAttacked)
                {
                    try
@@ -211,17 +224,7 @@ public class JungleTower extends Building
                        throw new RuntimeException(e);
                    }
                }
-               try
-               {
-                   Thread.sleep(1000);
-               }
-               catch (InterruptedException e)
-               {
-                   throw new RuntimeException(e);
-               }
            }
-
        }).start();
    }
-
 }

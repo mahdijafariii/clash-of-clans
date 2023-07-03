@@ -83,7 +83,6 @@ public class JungleTower extends Building
                     }
                 });
                 hero.setHealth(hero.getHealth() - damage);
-                jungleMapController.checkHeroHealth();
                 if(hero.getHealth()<=0)
                 {
                     hero.setImage(new Image(this.getClass().getResource("/com/example/game/Images/Die-1.png").toString()));
@@ -193,7 +192,7 @@ public class JungleTower extends Building
     //-----------------RUN METHOD--------------------
    public void startThread()
    {
-       Administrator.getJungleMapController().checkHeroHealth();
+
        new Thread(()->{
            while (true)
            {

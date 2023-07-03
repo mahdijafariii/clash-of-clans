@@ -352,30 +352,43 @@ public class JungleMapController implements Initializable
 
         //-------------------------------------------------------------------
 
-        //starting Threads
+        //starting Threads of attack Towers
         if (Administrator.getCurrentMap() == null)
         {
             JungleMap jungleMap = new JungleMap(this);
             Administrator.setJungleMapController(this);
             Administrator.setCurrentMap(jungleMap);
         }
-        for (Building building : Administrator.getCurrentMap().getBuildings())
-        {
-            if (building instanceof JungleTower)
-            {
-                ((JungleTower) building).startThread();
-            }
-        }
+//        for (Building building : Administrator.getCurrentMap().getBuildings())
+//        {
+//            if (building instanceof JungleTower)
+//            {
+//                ((JungleTower) building).startThread();
+//            }
+//        }
         //-------------------------------------------------------------------
+        new Thread(()->{
+            while (true){
+                Administrator.getCurrentMap().setHeroes(allHeroes);
+                if(Administrator.getCurrentMap().getHeroes().size()!=0){
+                    for (int i = 0 ; i <Administrator.getCurrentMap().getHeroes().size() ; i++){
+                        if(Administrator.getCurrentMap().getHeroes().get(i) instanceof FirstElf)
+                            ((FirstElf) Administrator.getCurrentMap().getHeroes().get(i)).startBattleAttacking();
+                    }
 
-        checkHeroHealth();
-        System.out.println(allHeroes.size());
+                    System.out.println("man to thread start shodam");
+                }
+                try {
+                    Thread.sleep(4000);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+        }).start();
 
     }
 
-    public void checkHeroHealth(){
-                    System.out.println(allHeroes.size());
-    }
 
 
 

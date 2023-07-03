@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af8125d7-6521-4a45-8aa6-6ded62a218e8" name="Changes" comment="fix some bugs of map controller and edit fxml file of them&#10;add drag and drop test for light jungle map">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/BuildingPackage/Towers/JungleTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/BuildingPackage/Towers/JungleTower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/DarkJungleMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/DarkJungleMapController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/JungleMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/JungleMapController.java" afterDir="false" />
-    </list>
+    <list default="true" id="af8125d7-6521-4a45-8aa6-6ded62a218e8" name="Changes" comment="change thread and the function of tower !" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -213,7 +208,15 @@
       <option name="project" value="LOCAL" />
       <updated>1688236533456</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="change thread and the function of tower !">
+      <option name="closed" value="true" />
+      <created>1688345798161</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1688345798161</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,6 +250,7 @@
     <MESSAGE value="add picture of heroes to fxml file of map" />
     <MESSAGE value="change image of elf and add Test User for start Attack Test" />
     <MESSAGE value="fix some bugs of map controller and edit fxml file of them&#10;add drag and drop test for light jungle map" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix some bugs of map controller and edit fxml file of them&#10;add drag and drop test for light jungle map" />
+    <MESSAGE value="change thread and the function of tower !" />
+    <option name="LAST_COMMIT_MESSAGE" value="change thread and the function of tower !" />
   </component>
 </project>

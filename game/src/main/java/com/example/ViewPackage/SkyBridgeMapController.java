@@ -12,6 +12,7 @@ import com.example.HeroPackage.Warrior.SecondWarrior;
 import com.example.HeroPackage.elves.FirstElf;
 import com.example.HeroPackage.elves.SecondElf;
 import com.example.HeroPackage.elves.ThirdElf;
+import com.example.MapPackage.SkyBridgeMap;
 import com.example.UserPackage.Administrator;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -336,11 +337,17 @@ public class SkyBridgeMapController implements Initializable
         //-------------------------------------------------------------------
 
         //starting building threads
+        if (Administrator.getSelectedMap() == null)
+        {
+            SkyBridgeMap skyBridgeMap = new SkyBridgeMap(this);
+            Administrator.setCurrentMap(skyBridgeMap);
+        }
         for (Building building : Administrator.getCurrentMap().getBuildings())
         {
             if (building instanceof SkyBridgeTower)
             {
                 ((SkyBridgeTower) building).run();
+                System.out.println("thread ran");
             }
         }
 

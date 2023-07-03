@@ -40,11 +40,8 @@ public class JungleMapController implements Initializable
     String elf3_head = this.getClass().getResource("/com/example/game/Images/Elf3_head.png").toString();
 
     ArrayList<ImageView> cardFrame = new ArrayList<>();
-    private ArrayList<Heroes> allHeroes = new ArrayList<>();
+    ArrayList<Heroes> allHeroes = new ArrayList<>();
 
-    public ArrayList<Heroes> getAllHeroes() {
-        return allHeroes;
-    }
 
 
     @FXML
@@ -362,14 +359,12 @@ public class JungleMapController implements Initializable
         {
             JungleMap jungleMap = new JungleMap(this);
             Administrator.setCurrentMap(jungleMap);
-            System.out.println(jungleMap.getBuildings().size());
-
         }
         for (Building building : Administrator.getCurrentMap().getBuildings())
         {
             if (building instanceof JungleTower)
             {
-                ((JungleTower) building).startThread();
+                ((JungleTower) building).run();
                 System.out.println("thread ran");
             }
         }
@@ -398,12 +393,11 @@ public class JungleMapController implements Initializable
                 test.get().setTranslateY(e.getSceneY());
             });
             hero.setOnMouseReleased(e ->{
-                if(e.getSceneY()>140 && e.getSceneY()<440) {
+                if(e.getSceneX()<300 && e.getSceneY()>140 && e.getSceneY()<440) {
                     if (hero.getId().equals("elf1")) {
                         FirstElf firstElf = new FirstElf(e.getSceneX() - 100, e.getSceneY() - 50);
                         anchor.getChildren().add(firstElf);
                         allHeroes.add(firstElf);
-                        Administrator.getCurrentMap().setHeroes(allHeroes);
                     } else if (hero.getId().equals("elf2")) {
                         SecondElf secondElf = new SecondElf(e.getSceneX() - 100, e.getSceneY() - 50);
                         anchor.getChildren().add(secondElf);

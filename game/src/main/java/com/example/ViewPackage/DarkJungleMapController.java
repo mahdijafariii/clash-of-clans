@@ -357,7 +357,7 @@ public class DarkJungleMapController implements Initializable
         {
             if (building instanceof JungleTower)
             {
-                ((JungleTower) building).run();
+                ((JungleTower) building).startThread();
             }
         }
 
@@ -389,6 +389,7 @@ public class DarkJungleMapController implements Initializable
                         FirstElf firstElf = new FirstElf(e.getSceneX() - 100, e.getSceneY() - 50);
                         anchor.getChildren().add(firstElf);
                         allHeroes.add(firstElf);
+
                     } else if (hero.getId().equals("elf2")) {
                         SecondElf secondElf = new SecondElf(e.getSceneX() - 100, e.getSceneY() - 50);
                         anchor.getChildren().add(secondElf);

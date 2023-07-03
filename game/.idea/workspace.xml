@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af8125d7-6521-4a45-8aa6-6ded62a218e8" name="Changes" comment="fix some bugs of map controller and edit fxml file of them&#10;add drag and drop test for light jungle map">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/MapPackage/JungleMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/MapPackage/JungleMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/CastleBridgeMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/CastleBridgeMapController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/BuildingPackage/Towers/JungleTower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/BuildingPackage/Towers/JungleTower.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/DarkJungleMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/DarkJungleMapController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/JungleMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/JungleMapController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/SkyBridgeMapController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ViewPackage/SkyBridgeMapController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

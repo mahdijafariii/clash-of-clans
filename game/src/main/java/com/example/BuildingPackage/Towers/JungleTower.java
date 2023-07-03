@@ -13,7 +13,7 @@ import javafx.scene.image.ImageView;
 import javafx.util.Duration;
 import java.util.ArrayList;
 
-public class JungleTower extends Building implements Runnable
+public class JungleTower extends Building
 {
     String img_1 = this.getClass().getResource("/com/example/game/Images/JungleTower1.png").toString();
     String img_2 = this.getClass().getResource("/com/example/game/Images/JungleTower2.png").toString();
@@ -35,11 +35,16 @@ public class JungleTower extends Building implements Runnable
     {
         for (Heroes hero : heroes)
         {
-            double distance = Math.pow((hero.getTranslateX() - this.getTranslateX()) , 2) + Math.pow((hero.getTranslateY() - this.getTranslateY()) , 2);
-            if (distance <= 200)
-            {
-                attack(hero , jungleMapController , darkJungleMapController , map);
-            }
+            System.out.println("salam man toye halqam");
+            double distance = Math.pow(Math.pow((hero.getTranslateX() - this.getTranslateX()) , 2) + Math.pow((hero.getTranslateY() - this.getTranslateY()) , 2) , 1/2);
+            System.out.println(this.getScaleX());
+            System.out.println(this.getTranslateY());
+            System.out.println(distance);
+//            if (distance <= 200)
+//            {
+//                System.out.println("ye koskesh nazdik mane");
+//                attack(hero , jungleMapController , darkJungleMapController , map);
+//            }
         }
 
     }
@@ -145,25 +150,37 @@ public class JungleTower extends Building implements Runnable
     }
 
     //-----------------RUN METHOD--------------------
-    @Override
-    public void run()
-    {
-        while (true)
-        {
-            checkForHealth(Administrator.getDarkJungleMapController() , Administrator.getJungleMapController() , Administrator.getCurrentMap());
-            checkForEnemies(Administrator.getCurrentMap().getHeroes(), Administrator.getJungleMapController() , Administrator.getDarkJungleMapController() , Administrator.getCurrentMap());
-            if (hasAttacked)
-            {
-                try
-                {
-                    Thread.sleep(2000);
-                    hasAttacked = false;
-                }
-                catch (InterruptedException e)
-                {
-                    throw new RuntimeException(e);
-                }
-            }
-        }
-    }
+   public void startThread(){
+       new Thread(()->{
+           while (true)
+           {
+               checkForHealth(Administrator.getDarkJungleMapController() , Administrator.getJungleMapController() , Administrator.getCurrentMap());
+               checkForEnemies(Administrator.getCurrentMap().getHeroes(), Administrator.getJungleMapController() , Administrator.getDarkJungleMapController() , Administrator.getCurrentMap());
+               System.out.println("salam");
+               System.out.println(Administrator.getCurrentMap().getHeroes().size());
+               if (hasAttacked)
+               {
+                   try
+                   {
+                       Thread.sleep(2000);
+
+                       hasAttacked = false;
+                   }
+                   catch (InterruptedException e)
+                   {
+                       throw new RuntimeException(e);
+                   }
+               }
+
+               try {
+                   Thread.sleep(8000);
+               } catch (InterruptedException e) {
+                   throw new RuntimeException(e);
+               }
+           }
+
+       }).start();
+   }
+
+
 }

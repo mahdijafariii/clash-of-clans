@@ -364,7 +364,7 @@ public class JungleMapController implements Initializable
         {
             if (building instanceof JungleTower)
             {
-//                ((JungleTower) building).run();
+                ((JungleTower) building).startThread();
                 System.out.println("thread ran");
             }
         }
@@ -398,6 +398,7 @@ public class JungleMapController implements Initializable
                         FirstElf firstElf = new FirstElf(e.getSceneX() - 100, e.getSceneY() - 50);
                         anchor.getChildren().add(firstElf);
                         allHeroes.add(firstElf);
+                        Administrator.getCurrentMap().setHeroes(allHeroes);
                     } else if (hero.getId().equals("elf2")) {
                         SecondElf secondElf = new SecondElf(e.getSceneX() - 100, e.getSceneY() - 50);
                         anchor.getChildren().add(secondElf);

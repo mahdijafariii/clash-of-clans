@@ -12,6 +12,8 @@ import com.example.HeroPackage.Warrior.SecondWarrior;
 import com.example.HeroPackage.elves.FirstElf;
 import com.example.HeroPackage.elves.SecondElf;
 import com.example.HeroPackage.elves.ThirdElf;
+import com.example.MapPackage.DarkJungleMap;
+import com.example.MapPackage.JungleMap;
 import com.example.UserPackage.Administrator;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -352,12 +354,17 @@ public class DarkJungleMapController implements Initializable
 
         //-------------------------------------------------------------------
         //starting Threads
-
+        if (Administrator.getCurrentMap() == null)
+        {
+            DarkJungleMap darkJungleMap = new DarkJungleMap(this);
+            Administrator.setCurrentMap(darkJungleMap);
+        }
         for (Building building : Administrator.getCurrentMap().getBuildings())
         {
             if (building instanceof JungleTower)
             {
                 ((JungleTower) building).run();
+                System.out.println("thread ran");
             }
         }
 

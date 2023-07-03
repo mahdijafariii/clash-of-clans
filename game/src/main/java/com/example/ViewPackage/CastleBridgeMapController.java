@@ -12,6 +12,7 @@ import com.example.HeroPackage.Warrior.SecondWarrior;
 import com.example.HeroPackage.elves.FirstElf;
 import com.example.HeroPackage.elves.SecondElf;
 import com.example.HeroPackage.elves.ThirdElf;
+import com.example.MapPackage.CastleBridgeMap;
 import com.example.UserPackage.Administrator;
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
@@ -357,12 +358,17 @@ public class CastleBridgeMapController implements Initializable
 
         //-------------------------------------------------------------------
         //starting Threads
-
+        if (Administrator.getCurrentMap() == null)
+        {
+            CastleBridgeMap castleBridgeMap = new CastleBridgeMap(this);
+            Administrator.setCurrentMap(castleBridgeMap);
+        }
         for (Building building : Administrator.getCurrentMap().getBuildings())
         {
             if (building instanceof CastleBridgeTower)
             {
                 ((CastleBridgeTower) building).run();
+                System.out.println("thread ran");
             }
         }
         //-------------------------------------------------------------------

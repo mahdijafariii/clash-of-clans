@@ -31,8 +31,8 @@ public class Administrator {
     private static final CastleBridgeMapController castleBridgeMapController = new CastleBridgeMapController();
     private static final SkyBridgeMapController skyBridgeMapController = new SkyBridgeMapController();
     private static final DarkJungleMapController darkJungleMapController = new DarkJungleMapController();
-    /*  controllers for when towers or the code needs access to the controllers , creating a new instance each time
-    will cause bugs and won't let program function correctly    */
+    /*controllers for when towers or the code needs access to the controllers , creating a new instance each time
+    will cause bugs and won't let program function correctly*/
 
     public static void setShowCharacter(String showCharacter) {
         Administrator.showCharacter = showCharacter;

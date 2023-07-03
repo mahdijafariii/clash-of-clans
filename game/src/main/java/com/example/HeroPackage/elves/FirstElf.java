@@ -1,12 +1,20 @@
 package com.example.HeroPackage.elves;
 
 import com.example.BuildingPackage.Building;
+import com.example.BuildingPackage.Castles.CastleBridgeCastle;
+import com.example.BuildingPackage.Castles.JungleCastle;
+import com.example.BuildingPackage.Castles.SkyBridgeCastle;
+import com.example.BuildingPackage.Doors.CastleBridgeDoor;
+import com.example.BuildingPackage.Doors.JungleDoor;
+import com.example.BuildingPackage.Doors.SkyBridgeDoor;
 import com.example.BuildingPackage.Towers.CastleBridgeTower;
 import com.example.BuildingPackage.Towers.JungleTower;
 import com.example.BuildingPackage.Towers.SkyBridgeTower;
 import com.example.HeroPackage.Heroes;
 import com.example.UserPackage.Administrator;
 import javafx.scene.image.Image;
+
+import java.util.ArrayList;
 
 public class FirstElf extends Heroes {
 
@@ -115,15 +123,52 @@ public class FirstElf extends Heroes {
 
 
     public void StartBattleAttacking(){
+        ArrayList<Building> castle = new ArrayList<>();
+        ArrayList<Building> doors = new ArrayList<>();
+        ArrayList<Building> towers = new ArrayList<>();
+        castle=castle();
+        doors=doors();
+        towers=towers();
+        // fek konam inja bayad ye while bezarim haqiqata !!
+        for(int i = 0 ; i < towers.size() ; i++ ){
+//            if()
 
-        for(int i = 0 ; i <Administrator.getCurrentMap().getBuildings().size() ; i++ ){
-            if(Administrator.getCurrentMap().getBuildings().get(i) instanceof CastleBridgeTower || Administrator.getCurrentMap().getBuildings().get(i) instanceof JungleTower ||Administrator.getCurrentMap().getBuildings().get(i) instanceof SkyBridgeTower){
-
-            }
         }
 
 
+
+
+
+
+
+
+
     }
+
+    public ArrayList<Building> towers (){
+        ArrayList<Building> towers = new ArrayList<>();
+        for(int i = 0 ; i <Administrator.getCurrentMap().getBuildings().size() ; i++ ){
+            if(Administrator.getCurrentMap().getBuildings().get(i) instanceof CastleBridgeTower || Administrator.getCurrentMap().getBuildings().get(i) instanceof JungleTower ||Administrator.getCurrentMap().getBuildings().get(i) instanceof SkyBridgeTower){
+                towers.add(Administrator.getCurrentMap().getBuildings().get(i));
+            }
+        }
+    return towers;}
+    public ArrayList<Building> castle (){
+        ArrayList<Building> castle = new ArrayList<>();
+        for(int i = 0 ; i <Administrator.getCurrentMap().getBuildings().size() ; i++ ){
+            if(Administrator.getCurrentMap().getBuildings().get(i) instanceof CastleBridgeCastle || Administrator.getCurrentMap().getBuildings().get(i) instanceof JungleCastle ||Administrator.getCurrentMap().getBuildings().get(i) instanceof SkyBridgeCastle){
+                castle.add(Administrator.getCurrentMap().getBuildings().get(i));
+            }
+        }
+        return castle;}
+    public ArrayList<Building> doors (){
+        ArrayList<Building> doors = new ArrayList<>();
+        for(int i = 0 ; i <Administrator.getCurrentMap().getBuildings().size() ; i++ ){
+            if(Administrator.getCurrentMap().getBuildings().get(i) instanceof CastleBridgeDoor || Administrator.getCurrentMap().getBuildings().get(i) instanceof JungleDoor ||Administrator.getCurrentMap().getBuildings().get(i) instanceof SkyBridgeDoor){
+                doors.add(Administrator.getCurrentMap().getBuildings().get(i));
+            }
+        }
+        return doors;}
 
 
 }

@@ -361,13 +361,14 @@ public class CastleBridgeMapController implements Initializable
         if (Administrator.getCurrentMap() == null)
         {
             CastleBridgeMap castleBridgeMap = new CastleBridgeMap(this);
+            Administrator.setCastleBridgeMapController(this);
             Administrator.setCurrentMap(castleBridgeMap);
         }
         for (Building building : Administrator.getCurrentMap().getBuildings())
         {
             if (building instanceof CastleBridgeTower)
             {
-                ((CastleBridgeTower) building).run();
+                ((CastleBridgeTower) building).startThread();
                 System.out.println("thread ran");
             }
         }

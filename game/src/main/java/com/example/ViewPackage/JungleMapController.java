@@ -364,7 +364,6 @@ public class JungleMapController implements Initializable
             if (building instanceof JungleTower)
             {
                 ((JungleTower) building).startThread();
-                System.out.println("thread ran");
             }
         }
         //-------------------------------------------------------------------

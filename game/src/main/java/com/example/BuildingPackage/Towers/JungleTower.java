@@ -74,16 +74,12 @@ public class JungleTower extends Building
                         jungleMapController.getAnchor().getChildren().add(imageView);
                         TranslateTransition transition = new TranslateTransition();
                         transition.setNode(imageView);
-                        transition.setFromX(jungleTower.getX()-110);
-                        transition.setByX((finalHero.getTranslateX()) - (jungleTower.getX()));
-
-                        System.out.println(finalHero.getTranslateX() - (jungleTower.getX()*2));
-
-//                        transition.setByY(Math.abs(jungleTower.getTranslateY()-finalHero.getTranslateY() ));
-                        transition.setDuration(new Duration(2000));
+                        transition.setByX(Math.abs(finalHero.getTranslateX() - jungleTower.getTranslateX()));
+                        transition.setByY(Math.abs(finalHero.getTranslateY() - jungleTower.getTranslateY()));
+                        transition.setDuration(new Duration(1000));
                         transition.play();
                         System.out.println("Play shod!");
-//                        jungleMapController.getAnchor().getChildren().remove(imageView);
+                        //jungleMapController.getAnchor().getChildren().remove(imageView);
                     }
                 });
                 hero.setHealth(hero.getHealth() - damage);

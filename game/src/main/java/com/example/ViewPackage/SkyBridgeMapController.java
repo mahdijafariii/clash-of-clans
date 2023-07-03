@@ -340,14 +340,14 @@ public class SkyBridgeMapController implements Initializable
         if (Administrator.getSelectedMap() == null)
         {
             SkyBridgeMap skyBridgeMap = new SkyBridgeMap(this);
+            Administrator.setSkyBridgeMapController(this);
             Administrator.setCurrentMap(skyBridgeMap);
         }
         for (Building building : Administrator.getCurrentMap().getBuildings())
         {
             if (building instanceof SkyBridgeTower)
             {
-                ((SkyBridgeTower) building).run();
-                System.out.println("thread ran");
+                ((SkyBridgeTower) building).startThread();
             }
         }
 

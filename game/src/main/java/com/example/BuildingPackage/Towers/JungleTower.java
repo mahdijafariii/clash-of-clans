@@ -68,16 +68,18 @@ public class JungleTower extends Building
                         System.out.println("Attack!");
                         System.out.println(finalHero.getHealth());
                         ImageView imageView = new ImageView(new Image(this.getClass().getResource("/com/example/game/Images/fireball.png").toString()));
+                        imageView.setTranslateX(jungleTower.getTranslateX());
+                        imageView.setTranslateY(jungleTower.getTranslateY());
                         jungleMapController.getAnchor().getChildren();
                         jungleMapController.getAnchor().getChildren().add(imageView);
                         TranslateTransition transition = new TranslateTransition();
                         transition.setNode(imageView);
-                        transition.setFromX(jungleTower.getTranslateX());
-                        transition.setFromY(jungleTower.getTranslateY());
-                        transition.setToX(finalHero.getTranslateX());
-                        transition.setDuration(new Duration(2000));
+                        transition.setByX(Math.abs(finalHero.getTranslateX() - jungleTower.getTranslateX()));
+                        transition.setByY(Math.abs(finalHero.getTranslateY() - jungleTower.getTranslateY()));
+                        transition.setDuration(new Duration(1000));
                         transition.play();
-                        jungleMapController.getAnchor().getChildren().remove(imageView);
+                        System.out.println("Play shod!");
+                        //jungleMapController.getAnchor().getChildren().remove(imageView);
                     }
                 });
                 hero.setHealth(hero.getHealth() - damage);

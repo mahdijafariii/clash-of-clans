@@ -12,6 +12,7 @@ import com.example.BuildingPackage.Towers.JungleTower;
 import com.example.BuildingPackage.Towers.SkyBridgeTower;
 import com.example.HeroPackage.Heroes;
 import com.example.UserPackage.Administrator;
+import javafx.scene.Node;
 import javafx.scene.image.Image;
 
 import java.util.ArrayList;
@@ -26,13 +27,14 @@ public class FirstElf extends Heroes {
     String img_Attack3 = this.getClass().getResource("/com/example/game/Images/Elf_01__ATTACK_007.png").toString();
     String img_main = this.getClass().getResource("/com/example/game/Images/Elf_01__Main.png").toString();
     int action = 1;
-    public FirstElf(double x , double y) {
-        super.health=50;
 
-        super.power=8 ;
+    public FirstElf(double x, double y) {
+        super.health = 50;
+
+        super.power = 8;
 
         super.speed = 3;
-        super.info="ELf shooter\n" +
+        super.info = "ELf shooter\n" +
                 "The best archer in the whole world is undoubtedly him\n" +
                 "He has the ability to shoot from a long distance and easily destroys his enemies";
 
@@ -45,34 +47,31 @@ public class FirstElf extends Heroes {
         setTranslateY(y);
     }
 
-    public String toString(){
+    public String toString() {
         return "Elf Shooter:\n" +
                 "Health = 50 \n " +
                 "Power = 8 \n " +
-                "Speed = 3 \n" ;
+                "Speed = 3 \n";
     }
 
-    public void showCharacterInfoAttack(){
-        for(int i = 0 ; i < 90 ; i ++){
-            if(i%3==0){
+    public void showCharacterInfoAttack() {
+        for (int i = 0; i < 90; i++) {
+            if (i % 3 == 0) {
                 setImage(new Image(img_Attack1));
-            }
-            else if (i%3==1){
+            } else if (i % 3 == 1) {
                 setImage(new Image(img_Attack2));
-            }
-            else if (i%3==2){
+            } else if (i % 3 == 2) {
                 setImage(new Image(img_Attack3));
             }
         }
     }
 
-    public void walkForLogin(){
+    public void walkForLogin() {
         action++;
-        setTranslateX(getTranslateX()+speed);
-        if(action%2==0){
+        setTranslateX(getTranslateX() + speed);
+        if (action % 2 == 0) {
             setImage(new Image(img_walk1));
-        }
-        else {
+        } else {
             setImage(new Image(img_walk2));
         }
 
@@ -80,23 +79,22 @@ public class FirstElf extends Heroes {
 
     //--------------------------------------------------- Walk x , y
 
-    public void walkForAttackX(){
+    public void walkForAttackX() {
         action++;
-        setTranslateX(getTranslateX()+speed);
-        if(action%2==0){
+        setTranslateX(getTranslateX() + speed);
+        if (action % 2 == 0) {
             setImage(new Image(img_walk1));
-        }
-        else {
+        } else {
             setImage(new Image(img_walk2));
         }
     }
-    public void walkForAttackY(){
+
+    public void walkForAttackY() {
         action++;
-        setTranslateY(getTranslateY()-speed);
-        if(action%2==0){
+        setTranslateY(getTranslateY() - speed);
+        if (action % 2 == 0) {
             setImage(new Image(img_walk1));
-        }
-        else {
+        } else {
             setImage(new Image(img_walk2));
         }
     }
@@ -104,94 +102,93 @@ public class FirstElf extends Heroes {
 
     //--------------------------------------------------- Attack and change attack picture
 
-    public void attackInBattle(){
+    public void attackInBattle() {
         action++;
-        setTranslateY(getTranslateY()+1);
-        setTranslateY(getTranslateY()-1);
-        if(action%3==0){
+        setTranslateY(getTranslateY() + 1);
+        setTranslateY(getTranslateY() - 1);
+        if (action % 3 == 0) {
             setImage(new Image(img_Attack1));
-        }
-        else if (action%3==1){
+        } else if (action % 3 == 1) {
             setImage(new Image(img_Attack2));
 
-        }
-        else {
+        } else {
             setImage(new Image(img_Attack3));
         }
     }
     //--------------------------------------------------- Attack and change attack picture
 
 
-    public void startBattleAttacking(){
+
+    public void startBattleAttacking() {
         ArrayList<Building> castle = new ArrayList<>();
         ArrayList<Building> doors = new ArrayList<>();
         ArrayList<Building> towers = new ArrayList<>();
-        castle=castle();
-        doors=doors();
-        towers=towers();
-        double minDistance=0 ;
-        Building closest =null;
-        for(int i = 0 ; i < towers.size() ; i++ ){
-            if(towers.get(i)!=null){
-                if(minDistance>getDistanceFromBuilding(this,towers.get(i)) ||minDistance==0){
-                    minDistance=getDistanceFromBuilding(this,towers.get(i));
-                    closest=towers.get(i);
+        castle = castle();
+        doors = doors();
+        towers = towers();
+        double minDistance = 0;
+        Building closest = null;
+        for (int i = 0; i < towers.size(); i++) {
+            if (towers.get(i) != null) {
+                if (minDistance > getDistanceFromBuilding(this, towers.get(i)) || minDistance == 0) {
+                    minDistance = getDistanceFromBuilding(this, towers.get(i));
+                    closest = towers.get(i);
                 }
             }
 
         }
-        if(minDistance!= 0 ){
-            while(closest.getX()>this.getTranslateX()+130){
+        if (minDistance != 0) {
+            while (closest.getX() > this.getTranslateX() + 130) {
                 walkForAttackX();
             }
-            while (closest.getY()<this.getTranslateY()-80){
+            while (closest.getY() < this.getTranslateY() - 80) {
                 walkForAttackY();
             }
-            while (closest.health>0){
+
                 attackInBattle();
-            }
+                closest.setHealth(closest.health - this.power);
+
         }
-
-
-
-
-
-
-
 
 
     }
 
-    public ArrayList<Building> towers (){
+
+    public ArrayList<Building> towers() {
         ArrayList<Building> towers = new ArrayList<>();
-        for(int i = 0 ; i <Administrator.getCurrentMap().getBuildings().size() ; i++ ){
-            if(Administrator.getCurrentMap().getBuildings().get(i) instanceof CastleBridgeTower || Administrator.getCurrentMap().getBuildings().get(i) instanceof JungleTower ||Administrator.getCurrentMap().getBuildings().get(i) instanceof SkyBridgeTower){
+        for (int i = 0; i < Administrator.getCurrentMap().getBuildings().size(); i++) {
+            if (Administrator.getCurrentMap().getBuildings().get(i) instanceof CastleBridgeTower || Administrator.getCurrentMap().getBuildings().get(i) instanceof JungleTower || Administrator.getCurrentMap().getBuildings().get(i) instanceof SkyBridgeTower) {
                 towers.add(Administrator.getCurrentMap().getBuildings().get(i));
             }
         }
-    return towers;}
-    public ArrayList<Building> castle (){
+        return towers;
+    }
+
+    public ArrayList<Building> castle() {
         ArrayList<Building> castle = new ArrayList<>();
-        for(int i = 0 ; i <Administrator.getCurrentMap().getBuildings().size() ; i++ ){
-            if(Administrator.getCurrentMap().getBuildings().get(i) instanceof CastleBridgeCastle || Administrator.getCurrentMap().getBuildings().get(i) instanceof JungleCastle ||Administrator.getCurrentMap().getBuildings().get(i) instanceof SkyBridgeCastle){
+        for (int i = 0; i < Administrator.getCurrentMap().getBuildings().size(); i++) {
+            if (Administrator.getCurrentMap().getBuildings().get(i) instanceof CastleBridgeCastle || Administrator.getCurrentMap().getBuildings().get(i) instanceof JungleCastle || Administrator.getCurrentMap().getBuildings().get(i) instanceof SkyBridgeCastle) {
                 castle.add(Administrator.getCurrentMap().getBuildings().get(i));
             }
         }
-        return castle;}
-    public ArrayList<Building> doors (){
+        return castle;
+    }
+
+    public ArrayList<Building> doors() {
         ArrayList<Building> doors = new ArrayList<>();
-        for(int i = 0 ; i <Administrator.getCurrentMap().getBuildings().size() ; i++ ){
-            if(Administrator.getCurrentMap().getBuildings().get(i) instanceof CastleBridgeDoor || Administrator.getCurrentMap().getBuildings().get(i) instanceof JungleDoor ||Administrator.getCurrentMap().getBuildings().get(i) instanceof SkyBridgeDoor){
+        for (int i = 0; i < Administrator.getCurrentMap().getBuildings().size(); i++) {
+            if (Administrator.getCurrentMap().getBuildings().get(i) instanceof CastleBridgeDoor || Administrator.getCurrentMap().getBuildings().get(i) instanceof JungleDoor || Administrator.getCurrentMap().getBuildings().get(i) instanceof SkyBridgeDoor) {
                 doors.add(Administrator.getCurrentMap().getBuildings().get(i));
             }
         }
-        return doors;}
+        return doors;
+    }
 
-    public double getDistanceFromBuilding(Heroes hero ,Building building ){
-        double distance = Math.sqrt(Math.pow((hero.getTranslateX() - building.getX()) , 2) + Math.pow((hero.getTranslateY() - building.getY()) , 2));
-    return distance;}
+    public double getDistanceFromBuilding(Heroes hero, Building building) {
+        double distance = Math.sqrt(Math.pow((hero.getTranslateX() - building.getX()), 2) + Math.pow((hero.getTranslateY() - building.getY()), 2));
+        return distance;
 
-
-
+    }
 
 }
+

@@ -372,14 +372,16 @@ public class JungleMapController implements Initializable
                 Administrator.getCurrentMap().setHeroes(allHeroes);
                 if(Administrator.getCurrentMap().getHeroes().size()!=0){
                     for (int i = 0 ; i <Administrator.getCurrentMap().getHeroes().size() ; i++){
-                        if(Administrator.getCurrentMap().getHeroes().get(i) instanceof FirstElf)
+                        if(Administrator.getCurrentMap().getHeroes().get(i) instanceof FirstElf){
                             ((FirstElf) Administrator.getCurrentMap().getHeroes().get(i)).startBattleAttacking();
+
+                        }
                     }
 
                     System.out.println("man to thread start shodam");
                 }
                 try {
-                    Thread.sleep(4000);
+                    Thread.sleep(700);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }

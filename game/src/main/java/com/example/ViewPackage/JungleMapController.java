@@ -367,27 +367,29 @@ public class JungleMapController implements Initializable
 //            }
 //        }
         //-------------------------------------------------------------------
-        new Thread(()->{
-            while (true){
+//        new Thread(()->{
+//            while (true){
                 Administrator.getCurrentMap().setHeroes(allHeroes);
                 if(Administrator.getCurrentMap().getHeroes().size()!=0){
                     for (int i = 0 ; i <Administrator.getCurrentMap().getHeroes().size() ; i++){
-                        if(Administrator.getCurrentMap().getHeroes().get(i) instanceof FirstElf)
+                        if(Administrator.getCurrentMap().getHeroes().get(i) instanceof FirstElf){
                             ((FirstElf) Administrator.getCurrentMap().getHeroes().get(i)).startBattleAttacking();
+
+                        }
                     }
 
                     System.out.println("man to thread start shodam");
                 }
                 try {
-                    Thread.sleep(4000);
+                    Thread.sleep(700);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
             }
-
-        }).start();
-
-    }
+//
+//        }).start();
+//
+//    }
 
 
 
@@ -417,6 +419,7 @@ public class JungleMapController implements Initializable
                         anchor.getChildren().add(firstElf);
                         allHeroes.add(firstElf);
                         Administrator.getCurrentMap().setHeroes(allHeroes);
+                        firstElf.startBattleAttacking();
                     } else if (hero.getId().equals("elf2")) {
                         SecondElf secondElf = new SecondElf(e.getSceneX() - 100, e.getSceneY() - 50);
                         anchor.getChildren().add(secondElf);

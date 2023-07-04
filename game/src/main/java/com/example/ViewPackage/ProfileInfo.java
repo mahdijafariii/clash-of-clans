@@ -33,7 +33,7 @@ public class ProfileInfo implements Initializable {
     private Text win;
     @FXML
     void backFromProfile(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("AfterLoginController.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("after-login-controller.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = (Stage) ((Node) (event.getSource())).getScene().getWindow();
         stage.setScene(scene);

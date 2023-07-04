@@ -89,9 +89,18 @@ public class FirstElf extends Heroes {
         }
     }
 
-    public void walkForAttackY() {
+    public void walkForAttackYN() {
         action++;
         setTranslateY(getTranslateY() - speed);
+        if (action % 2 == 0) {
+            setImage(new Image(img_walk1));
+        } else {
+            setImage(new Image(img_walk2));
+        }
+    }
+    public void walkForAttackYP() {
+        action++;
+        setTranslateY(getTranslateY() + speed);
         if (action % 2 == 0) {
             setImage(new Image(img_walk1));
         } else {
@@ -118,7 +127,6 @@ public class FirstElf extends Heroes {
     //--------------------------------------------------- Attack and change attack picture
 
 
-
     public void startBattleAttacking() {
         ArrayList<Building> castle = new ArrayList<>();
         ArrayList<Building> doors = new ArrayList<>();
@@ -126,32 +134,46 @@ public class FirstElf extends Heroes {
         castle = castle();
         doors = doors();
         towers = towers();
-        double minDistance = 0;
-        Building closest = null;
-        for (int i = 0; i < towers.size(); i++)
-        {
-            if (towers.get(i) != null || towers.get(i).getHealth()>0) {
-                if (minDistance > getDistanceFromBuilding(this, towers.get(i)) || minDistance == 0) {
-                    minDistance = getDistanceFromBuilding(this, towers.get(i));
-                    closest = towers.get(i);
+        ArrayList<Building> finalTowers = towers;
+        new Thread(()->{
+
+        while (true){
+            double minDistance = 0;
+            Building closest = null;
+            for (int i = 0; i < finalTowers.size(); i++) {
+                if (finalTowers.get(i) != null && finalTowers.get(i).getHealth() > 0) {
+                    if (minDistance > getDistanceFromBuilding(this, finalTowers.get(i)) || minDistance == 0) {
+                        minDistance = getDistanceFromBuilding(this, finalTowers.get(i));
+                        closest = finalTowers.get(i);
+                    }
                 }
-            }
 
-        }
-        if (minDistance != 0) {
-            while (closest.getX() > this.getTranslateX() + 130) {
-                walkForAttackX();
             }
-            while (closest.getY() < this.getTranslateY() - 80) {
-                walkForAttackY();
-            }
-
+            if (minDistance != 0) {
+                while (closest.getX() > this.getTranslateX() + 130) {
+                    walkForAttackX();
+                }
+                if (closest.getY() > this.getTranslateY()) {
+                    while (closest.getY() > this.getTranslateY() - 80) {
+                        walkForAttackYP();
+                    }
+                } else if (closest.getY() < this.getTranslateY()) {
+                    while (closest.getY() < this.getTranslateY() - 80) {
+                        walkForAttackYN();
+                    }
+                }
                 attackInBattle();
                 closest.setHealth(closest.health - this.power);
-            System.out.println(closest.health);
+                if (closest.getHealth() <= 0) {
+                    finalTowers.remove(closest);
+                }
+                System.out.println(closest.health);
+            }
+            System.out.println(finalTowers.size());
 
 
         }
+        }).start();
 
 
     }

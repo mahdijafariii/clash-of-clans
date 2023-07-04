@@ -135,13 +135,14 @@ public class FirstElf extends Heroes {
         doors = doors();
         towers = towers();
         ArrayList<Building> finalTowers = towers;
+        ArrayList<Building> finalCastle = castle;
         new Thread(()->{
 
         while (true){
             double minDistance = 0;
             Building closest = null;
             for (int i = 0; i < finalTowers.size(); i++) {
-                if (finalTowers.get(i) != null && finalTowers.get(i).getHealth() > 0) {
+                if (finalTowers.get(i) != null && finalTowers.get(i).getHealth() > 0 && !finalTowers.get(i).isDestroyed) {
                     if (minDistance > getDistanceFromBuilding(this, finalTowers.get(i)) || minDistance == 0) {
                         minDistance = getDistanceFromBuilding(this, finalTowers.get(i));
                         closest = finalTowers.get(i);
@@ -154,22 +155,53 @@ public class FirstElf extends Heroes {
                     walkForAttackX();
                 }
                 if (closest.getY() > this.getTranslateY()) {
-                    while (closest.getY() > this.getTranslateY() - 80) {
+                    while (closest.getY() > this.getTranslateY() ) {
                         walkForAttackYP();
                     }
                 } else if (closest.getY() < this.getTranslateY()) {
-                    while (closest.getY() < this.getTranslateY() - 80) {
+                    while (closest.getY() < this.getTranslateY() ) {
                         walkForAttackYN();
                     }
                 }
                 attackInBattle();
                 closest.setHealth(closest.health - this.power);
                 if (closest.getHealth() <= 0) {
-                    finalTowers.remove(closest);
+                    closest.isDestroyed=true;
+                    setDestroyedBuildingAdmin(closest);
                 }
-                System.out.println(closest.health);
             }
-            System.out.println(finalTowers.size());
+            if(checkTowerDestroyed()){
+                for (int i = 0; i < finalCastle.size(); i++) {
+                    if (finalCastle.get(i) != null && finalCastle.get(i).getHealth() > 0 && !finalCastle.get(i).isDestroyed) {
+                        if (minDistance > getDistanceFromBuilding(this, finalCastle.get(i)) || minDistance == 0) {
+                            minDistance = getDistanceFromBuilding(this, finalCastle.get(i));
+                            closest = finalCastle.get(i);
+                        }
+                    }
+
+                }
+                if (minDistance != 0) {
+                    while (closest.getX() > this.getTranslateX() + 130) {
+                        walkForAttackX();
+                    }
+                    if (closest.getY() > this.getTranslateY()) {
+                        while (closest.getY() > this.getTranslateY() - 140) {
+                            walkForAttackYP();
+                        }
+                    } else if (closest.getY() < this.getTranslateY()) {
+                        while (closest.getY() < this.getTranslateY() - 140) {
+                            walkForAttackYN();
+                        }
+                    }
+                    attackInBattle();
+                    closest.setHealth(closest.health - this.power);
+                    if (closest.getHealth() <= 0) {
+                        closest.isDestroyed=true;
+                        setDestroyedBuildingAdmin(closest);
+                    }
+                }
+            }
+
 
 
         }
@@ -183,7 +215,10 @@ public class FirstElf extends Heroes {
         ArrayList<Building> towers = new ArrayList<>();
         for (int i = 0; i < Administrator.getCurrentMap().getBuildings().size(); i++) {
             if (Administrator.getCurrentMap().getBuildings().get(i) instanceof CastleBridgeTower || Administrator.getCurrentMap().getBuildings().get(i) instanceof JungleTower || Administrator.getCurrentMap().getBuildings().get(i) instanceof SkyBridgeTower) {
-                towers.add(Administrator.getCurrentMap().getBuildings().get(i));
+                if(!Administrator.getCurrentMap().getBuildings().get(i).isDestroyed){
+                    towers.add(Administrator.getCurrentMap().getBuildings().get(i));
+                }
+
             }
         }
         return towers;
@@ -193,7 +228,10 @@ public class FirstElf extends Heroes {
         ArrayList<Building> castle = new ArrayList<>();
         for (int i = 0; i < Administrator.getCurrentMap().getBuildings().size(); i++) {
             if (Administrator.getCurrentMap().getBuildings().get(i) instanceof CastleBridgeCastle || Administrator.getCurrentMap().getBuildings().get(i) instanceof JungleCastle || Administrator.getCurrentMap().getBuildings().get(i) instanceof SkyBridgeCastle) {
-                castle.add(Administrator.getCurrentMap().getBuildings().get(i));
+                if(!Administrator.getCurrentMap().getBuildings().get(i).isDestroyed){
+                    castle.add(Administrator.getCurrentMap().getBuildings().get(i));
+                }
+
             }
         }
         return castle;
@@ -203,7 +241,9 @@ public class FirstElf extends Heroes {
         ArrayList<Building> doors = new ArrayList<>();
         for (int i = 0; i < Administrator.getCurrentMap().getBuildings().size(); i++) {
             if (Administrator.getCurrentMap().getBuildings().get(i) instanceof CastleBridgeDoor || Administrator.getCurrentMap().getBuildings().get(i) instanceof JungleDoor || Administrator.getCurrentMap().getBuildings().get(i) instanceof SkyBridgeDoor) {
-                doors.add(Administrator.getCurrentMap().getBuildings().get(i));
+                if(!Administrator.getCurrentMap().getBuildings().get(i).isDestroyed){
+                    doors.add(Administrator.getCurrentMap().getBuildings().get(i));                }
+
             }
         }
         return doors;
@@ -212,7 +252,58 @@ public class FirstElf extends Heroes {
     public double getDistanceFromBuilding(Heroes hero, Building building) {
         double distance = Math.sqrt(Math.pow((hero.getTranslateX() - building.getX()), 2) + Math.pow((hero.getTranslateY() - building.getY()), 2));
         return distance;
+    }
+    public void setDestroyedBuildingAdmin(Building building){
+        for(int i = 0 ; i<Administrator.getCurrentMap().getBuildings().size() ; i++ ){
+            if (Administrator.getCurrentMap().getBuildings().get(i).damage == building.getX()){
+                Administrator.getCurrentMap().getBuildings().get(i).isDestroyed =true;
+            }
+        }
+    }
 
+
+    public boolean checkTowerDestroyed() {
+        for (int i = 0; i < Administrator.getCurrentMap().getBuildings().size(); i++) {
+            if (Administrator.getCurrentMap().getBuildings().get(i) instanceof CastleBridgeTower || Administrator.getCurrentMap().getBuildings().get(i) instanceof JungleTower || Administrator.getCurrentMap().getBuildings().get(i) instanceof SkyBridgeTower) {
+                if(Administrator.getCurrentMap().getBuildings().get(i).isDestroyed){
+
+                }
+                else {
+                    return false;
+                }
+            }
+        }
+        return true;// if all buildings destroyed will be return true !!
+    }
+
+
+    public boolean checkDoorDestroyed() {
+        for (int i = 0; i < Administrator.getCurrentMap().getBuildings().size(); i++) {
+            if (Administrator.getCurrentMap().getBuildings().get(i) instanceof CastleBridgeDoor || Administrator.getCurrentMap().getBuildings().get(i) instanceof JungleDoor || Administrator.getCurrentMap().getBuildings().get(i) instanceof SkyBridgeDoor) {
+                if (Administrator.getCurrentMap().getBuildings().get(i).isDestroyed) {
+
+                }
+                else {
+                    return false;
+                }
+            }
+
+        }
+
+    return true;}// if all buildings destroyed will be return true !!
+
+    public boolean checkCastleDestroyed() {
+        for (int i = 0; i < Administrator.getCurrentMap().getBuildings().size(); i++) {
+            if (Administrator.getCurrentMap().getBuildings().get(i) instanceof CastleBridgeCastle || Administrator.getCurrentMap().getBuildings().get(i) instanceof JungleCastle || Administrator.getCurrentMap().getBuildings().get(i) instanceof SkyBridgeCastle) {
+                if(Administrator.getCurrentMap().getBuildings().get(i).isDestroyed){
+                }
+                else {
+                    return false;
+                }
+
+            }
+        }
+        return true;// if all buildings destroyed will be return true !!
     }
 
 }

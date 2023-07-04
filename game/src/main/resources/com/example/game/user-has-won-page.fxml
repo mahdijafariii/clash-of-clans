@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="304.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ViewPackage.UserHasWonPageController">
+   <children>
+      <ImageView fitHeight="406.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/MidGameBackground.jpg" />
+         </image>
+         <effect>
+            <Lighting bumpInput="$null" diffuseConstant="0.32">
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="225.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Win.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="168.0" layoutY="171.0" prefHeight="68.0" prefWidth="262.0" text="YOU WON" textFill="#46c6d4">
+         <font>
+            <Font name="Algerian" size="36.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="187.0" layoutY="239.0" prefHeight="36.0" prefWidth="226.0" text="CONgratulations" textFill="#46c6d4">
+         <font>
+            <Font name="Algerian" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="261.0" layoutY="312.0" mnemonicParsing="false" onAction="#backToStart" prefHeight="34.0" prefWidth="75.0" style="-fx-background-color: #08233b; -fx-background-radius: 200;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="Vladimir Script" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

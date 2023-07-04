@@ -1,6 +1,7 @@
 package com.example.BuildingPackage.Doors;
 
 import com.example.BuildingPackage.Building;
+import com.example.UserPackage.Administrator;
 import com.example.ViewPackage.CastleBridgeMapController;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -27,15 +28,15 @@ public class CastleBridgeDoor extends Building
     //-----------------CHECK FOR TOWER HEALTH FUNCTION--------------------
 
 
-    public void checkForHealth(CastleBridgeMapController castleBridgeMapController)
+    public void checkForHealth()
     {
         if (this.getHealth() <= 200)
         {
             if (this.getHealth() == 0)
             {
-                for (ImageView imageView : castleBridgeMapController.getImages())
+                for (ImageView imageView : Administrator.getCastleBridgeMapController().getImages())
                 {
-                    if (imageView.getTranslateX() == this.getX() && imageView.getTranslateY() == this.getY())
+                    if (imageView.getLayoutX() == this.getX() && imageView.getLayoutY() == this.getY())
                     {
                         Image image = new Image(img_3);
                         imageView.setImage(image);
@@ -44,9 +45,9 @@ public class CastleBridgeDoor extends Building
             }
             else
             {
-                for (ImageView imageView : castleBridgeMapController.getImages())
+                for (ImageView imageView : Administrator.getCastleBridgeMapController().getImages())
                 {
-                    if (imageView.getTranslateX() == this.getX() && imageView.getTranslateY() == this.getY())
+                    if (imageView.getLayoutX() == this.getX() && imageView.getLayoutY() == this.getY())
                     {
                         Image image = new Image(img_2);
                         imageView.setImage(image);

@@ -134,6 +134,37 @@ public class CastleBridgeMapController implements Initializable
         return images;
     }
 
+    @FXML
+    public void setStarsAndProgression()
+    {
+        double maxMultiplier = 0;
+        double sumOfMultiplier = 0;
+        for (Building building : Administrator.getCurrentMap().getBuildings())
+        {
+            if (building.isDestroyed)
+            {
+                sumOfMultiplier += building.getMultiplier();
+            }
+            maxMultiplier += building.getMultiplier();
+        }
+        progress.setProgress(sumOfMultiplier / maxMultiplier);
+
+        if ((sumOfMultiplier / maxMultiplier) > 0.3)
+        {
+            star_1.setImage(new Image(this.getClass().getResource("/com/example/game/Images/star.png").toString()));
+
+            if ((sumOfMultiplier / maxMultiplier) > 0.6)
+            {
+                star_2.setImage(new Image(this.getClass().getResource("/com/example/game/Images/star.png").toString()));
+
+                if ((sumOfMultiplier / maxMultiplier) == 1)
+                {
+                    star_3.setImage(new Image(this.getClass().getResource("/com/example/game/Images/star.png").toString()));
+                }
+            }
+        }
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 

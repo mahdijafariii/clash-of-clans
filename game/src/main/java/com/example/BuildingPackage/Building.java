@@ -57,4 +57,6 @@ public abstract class Building
     {
         this.multiplier = multiplier;
     }
+
+    public abstract void checkForHealth();
 }

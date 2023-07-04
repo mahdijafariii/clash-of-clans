@@ -84,15 +84,15 @@ public class CastleBridgeTower extends Building
     //-----------------CHECK FOR TOWER HEALTH FUNCTION--------------------
 
 
-    public void checkForHealth(CastleBridgeMapController castleBridgeMapController)
+    public void checkForHealth()
     {
         if (this.getHealth() <= 200)
         {
             if (this.getHealth() == 0)
             {
-                for (ImageView imageView : castleBridgeMapController.getImages())
+                for (ImageView imageView : Administrator.getCastleBridgeMapController().getImages())
                 {
-                    if (imageView.getTranslateX() == this.getX() && imageView.getTranslateY() == this.getY())
+                    if (imageView.getLayoutX() == this.getX() && imageView.getLayoutY() == this.getY())
                     {
                         Image image = new Image(img_3);
                         imageView.setImage(image);
@@ -101,9 +101,9 @@ public class CastleBridgeTower extends Building
             }
             else
             {
-                for (ImageView imageView : castleBridgeMapController.getImages())
+                for (ImageView imageView : Administrator.getCastleBridgeMapController().getImages())
                 {
-                    if (imageView.getTranslateX() == this.getX() && imageView.getTranslateY() == this.getY())
+                    if (imageView.getLayoutX() == this.getX() && imageView.getLayoutY() == this.getY())
                     {
                         Image image = new Image(img_2);
                         imageView.setImage(image);
@@ -111,6 +111,7 @@ public class CastleBridgeTower extends Building
                 }
             }
         }
+        Administrator.getCastleBridgeMapController().setStarsAndProgression();
     }
 
 
@@ -121,7 +122,6 @@ public class CastleBridgeTower extends Building
         new Thread(()->{
             while (true)
             {
-                //checkForHealth(Administrator.getDarkJungleMapController() , Administrator.getJungleMapController() , Administrator.getCurrentMap());
                 checkForEnemies(Administrator.getCurrentMap().getHeroes(), Administrator.getCastleBridgeMapController());
                 if (hasAttacked)
                 {

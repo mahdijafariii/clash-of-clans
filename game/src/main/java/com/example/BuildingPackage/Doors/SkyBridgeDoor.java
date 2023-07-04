@@ -2,6 +2,7 @@ package com.example.BuildingPackage.Doors;
 
 import com.example.BuildingPackage.Building;
 import com.example.MapPackage.TwoPlayerMap;
+import com.example.UserPackage.Administrator;
 import com.example.ViewPackage.SkyBridgeMapController;
 import com.example.ViewPackage.TwoPlayerMapController;
 import javafx.scene.image.Image;
@@ -31,10 +32,11 @@ public class SkyBridgeDoor extends Building
 
 //-----------------CHECK FOR TOWER HEALTH FUNCTION--------------------
 
-    public void checkForHealth(SkyBridgeMapController skyBridgeMapController , TwoPlayerMapController twoPlayerMapController , Map map)
+    public void checkForHealth()
     {
-        if (map instanceof TwoPlayerMap)
+        if (Administrator.getCurrentMap() instanceof TwoPlayerMap)
         {
+            /*
             if (this.getHealth() <= 200)
             {
                 if (this.getHealth() == 0)
@@ -60,6 +62,8 @@ public class SkyBridgeDoor extends Building
                     }
                 }
             }
+
+             */
         }
         else
         {
@@ -67,9 +71,9 @@ public class SkyBridgeDoor extends Building
             {
                 if (this.getHealth() == 0)
                 {
-                    for (ImageView imageView : skyBridgeMapController.getImages())
+                    for (ImageView imageView : Administrator.getSkyBridgeMapController().getImages())
                     {
-                        if (imageView.getTranslateX() == this.getX() && imageView.getTranslateY() == this.getY())
+                        if (imageView.getLayoutX() == this.getX() && imageView.getLayoutY() == this.getY())
                         {
                             Image image = new Image(img_3);
                             imageView.setImage(image);
@@ -78,9 +82,9 @@ public class SkyBridgeDoor extends Building
                 }
                 else
                 {
-                    for (ImageView imageView : skyBridgeMapController.getImages())
+                    for (ImageView imageView : Administrator.getSkyBridgeMapController().getImages())
                     {
-                        if (imageView.getTranslateX() == this.getX() && imageView.getTranslateY() == this.getY())
+                        if (imageView.getLayoutX() == this.getX() && imageView.getLayoutY() == this.getY())
                         {
                             Image image = new Image(img_2);
                             imageView.setImage(image);

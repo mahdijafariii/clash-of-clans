@@ -136,15 +136,15 @@ public class JungleTower extends Building
 
     //-----------------CHECK FOR TOWER HEALTH FUNCTION--------------------
 
-    public void checkForHealth(DarkJungleMapController darkJungleMapController , JungleMapController jungleMapController , Map map)
+    public void checkForHealth()
     {
-        if (map instanceof JungleMap)
+        if (Administrator.getCurrentMap() instanceof JungleMap)
         {
             if (this.getHealth() <= 200)
             {
                 if (this.getHealth() == 0)
                 {
-                    for (ImageView imageView : jungleMapController.getImages())
+                    for (ImageView imageView : Administrator.getJungleMapController().getImages())
                     {
                         if (imageView.getLayoutX() == this.getX() && imageView.getLayoutY() == this.getY())
                         {
@@ -158,7 +158,7 @@ public class JungleTower extends Building
                 }
                 else
                 {
-                    for (ImageView imageView : jungleMapController.getImages())
+                    for (ImageView imageView : Administrator.getJungleMapController().getImages())
                     {
                         if (imageView.getLayoutX() == this.getX() && imageView.getLayoutY() == this.getY())
                         {
@@ -169,6 +169,7 @@ public class JungleTower extends Building
                     }
                 }
             }
+            Administrator.getJungleMapController().setStarsAndProgression();
         }
         else
         {
@@ -176,7 +177,7 @@ public class JungleTower extends Building
             {
                 if (this.getHealth() == 0)
                 {
-                    for (ImageView imageView : darkJungleMapController.getImages())
+                    for (ImageView imageView : Administrator.getDarkJungleMapController().getImages())
                     {
                         if (imageView.getTranslateX() == this.getX() && imageView.getTranslateY() == this.getY())
                         {
@@ -187,7 +188,7 @@ public class JungleTower extends Building
                 }
                 else
                 {
-                    for (ImageView imageView : darkJungleMapController.getImages())
+                    for (ImageView imageView : Administrator.getDarkJungleMapController().getImages())
                     {
                         if (imageView.getTranslateX() == this.getX() && imageView.getTranslateY() == this.getY())
                         {
@@ -197,6 +198,7 @@ public class JungleTower extends Building
                     }
                 }
             }
+            Administrator.getDarkJungleMapController().setStarsAndProgression();
         }
     }
 
@@ -207,7 +209,6 @@ public class JungleTower extends Building
        new Thread(()->{
            while (true)
            {
-               checkForHealth(Administrator.getDarkJungleMapController() , Administrator.getJungleMapController() , Administrator.getCurrentMap());
                checkForEnemies(Administrator.getCurrentMap().getHeroes(), Administrator.getJungleMapController() , Administrator.getDarkJungleMapController() , Administrator.getCurrentMap());
                if (hasAttacked)
                {

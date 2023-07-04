@@ -87,10 +87,11 @@ public class SkyBridgeTower extends Building
 
     //-----------------CHECK FOR TOWER HEALTH FUNCTION--------------------
 
-    public void checkForHealth(SkyBridgeMapController skyBridgeMapController , TwoPlayerMapController twoPlayerMapController , Map map)
+    public void checkForHealth()
     {
-        if (map instanceof TwoPlayerMap)
+        if (Administrator.getCurrentMap() instanceof TwoPlayerMap)
         {
+            /*
             if (this.getHealth() <= 200)
             {
                 if (this.getHealth() == 0)
@@ -116,6 +117,8 @@ public class SkyBridgeTower extends Building
                     }
                 }
             }
+
+             */
         }
         else
         {
@@ -123,9 +126,9 @@ public class SkyBridgeTower extends Building
             {
                 if (this.getHealth() == 0)
                 {
-                    for (ImageView imageView : skyBridgeMapController.getImages())
+                    for (ImageView imageView : Administrator.getSkyBridgeMapController().getImages())
                     {
-                        if (imageView.getTranslateX() == this.getX() && imageView.getTranslateY() == this.getY())
+                        if (imageView.getLayoutX() == this.getX() && imageView.getLayoutY() == this.getY())
                         {
                             Image image = new Image(img_3);
                             imageView.setImage(image);
@@ -134,9 +137,9 @@ public class SkyBridgeTower extends Building
                 }
                 else
                 {
-                    for (ImageView imageView : skyBridgeMapController.getImages())
+                    for (ImageView imageView : Administrator.getSkyBridgeMapController().getImages())
                     {
-                        if (imageView.getTranslateX() == this.getX() && imageView.getTranslateY() == this.getY())
+                        if (imageView.getLayoutX() == this.getX() && imageView.getLayoutX() == this.getY())
                         {
                             Image image = new Image(img_2);
                             imageView.setImage(image);
@@ -144,6 +147,7 @@ public class SkyBridgeTower extends Building
                     }
                 }
             }
+            Administrator.getSkyBridgeMapController().setStarsAndProgression();
         }
     }
 
@@ -153,7 +157,6 @@ public class SkyBridgeTower extends Building
         new Thread(()->{
             while (true)
             {
-                //checkForHealth(Administrator.getDarkJungleMapController() , Administrator.getJungleMapController() , Administrator.getCurrentMap());
                 checkForEnemies(Administrator.getCurrentMap().getHeroes(), Administrator.getSkyBridgeMapController());
                 if (hasAttacked)
                 {

@@ -162,7 +162,8 @@ public class SkyBridgeTower extends Building
                 {
                     try
                     {
-                        Thread.sleep(1000);
+                        Thread.sleep(8000);
+                        System.out.println("Attacked!");
                         hasAttacked = false;
                     }
                     catch (InterruptedException e)

@@ -390,13 +390,13 @@ public class JungleMapController implements Initializable
             Administrator.setJungleMapController(this);
             Administrator.setCurrentMap(jungleMap);
         }
-//        for (Building building : Administrator.getCurrentMap().getBuildings())
-//        {
-//            if (building instanceof JungleTower)
-//            {
-//                ((JungleTower) building).startThread();
-//            }
-//        }
+        for (Building building : Administrator.getCurrentMap().getBuildings())
+         {
+           if (building instanceof JungleTower)
+            {
+                ((JungleTower) building).startThread();
+            }
+        }
         //-------------------------------------------------------------------
 
         new Thread(()->{

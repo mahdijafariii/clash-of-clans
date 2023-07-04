@@ -45,7 +45,6 @@ public class JungleTower extends Building
                 double distance = Math.sqrt(Math.pow((hero.getTranslateX() - this.getX()) , 2) + Math.pow((hero.getTranslateY() - this.getY()) , 2));
                 if (distance <= 250)
                 {
-                    System.out.println("Enemy Found , Distance : " + distance);
                     attack(this , hero , jungleMapController , darkJungleMapController , map);
                 }
             }
@@ -214,7 +213,8 @@ public class JungleTower extends Building
                {
                    try
                    {
-                       Thread.sleep(1000);
+                       Thread.sleep(8000);
+                       System.out.println("Attacked!");
                        hasAttacked = false;
                    }
                    catch (InterruptedException e)
@@ -222,17 +222,7 @@ public class JungleTower extends Building
                        throw new RuntimeException(e);
                    }
                }
-               try
-               {
-                   Thread.sleep(1000);
-               }
-               catch (InterruptedException e)
-               {
-                   throw new RuntimeException(e);
-               }
            }
-
        }).start();
    }
-
 }

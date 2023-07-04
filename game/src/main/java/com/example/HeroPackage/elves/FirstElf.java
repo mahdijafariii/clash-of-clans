@@ -164,14 +164,12 @@ public class FirstElf extends Heroes {
                 }
                 attackInBattle();
                 closest.setHealth(closest.health - this.power);
+                ((JungleTower) closest).checkForHealth(Administrator.getDarkJungleMapController() , Administrator.getJungleMapController() , Administrator.getCurrentMap());
                 if (closest.getHealth() <= 0) {
                     finalTowers.remove(closest);
                 }
                 System.out.println(closest.health);
             }
-            System.out.println(finalTowers.size());
-
-
         }
         }).start();
 

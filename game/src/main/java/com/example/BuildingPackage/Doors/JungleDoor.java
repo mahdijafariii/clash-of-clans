@@ -37,7 +37,7 @@ public class JungleDoor extends Building
                 {
                     for (ImageView imageView : jungleMapController.getImages())
                     {
-                        if (imageView.getTranslateX() == this.getTranslateX() && imageView.getTranslateY() == this.getTranslateY())
+                        if (imageView.getTranslateX() == this.getX() && imageView.getTranslateY() == this.getY())
                         {
                             Image image = new Image(img_3);
                             imageView.setImage(image);
@@ -48,7 +48,7 @@ public class JungleDoor extends Building
                 {
                     for (ImageView imageView : jungleMapController.getImages())
                     {
-                        if (imageView.getTranslateX() == this.getTranslateX() && imageView.getTranslateY() == this.getTranslateY())
+                        if (imageView.getTranslateX() == this.getX() && imageView.getTranslateY() == this.getY())
                         {
                             Image image = new Image(img_2);
                             imageView.setImage(image);
@@ -65,7 +65,7 @@ public class JungleDoor extends Building
                 {
                     for (ImageView imageView : darkJungleMapController.getImages())
                     {
-                        if (imageView.getTranslateX() == this.getTranslateX() && imageView.getTranslateY() == this.getTranslateY())
+                        if (imageView.getTranslateX() == this.getX() && imageView.getTranslateY() == this.getY())
                         {
                             Image image = new Image(img_3);
                             imageView.setImage(image);
@@ -76,7 +76,7 @@ public class JungleDoor extends Building
                 {
                     for (ImageView imageView : darkJungleMapController.getImages())
                     {
-                        if (imageView.getTranslateX() == this.getTranslateX() && imageView.getTranslateY() == this.getTranslateY())
+                        if (imageView.getTranslateX() == this.getX() && imageView.getTranslateY() == this.getY())
                         {
                             Image image = new Image(img_2);
                             imageView.setImage(image);

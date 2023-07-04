@@ -39,7 +39,7 @@ public class SkyBridgeCastle extends Building
                 {
                     for (ImageView imageView : twoPlayerMapController.getImages())
                     {
-                        if (imageView.getTranslateX() == this.getTranslateX() && imageView.getTranslateY() == this.getTranslateY())
+                        if (imageView.getTranslateX() == this.getX() && imageView.getTranslateY() == this.getY())
                         {
                             Image image = new Image(img_3);
                             imageView.setImage(image);
@@ -50,7 +50,7 @@ public class SkyBridgeCastle extends Building
                 {
                     for (ImageView imageView : twoPlayerMapController.getImages())
                     {
-                        if (imageView.getTranslateX() == this.getTranslateX() && imageView.getTranslateY() == this.getTranslateY())
+                        if (imageView.getTranslateX() == this.getX() && imageView.getTranslateY() == this.getY())
                         {
                             Image image = new Image(img_2);
                             imageView.setImage(image);
@@ -67,7 +67,7 @@ public class SkyBridgeCastle extends Building
                 {
                     for (ImageView imageView : skyBridgeMapController.getImages())
                     {
-                        if (imageView.getTranslateX() == this.getTranslateX() && imageView.getTranslateY() == this.getTranslateY())
+                        if (imageView.getTranslateX() == this.getX() && imageView.getTranslateY() == this.getY())
                         {
                             Image image = new Image(img_3);
                             imageView.setImage(image);
@@ -78,7 +78,7 @@ public class SkyBridgeCastle extends Building
                 {
                     for (ImageView imageView : skyBridgeMapController.getImages())
                     {
-                        if (imageView.getTranslateX() == this.getTranslateX() && imageView.getTranslateY() == this.getTranslateY())
+                        if (imageView.getTranslateX() == this.getX() && imageView.getTranslateY() == this.getY())
                         {
                             Image image = new Image(img_2);
                             imageView.setImage(image);

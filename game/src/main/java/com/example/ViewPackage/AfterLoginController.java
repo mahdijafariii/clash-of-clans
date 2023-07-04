@@ -45,7 +45,11 @@ public class AfterLoginController {
     }
 
     @FXML
-    void startBattlePage(ActionEvent event) {
-
+    void startBattlePage(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("after-start-battle-button-controller.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = (Stage) ((Node) (event.getSource())).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 }

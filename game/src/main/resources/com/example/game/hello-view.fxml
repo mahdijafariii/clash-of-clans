@@ -40,7 +40,7 @@
             <Font name="Script MT Bold" size="12.0" />
          </font>
       </Button>
-      <PasswordField layoutX="326.0" layoutY="263.0" opacity="0.32" prefHeight="26.0" prefWidth="156.0" style="-fx-background-radius: 200;" />
+      <PasswordField fx:id="passwordInput" layoutX="326.0" layoutY="263.0" opacity="0.32" prefHeight="26.0" prefWidth="156.0" style="-fx-background-radius: 200;" />
       <ImageView fitHeight="56.0" fitWidth="44.0" layoutX="372.0" layoutY="414.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Images/Die-1.png" />

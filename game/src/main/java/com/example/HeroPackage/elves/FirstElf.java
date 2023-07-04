@@ -19,13 +19,42 @@ import java.util.ArrayList;
 
 public class FirstElf extends Heroes {
 
-    String img_walk1 = this.getClass().getResource("/com/example/game/Images/Elf_01__WALK_000.png").toString();
-    String img_walk2 = this.getClass().getResource("/com/example/game/Images/Elf_01__WALK_005.png").toString();
+    private String img_walk1 = this.getClass().getResource("/com/example/game/Images/Elf_01__WALK_000.png").toString();
+    private String img_walk2 = this.getClass().getResource("/com/example/game/Images/Elf_01__WALK_005.png").toString();
 
-    String img_Attack1 = this.getClass().getResource("/com/example/game/Images/Elf_01__ATTACK_001.png").toString();
-    String img_Attack2 = this.getClass().getResource("/com/example/game/Images/Elf_01__ATTACK_002.png").toString();
-    String img_Attack3 = this.getClass().getResource("/com/example/game/Images/Elf_01__ATTACK_007.png").toString();
-    String img_main = this.getClass().getResource("/com/example/game/Images/Elf_01__Main.png").toString();
+    private String img_Attack1 = this.getClass().getResource("/com/example/game/Images/Elf_01__ATTACK_001.png").toString();
+    private String img_Attack2 = this.getClass().getResource("/com/example/game/Images/Elf_01__ATTACK_002.png").toString();
+    private String img_Attack3 = this.getClass().getResource("/com/example/game/Images/Elf_01__ATTACK_007.png").toString();
+    private String img_main = this.getClass().getResource("/com/example/game/Images/Elf_01__Main.png").toString();
+
+    public int getAction() {
+        return action;
+    }
+
+    public String getImg_Attack1() {
+        return img_Attack1;
+    }
+
+    public String getImg_Attack2() {
+        return img_Attack2;
+    }
+
+    public String getImg_walk1() {
+        return img_walk1;
+    }
+
+    public String getImg_Attack3() {
+        return img_Attack3;
+    }
+
+    public String getImg_main() {
+        return img_main;
+    }
+
+    public String getImg_walk2() {
+        return img_walk2;
+    }
+
     int action = 1;
 
     public FirstElf(double x, double y) {
@@ -127,8 +156,89 @@ public class FirstElf extends Heroes {
     //--------------------------------------------------- Attack and change attack picture
 
 
-    public void startBattleAttacking() {
-        ArrayList<Building> castle = new ArrayList<>();
+//    public void startBattleAttacking() {
+//        ArrayList<Building> castle = new ArrayList<>();
+//        ArrayList<Building> doors = new ArrayList<>();
+//        ArrayList<Building> towers = new ArrayList<>();
+//        castle = castle();
+//        doors = doors();
+//        towers = towers();
+//        ArrayList<Building> finalTowers = towers;
+//        ArrayList<Building> finalCastle = castle;
+//
+//
+//        while (true){
+//            double minDistance = 0;
+//            Building closest = null;
+//            for (int i = 0; i < finalTowers.size(); i++) {
+//                if ( finalTowers.get(i).getHealth() > 0 && !finalTowers.get(i).isDestroyed) {
+//                    if (minDistance > getDistanceFromBuilding(this, finalTowers.get(i)) || minDistance == 0) {
+//                        minDistance = getDistanceFromBuilding(this, finalTowers.get(i));
+//                        closest = finalTowers.get(i);
+//                    }
+//                }
+//
+//            }
+//            if (minDistance != 0) {
+//                while (closest.getX() > this.getTranslateX() + 130) {
+//                    walkForAttackX();
+//                }
+//                if (closest.getY() > this.getTranslateY()) {
+//                    while (closest.getY() > this.getTranslateY() ) {
+//                        walkForAttackYP();
+//                    }
+//                } else if (closest.getY() < this.getTranslateY()) {
+//                    while (closest.getY() < this.getTranslateY() ) {
+//                        walkForAttackYN();
+//                    }
+//                }
+//                attackInBattle();
+//                closest.setHealth(closest.health - this.power);
+//                if (closest.getHealth() <= 0) {
+//                    closest.isDestroyed=true;
+//                    setDestroyedBuildingAdmin(closest);
+//                    closest=null;
+//                }
+//            }
+//            if(checkTowerDestroyed()){
+//                for (int i = 0; i < finalCastle.size(); i++) {
+//                    if ( finalCastle.get(i).getHealth() > 0 && !finalCastle.get(i).isDestroyed) {
+//                        if (minDistance > getDistanceFromBuilding(this, finalCastle.get(i)) || minDistance == 0) {
+//                            minDistance = getDistanceFromBuilding(this, finalCastle.get(i));
+//                            closest = finalCastle.get(i);
+//                        }
+//                    }
+//
+//                }
+//                if (minDistance != 0) {
+//                    while (closest.getX() > this.getTranslateX() + 130) {
+//                        walkForAttackX();
+//                    }
+//                    if (closest.getY() > this.getTranslateY()) {
+//                        while (closest.getY() > this.getTranslateY() - 140) {
+//                            walkForAttackYP();
+//                        }
+//                    } else if (closest.getY() < this.getTranslateY()) {
+//                        while (closest.getY() < this.getTranslateY() - 140) {
+//                            walkForAttackYN();
+//                        }
+//                    }
+//                    attackInBattle();
+//                    closest.setHealth(closest.health - this.power);
+//                    if (closest.getHealth() <= 0) {
+//                        closest.isDestroyed=true;
+//                        setDestroyedBuildingAdmin(closest);
+//                    }
+//                }
+//            }
+//        }
+//
+//
+//
+//    }
+
+        public void startBattleAttacking() {
+                    ArrayList<Building> castle = new ArrayList<>();
         ArrayList<Building> doors = new ArrayList<>();
         ArrayList<Building> towers = new ArrayList<>();
         castle = castle();
@@ -136,13 +246,13 @@ public class FirstElf extends Heroes {
         towers = towers();
         ArrayList<Building> finalTowers = towers;
         ArrayList<Building> finalCastle = castle;
-        new Thread(()->{
 
-        while (true){
+
+
             double minDistance = 0;
             Building closest = null;
             for (int i = 0; i < finalTowers.size(); i++) {
-                if (finalTowers.get(i) != null && finalTowers.get(i).getHealth() > 0 && !finalTowers.get(i).isDestroyed) {
+                if ( finalTowers.get(i).getHealth() > 0 && !finalTowers.get(i).isDestroyed) {
                     if (minDistance > getDistanceFromBuilding(this, finalTowers.get(i)) || minDistance == 0) {
                         minDistance = getDistanceFromBuilding(this, finalTowers.get(i));
                         closest = finalTowers.get(i);
@@ -155,11 +265,11 @@ public class FirstElf extends Heroes {
                     walkForAttackX();
                 }
                 if (closest.getY() > this.getTranslateY()) {
-                    while (closest.getY() > this.getTranslateY() ) {
+                    while (closest.getY() > this.getTranslateY()-140 ) {
                         walkForAttackYP();
                     }
                 } else if (closest.getY() < this.getTranslateY()) {
-                    while (closest.getY() < this.getTranslateY() ) {
+                    while (closest.getY() < this.getTranslateY()-140 ) {
                         walkForAttackYN();
                     }
                 }
@@ -168,47 +278,45 @@ public class FirstElf extends Heroes {
                 if (closest.getHealth() <= 0) {
                     closest.isDestroyed=true;
                     setDestroyedBuildingAdmin(closest);
+                    closest=null;
                 }
             }
             if(checkTowerDestroyed()){
-                for (int i = 0; i < finalCastle.size(); i++) {
-                    if (finalCastle.get(i) != null && finalCastle.get(i).getHealth() > 0 && !finalCastle.get(i).isDestroyed) {
-                        if (minDistance > getDistanceFromBuilding(this, finalCastle.get(i)) || minDistance == 0) {
-                            minDistance = getDistanceFromBuilding(this, finalCastle.get(i));
-                            closest = finalCastle.get(i);
-                        }
-                    }
-
-                }
-                if (minDistance != 0) {
-                    while (closest.getX() > this.getTranslateX() + 130) {
-                        walkForAttackX();
-                    }
-                    if (closest.getY() > this.getTranslateY()) {
-                        while (closest.getY() > this.getTranslateY() - 140) {
-                            walkForAttackYP();
-                        }
-                    } else if (closest.getY() < this.getTranslateY()) {
-                        while (closest.getY() < this.getTranslateY() - 140) {
-                            walkForAttackYN();
-                        }
-                    }
-                    attackInBattle();
-                    closest.setHealth(closest.health - this.power);
-                    if (closest.getHealth() <= 0) {
-                        closest.isDestroyed=true;
-                        setDestroyedBuildingAdmin(closest);
-                    }
-                }
+//                for (int i = 0; i < finalCastle.size(); i++) {
+//                    if ( finalCastle.get(i).getHealth() > 0 && !finalCastle.get(i).isDestroyed) {
+//                        if (minDistance > getDistanceFromBuilding(this, finalCastle.get(i)) || minDistance == 0) {
+//                            minDistance = getDistanceFromBuilding(this, finalCastle.get(i));
+//                            closest = finalCastle.get(i);
+//                        }
+//                    }
+//
+//                }
+//                if (minDistance != 0) {
+//                    while (closest.getX() > this.getTranslateX() + 130) {
+//                        walkForAttackX();
+//                    }
+//                    if (closest.getY() > this.getTranslateY()) {
+//                        while (closest.getY() > this.getTranslateY() - 140) {
+//                            walkForAttackYP();
+//                        }
+//                    } else if (closest.getY() < this.getTranslateY()) {
+//                        while (closest.getY() < this.getTranslateY() - 140) {
+//                            walkForAttackYN();
+//                        }
+//                    }
+//                    attackInBattle();
+//                    closest.setHealth(closest.health - this.power);
+//                    if (closest.getHealth() <= 0) {
+//                        closest.isDestroyed=true;
+//                        setDestroyedBuildingAdmin(closest);
+//                    }
+//                }
             }
-
-
-
         }
-        }).start();
 
 
-    }
+
+
 
 
     public ArrayList<Building> towers() {
@@ -255,7 +363,7 @@ public class FirstElf extends Heroes {
     }
     public void setDestroyedBuildingAdmin(Building building){
         for(int i = 0 ; i<Administrator.getCurrentMap().getBuildings().size() ; i++ ){
-            if (Administrator.getCurrentMap().getBuildings().get(i).damage == building.getX()){
+            if (Administrator.getCurrentMap().getBuildings().get(i).getX() == building.getX()){
                 Administrator.getCurrentMap().getBuildings().get(i).isDestroyed =true;
             }
         }
@@ -307,4 +415,5 @@ public class FirstElf extends Heroes {
     }
 
 }
+
 

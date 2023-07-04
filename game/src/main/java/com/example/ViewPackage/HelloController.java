@@ -3,6 +3,7 @@ package com.example.ViewPackage;
 import com.example.HeroPackage.Knight.FirstKnight;
 import com.example.UserPackage.Administrator;
 import com.example.UserPackage.User;
+import com.example.game.DataBase;
 import com.example.game.HelloApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -11,6 +12,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -48,8 +50,30 @@ public class HelloController extends Thread implements Initializable {
     }
 
     @FXML
-    void login(ActionEvent event) {
-
+    void login(ActionEvent event) throws IOException {
+        DataBase dataBase = new DataBase();
+        String check = dataBase.checkPassword(userNameInput.getText() , passwordInput.getText());
+        if (check.equals("checked")){
+            User user = new User();
+            user.setUserName(userNameInput.getText());
+            user.setPassword(passwordInput.getText());
+            user.setMap(Integer.valueOf(dataBase.checkMap(userNameInput.getText(),passwordInput.getText())));
+            user.setLose(0);
+            user.setWin(0);
+            Administrator.setUser(user);
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("after-login-controller.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage stage = (Stage) ((Node) (event.getSource())).getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
+        }
+        else {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("ERROR");
+            alert.setContentText("We do not have any user with this information!!!");
+            alert.setHeaderText(null);
+            alert.show();
+        }
     }
 
 

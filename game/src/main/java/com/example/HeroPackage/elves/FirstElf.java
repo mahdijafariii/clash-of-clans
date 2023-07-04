@@ -128,8 +128,9 @@ public class FirstElf extends Heroes {
         towers = towers();
         double minDistance = 0;
         Building closest = null;
-        for (int i = 0; i < towers.size(); i++) {
-            if (towers.get(i) != null) {
+        for (int i = 0; i < towers.size(); i++)
+        {
+            if (towers.get(i) != null || towers.get(i).getHealth()>0) {
                 if (minDistance > getDistanceFromBuilding(this, towers.get(i)) || minDistance == 0) {
                     minDistance = getDistanceFromBuilding(this, towers.get(i));
                     closest = towers.get(i);
@@ -147,6 +148,8 @@ public class FirstElf extends Heroes {
 
                 attackInBattle();
                 closest.setHealth(closest.health - this.power);
+            System.out.println(closest.health);
+
 
         }
 

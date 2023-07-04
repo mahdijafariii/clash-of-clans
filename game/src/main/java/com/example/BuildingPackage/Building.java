@@ -7,10 +7,12 @@ import java.lang.Math;
 
 import java.util.ArrayList;
 
-public abstract class Building extends ImageView
+public abstract class Building
 {
      public int health;
      public int damage;
+     public double x , y;
+     public boolean isDestroyed;
 
     //-----------------GETTER AND SETTER--------------------
 
@@ -29,5 +31,21 @@ public abstract class Building extends ImageView
     public void setDamage(int damage)
     {
         this.damage = damage;
+    }
+    public double getY()
+    {
+        return y;
+    }
+    public void setY(double y)
+    {
+        this.y = y;
+    }
+    public double getX()
+    {
+        return x;
+    }
+    public void setX(double x)
+    {
+        this.x = x;
     }
 }

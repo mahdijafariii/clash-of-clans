@@ -26,6 +26,7 @@ public class JungleTower extends Building
     boolean hasAttacked;
     public JungleTower(ImageView imageView)
     {
+        super.isDestroyed = false;
         super.setX(imageView.getLayoutX());
         super.setY(imageView.getLayoutY());
         hasAttacked = false;
@@ -59,6 +60,7 @@ public class JungleTower extends Building
         {
             if (!hero.getImage().getUrl().equals(this.getClass().getResource("/com/example/game/Images/Die-1.png").toString()))
             {
+                /*
                 Heroes finalHero = hero;
                 Platform.runLater(new Runnable()
                 {
@@ -68,20 +70,22 @@ public class JungleTower extends Building
                         System.out.println("Attack!");
                         System.out.println(finalHero.getHealth());
                         ImageView imageView = new ImageView(new Image(this.getClass().getResource("/com/example/game/Images/fireball.png").toString()));
-                        imageView.setTranslateX(jungleTower.getTranslateX());
-                        imageView.setTranslateY(jungleTower.getTranslateY());
+                        imageView.setTranslateX(jungleTower.getX());
+                        imageView.setTranslateY(jungleTower.getY());
                         jungleMapController.getAnchor().getChildren();
                         jungleMapController.getAnchor().getChildren().add(imageView);
                         TranslateTransition transition = new TranslateTransition();
                         transition.setNode(imageView);
-                        transition.setByX(Math.abs(finalHero.getTranslateX() - jungleTower.getTranslateX()));
-                        transition.setByY(Math.abs(finalHero.getTranslateY() - jungleTower.getTranslateY()));
+                        transition.setByX(Math.abs(finalHero.getTranslateX() - jungleTower.getX()));
+                        transition.setByY(Math.abs(finalHero.getTranslateY() - jungleTower.getY()));
                         transition.setDuration(new Duration(1000));
                         transition.play();
                         System.out.println("Play shod!");
                         //jungleMapController.getAnchor().getChildren().remove(imageView);
                     }
                 });
+
+                 */
                 hero.setHealth(hero.getHealth() - damage);
                 if(hero.getHealth()<=0)
                 {
@@ -101,20 +105,23 @@ public class JungleTower extends Building
         }
         else
         {
+            /*
             ImageView imageView = new ImageView(img_fire);
             darkJungleMapController.getAnchor().getChildren().add(imageView);
             TranslateTransition transition = new TranslateTransition();
             transition.setNode(imageView);
-            transition.setFromX(this.getTranslateX());
-            transition.setFromY(this.getTranslateY());
+            transition.setFromX(this.getX());
+            transition.setFromY(this.getY());
             transition.setToX(hero.getTranslateX());
             transition.setToY(hero.getTranslateY());
             transition.setDuration(new Duration(2000));
             transition.play();
             darkJungleMapController.getAnchor().getChildren().remove(imageView);
-            hero.setHealth(hero.getHealth() - damage);
 
-            if(hero.getHealth()<=0)
+             */
+
+            hero.setHealth(hero.getHealth() - damage);
+            if(hero.getHealth() <= 0)
             {
                 hero.setImage(new Image(this.getClass().getResource("/com/example/game/Images/Die-1.png").toString()));
                 hero.setFitHeight(30);
@@ -139,10 +146,13 @@ public class JungleTower extends Building
                 {
                     for (ImageView imageView : jungleMapController.getImages())
                     {
-                        if (imageView.getTranslateX() == this.getTranslateX() && imageView.getTranslateY() == this.getTranslateY())
+                        if (imageView.getLayoutX() == this.getX() && imageView.getLayoutY() == this.getY())
                         {
                             Image image = new Image(img_3);
                             imageView.setImage(image);
+                            imageView.setLayoutY(this.getY() + 35);
+                            super.isDestroyed = true;
+                            break;
                         }
                     }
                 }
@@ -150,10 +160,11 @@ public class JungleTower extends Building
                 {
                     for (ImageView imageView : jungleMapController.getImages())
                     {
-                        if (imageView.getTranslateX() == this.getTranslateX() && imageView.getTranslateY() == this.getTranslateY())
+                        if (imageView.getLayoutX() == this.getX() && imageView.getLayoutY() == this.getY())
                         {
                             Image image = new Image(img_2);
                             imageView.setImage(image);
+                            break;
                         }
                     }
                 }
@@ -167,7 +178,7 @@ public class JungleTower extends Building
                 {
                     for (ImageView imageView : darkJungleMapController.getImages())
                     {
-                        if (imageView.getTranslateX() == this.getTranslateX() && imageView.getTranslateY() == this.getTranslateY())
+                        if (imageView.getTranslateX() == this.getX() && imageView.getTranslateY() == this.getY())
                         {
                             Image image = new Image(img_3);
                             imageView.setImage(image);
@@ -178,7 +189,7 @@ public class JungleTower extends Building
                 {
                     for (ImageView imageView : darkJungleMapController.getImages())
                     {
-                        if (imageView.getTranslateX() == this.getTranslateX() && imageView.getTranslateY() == this.getTranslateY())
+                        if (imageView.getTranslateX() == this.getX() && imageView.getTranslateY() == this.getY())
                         {
                             Image image = new Image(img_2);
                             imageView.setImage(image);

@@ -20,14 +20,16 @@ public class CastleBridgeTower extends Building
     String img_3 = this.getClass().getResource("/com/example/game/Images/CastleBridgeTower3.png").toString();
     String img_main = this.getClass().getResource("/com/example/game/Images/CastleBridgeTower1.png").toString();
 
-    int multiplier = 2;
-
     boolean hasAttacked;
     public CastleBridgeTower (ImageView imageView)
     {
+        super.setX(imageView.getLayoutX());
+        super.setY(imageView.getLayoutY());
+        super.setMultiplier(3);
         hasAttacked = false;
+        super.isDestroyed = false;
         super.health = 400;
-        super.damage = 20;
+        super.damage = 10;
     }
 
     //-----------------CHECK FOR ENEMIES FUNCTION--------------------

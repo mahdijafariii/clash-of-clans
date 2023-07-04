@@ -12,6 +12,7 @@ import com.example.HeroPackage.Warrior.SecondWarrior;
 import com.example.HeroPackage.elves.FirstElf;
 import com.example.HeroPackage.elves.SecondElf;
 import com.example.HeroPackage.elves.ThirdElf;
+import com.example.MapPackage.JungleMap;
 import com.example.MapPackage.SkyBridgeMap;
 import com.example.UserPackage.Administrator;
 import javafx.fxml.FXML;
@@ -113,6 +114,15 @@ public class SkyBridgeMapController implements Initializable
         images.add(door_4);
 
         return images;
+    }
+
+    @FXML
+    public void setStarsAndProgression()
+    {
+        for (Building building : Administrator.getCurrentMap().getBuildings())
+        {
+
+        }
     }
 
     @Override

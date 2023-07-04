@@ -13,6 +13,7 @@ public abstract class Building
      public int damage;
      public double x , y;
      public boolean isDestroyed;
+     public int multiplier;
 
     //-----------------GETTER AND SETTER--------------------
 
@@ -47,5 +48,13 @@ public abstract class Building
     public void setX(double x)
     {
         this.x = x;
+    }
+    public int getMultiplier()
+    {
+        return multiplier;
+    }
+    public void setMultiplier(int multiplier)
+    {
+        this.multiplier = multiplier;
     }
 }

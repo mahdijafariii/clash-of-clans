@@ -12,13 +12,14 @@ public class CastleBridgeDoor extends Building
     String img_3 = this.getClass().getResource("/com/example/game/Images/CastleBridgeDoor3.png").toString();
     String img_main = this.getClass().getResource("/com/example/game/Images/CastleBridgeDoor1.png").toString();
 
-    int multiplier = 1;
     double x , y;
 
     public CastleBridgeDoor (ImageView imageView)
     {
-        this.x = imageView.getX();
-        this.y = imageView.getY();
+        super.setX(imageView.getLayoutX());
+        super.setY(imageView.getLayoutY());
+        super.setMultiplier(1);
+        super.isDestroyed = false;
         super.health = 600;
         super.damage = 0;
     }

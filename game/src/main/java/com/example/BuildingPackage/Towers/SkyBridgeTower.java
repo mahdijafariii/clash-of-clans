@@ -26,9 +26,13 @@ public class SkyBridgeTower extends Building
 
     public SkyBridgeTower(ImageView imageView)
     {
+        super.setMultiplier(3);
+        super.setX(imageView.getLayoutX());
+        super.setY(imageView.getLayoutY());
+        super.isDestroyed = false;
         hasAttacked = false;
         super.health = 400;
-        super.damage = 20;
+        super.damage = 10;
     }
 
     //-----------------CHECK FOR ENEMIES FUNCTION--------------------

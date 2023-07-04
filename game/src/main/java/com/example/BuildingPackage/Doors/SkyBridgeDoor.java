@@ -21,8 +21,10 @@ public class SkyBridgeDoor extends Building
 
     public SkyBridgeDoor(ImageView imageView)
     {
-        this.x = imageView.getX();
-        this.y = imageView.getY();
+        super.setX(imageView.getLayoutX());
+        super.setY(imageView.getLayoutY());
+        super.setMultiplier(1);
+        super.isDestroyed = false;
         super.health = 600;
         super.damage = 0;
     }

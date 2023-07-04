@@ -22,16 +22,16 @@ public class JungleTower extends Building
     String img_main = this.getClass().getResource("/com/example/game/Images/JungleTower1.png").toString();
     String img_fire = this.getClass().getResource("/com/example/game/Images/fireball.png").toString();
 
-    int multiplier = 2;
     boolean hasAttacked;
     public JungleTower(ImageView imageView)
     {
+        super.setMultiplier(3);
         super.isDestroyed = false;
         super.setX(imageView.getLayoutX());
         super.setY(imageView.getLayoutY());
         hasAttacked = false;
         super.health = 400;
-        super.damage = 20;
+        super.damage = 10;
     }
 
     //-----------------CHECK FOR ENEMIES FUNCTION--------------------

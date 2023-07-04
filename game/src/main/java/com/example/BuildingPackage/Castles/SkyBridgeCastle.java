@@ -16,13 +16,14 @@ public class SkyBridgeCastle extends Building
     String img_3 = this.getClass().getResource("/com/example/game/Images/SkyBridgeCastle3.png").toString();
     String img_main = this.getClass().getResource("/com/example/game/Images/SkyBridgeCastle1.png").toString();
 
-    int multiplier = 3;
     double x , y;
 
     public SkyBridgeCastle(ImageView imageView)
     {
-        this.x = imageView.getX();
-        this.y = imageView.getY();
+        super.setX(imageView.getLayoutX());
+        super.setY(imageView.getLayoutY());
+        super.setMultiplier(1);
+        super.isDestroyed = false;
         super.health = 1000;
         super.damage = 0;
     }

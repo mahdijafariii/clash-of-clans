@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="481.0" prefWidth="804.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ViewPackage.CharacterPageController">
+   <children>
+      <ImageView fitHeight="564.0" fitWidth="865.0" layoutX="-8.0" layoutY="-35.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/signUp.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="237.0" fitWidth="277.0" layoutX="278.0" layoutY="82.0" onMouseClicked="#elf_1" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Elf_01__Main.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="140.0" fitWidth="265.0" layoutX="13.0" layoutY="79.0" onMouseClicked="#elf_2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Elf_02__Main.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="237.0" fitWidth="277.0" layoutX="9.0" layoutY="214.0" onMouseClicked="#elf_3" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Elf_03__Main.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="140.0" fitWidth="255.0" layoutX="555.0" layoutY="99.0" onMouseClicked="#knight_1" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Knight_01__Main.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="140.0" fitWidth="242.0" layoutX="93.0" layoutY="368.0" onMouseClicked="#Knight_2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Knight_02__Main.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="98.0" fitWidth="170.0" layoutX="335.0" layoutY="247.0" onMouseClicked="#warrior_2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Warrior_02__Main.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="140.0" fitWidth="242.0" layoutX="493.0" layoutY="368.0" onMouseClicked="#knight_3" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Knight_03__Main.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="98.0" fitWidth="163.0" layoutX="600.0" layoutY="247.0" onMouseClicked="#warrior_1" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Warrior_01__Main.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="180.0" layoutY="11.0" prefHeight="54.0" prefWidth="480.0" text="Characters" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Jokerman" size="42.0" />
+         </font>
+      </Label>
+      <Ellipse fill="#08233b" layoutX="146.0" layoutY="204.0" radiusX="100.0" radiusY="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Ellipse fill="#08233b" layoutX="414.0" layoutY="202.0" radiusX="100.0" radiusY="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Ellipse fill="#08233b" layoutX="681.0" layoutY="201.0" radiusX="100.0" radiusY="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Ellipse fill="#08233b" layoutX="147.0" layoutY="339.0" radiusX="100.0" radiusY="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Ellipse fill="#08233b" layoutX="223.0" layoutY="467.0" radiusX="100.0" radiusY="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Ellipse fill="#08233b" layoutX="681.0" layoutY="340.0" radiusX="100.0" radiusY="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Ellipse fill="#08233b" layoutX="416.0" layoutY="340.0" radiusX="100.0" radiusY="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Ellipse fill="#08233b" layoutX="623.0" layoutY="467.0" radiusX="100.0" radiusY="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Button layoutX="382.0" layoutY="450.0" mnemonicParsing="false" onAction="#backToStart" prefHeight="34.0" prefWidth="75.0" style="-fx-background-color: #08233b; -fx-background-radius: 200;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="Vladimir Script" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

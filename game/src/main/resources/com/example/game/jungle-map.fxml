@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchor" prefHeight="607.0" prefWidth="819.0" style="-fx-background-color: #050226;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ViewPackage.JungleMapController">
+   <children>
+      <ImageView fitHeight="566.0" fitWidth="819.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/LightJungleBackground.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="tower_2" fitHeight="164.0" fitWidth="68.0" layoutX="485.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/JungleTower1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="56.0" layoutX="113.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Bush_blue_flowers1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="56.0" layoutX="579.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Bush_orange_flowers1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="56.0" layoutX="687.0" layoutY="353.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Bush_orange_flowers1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="56.0" layoutX="88.0" layoutY="384.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Bush_orange_flowers1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="56.0" layoutX="321.0" layoutY="394.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Bush_blue_flowers1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="56.0" layoutX="410.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Bush_blue_flowers1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="76.0" fitWidth="79.0" layoutX="460.0" layoutY="366.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/JungleWallFront1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="74.0" fitWidth="66.0" layoutX="388.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/JungleWallBehind1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="74.0" fitWidth="66.0" layoutX="446.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/JungleWallBehind1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="74.0" fitWidth="66.0" layoutX="504.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/JungleWallBehind1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="tower_1" fitHeight="164.0" fitWidth="57.0" layoutX="397.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/JungleTower1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="76.0" fitWidth="79.0" layoutX="525.0" layoutY="366.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/JungleWallFront1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="door_1" fitHeight="120.0" fitWidth="66.0" layoutX="564.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/JungleDoor1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="door_2" fitHeight="120.0" fitWidth="66.0" layoutX="643.0" layoutY="328.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/JungleDoor1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="76.0" fitWidth="79.0" layoutX="589.0" layoutY="366.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/JungleWallFront1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="56.0" layoutX="281.0" layoutY="161.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Bush_blue_flowers1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="56.0" layoutX="429.0" layoutY="311.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Bush_orange_flowers1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="56.0" layoutX="524.0" layoutY="195.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Bush_orange_flowers1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="56.0" layoutX="14.0" layoutY="286.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Bush_orange_flowers1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="744.0" layoutY="318.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Die-3.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="28.0" fitWidth="28.0" layoutX="292.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/29.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="36.0" layoutX="337.0" layoutY="361.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Die-2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="56.0" layoutX="744.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Bush_orange_flowers1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="56.0" layoutX="652.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Bush_blue_flowers1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="36.0" layoutX="418.0" layoutY="231.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Lose2.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="castle_1" fitHeight="206.0" fitWidth="254.0" layoutX="560.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/JungleCastle1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="41.0" fitWidth="48.0" layoutX="71.0" layoutY="186.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Bush_red_flowers1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="17.0" fitWidth="50.0" layoutX="384.0" layoutY="299.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/arrow.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="16.0" fitWidth="17.0" layoutX="277.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/dagger.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="146.0" fitWidth="152.0" layoutX="149.0" layoutY="462.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/CardFrame.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="146.0" fitWidth="152.0" layoutX="299.0" layoutY="461.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/CardFrame.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="146.0" fitWidth="152.0" layoutY="461.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/CardFrame.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="hero_1" fitHeight="62.0" fitWidth="69.0" layoutX="39.0" layoutY="505.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="146.0" fitWidth="152.0" layoutX="449.0" layoutY="461.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/CardFrame.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="hero_2" fitHeight="62.0" fitWidth="69.0" layoutX="188.0" layoutY="505.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="hero_3" fitHeight="62.0" fitWidth="69.0" layoutX="338.0" layoutY="503.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="hero_4" fitHeight="62.0" fitWidth="69.0" layoutX="488.0" layoutY="505.0" pickOnBounds="true" preserveRatio="true" />
+      <ProgressBar fx:id="progress" layoutX="637.0" layoutY="495.0" prefHeight="18.0" prefWidth="146.0" progress="0.0" />
+      <Label alignment="CENTER" layoutX="658.0" layoutY="468.0" prefHeight="26.0" prefWidth="104.0" text="Progress" textFill="WHITE">
+         <font>
+            <Font name="Segoe Script" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="star_1" fitHeight="51.0" fitWidth="56.0" layoutX="633.0" layoutY="541.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="star_3" fitHeight="51.0" fitWidth="56.0" layoutX="685.0" layoutY="518.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="star_2" fitHeight="51.0" fitWidth="56.0" layoutX="737.0" layoutY="541.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="name_1" alignment="CENTER" layoutX="5.0" layoutY="462.0" prefHeight="26.0" prefWidth="134.0" textFill="WHITE">
+         <font>
+            <Font name="Segoe Script" size="10.0" />
+         </font>
+      </Label>
+      <Label fx:id="name_2" alignment="CENTER" layoutX="154.0" layoutY="462.0" prefHeight="26.0" prefWidth="134.0" textFill="WHITE">
+         <font>
+            <Font name="Segoe Script" size="10.0" />
+         </font>
+      </Label>
+      <Label fx:id="name_3" alignment="CENTER" layoutX="304.0" layoutY="462.0" prefHeight="26.0" prefWidth="134.0" textFill="WHITE">
+         <font>
+            <Font name="Segoe Script" size="10.0" />
+         </font>
+      </Label>
+      <Label fx:id="name_4" alignment="CENTER" layoutX="451.0" layoutY="462.0" prefHeight="26.0" prefWidth="134.0" textFill="WHITE">
+         <font>
+            <Font name="Segoe Script" size="10.0" />
+         </font>
+      </Label>
+      <Label fx:id="numberHero" alignment="CENTER" layoutX="48.0" layoutY="581.0" prefHeight="16.0" prefWidth="50.0" textFill="WHITE">
+         <font>
+            <Font name="Segoe Script" size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="numberHero2" alignment="CENTER" layoutX="196.0" layoutY="581.0" prefHeight="16.0" prefWidth="50.0" textFill="WHITE">
+         <font>
+            <Font name="Segoe Script" size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="numberHero3" alignment="CENTER" layoutX="347.0" layoutY="581.0" prefHeight="16.0" prefWidth="50.0" textFill="WHITE">
+         <font>
+            <Font name="Segoe Script" size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="numberHero4" alignment="CENTER" layoutX="498.0" layoutY="581.0" prefHeight="16.0" prefWidth="50.0" textFill="WHITE">
+         <font>
+            <Font name="Segoe Script" size="11.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

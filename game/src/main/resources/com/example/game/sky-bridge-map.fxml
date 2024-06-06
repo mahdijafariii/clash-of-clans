@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="607.0" prefWidth="813.0" style="-fx-background-color: #050226;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ViewPackage.SkyBridgeMapController">
+   <children>
+      <ImageView fitHeight="146.0" fitWidth="152.0" layoutX="151.0" layoutY="459.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/CardFrame.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="146.0" fitWidth="152.0" layoutX="301.0" layoutY="458.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/CardFrame.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="146.0" fitWidth="152.0" layoutX="2.0" layoutY="458.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/CardFrame.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="464.0" fitWidth="814.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/SkyBridgeBackground.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="door_3" fitHeight="98.0" fitWidth="59.0" layoutX="480.0" layoutY="278.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/SkyBridgeDoor1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="door_4" fitHeight="98.0" fitWidth="64.0" layoutX="492.0" layoutY="293.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/SkyBridgeDoor1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="door_2" fitHeight="91.0" fitWidth="56.0" layoutX="424.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/SkyBridgeDoor1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="door_1" fitHeight="91.0" fitWidth="56.0" layoutX="436.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/SkyBridgeDoor1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="tower_1" fitHeight="155.0" fitWidth="51.0" layoutX="491.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/SkyBridgeTower1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="castle_1" fitHeight="230.0" fitWidth="270.0" layoutX="530.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/SkyBridgeCastle1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="tower_2" fitHeight="191.0" fitWidth="64.0" layoutX="560.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/SkyBridgeTower1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="44.0" fitWidth="46.0" layoutX="380.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Lose2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="36.0" layoutX="135.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Die-3.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="36.0" layoutX="322.0" layoutY="193.0" pickOnBounds="true" preserveRatio="true" style="-fx-rotate: 60;">
+         <image>
+            <Image url="@Images/Die-3.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="36.0" layoutX="104.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true" style="-fx-rotate: 0;">
+         <image>
+            <Image url="@Images/Die-1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="71.0" fitWidth="104.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="hero_1" fitHeight="62.0" fitWidth="69.0" layoutX="41.0" layoutY="502.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="146.0" fitWidth="152.0" layoutX="451.0" layoutY="458.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/CardFrame.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="hero_2" fitHeight="62.0" fitWidth="69.0" layoutX="190.0" layoutY="502.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="hero_3" fitHeight="62.0" fitWidth="69.0" layoutX="340.0" layoutY="500.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="hero_4" fitHeight="62.0" fitWidth="69.0" layoutX="490.0" layoutY="502.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="name_1" alignment="CENTER" layoutX="-4.0" layoutY="458.0" prefHeight="26.0" prefWidth="153.0" textFill="WHITE">
+         <font>
+            <Font name="Segoe Script" size="10.0" />
+         </font>
+      </Label>
+      <Label fx:id="name_2" alignment="CENTER" layoutX="145.0" layoutY="458.0" prefHeight="26.0" prefWidth="146.0" textFill="WHITE">
+         <font>
+            <Font name="Segoe Script" size="10.0" />
+         </font>
+      </Label>
+      <Label fx:id="name_3" alignment="CENTER" layoutX="299.0" layoutY="458.0" prefHeight="26.0" prefWidth="154.0" textFill="WHITE">
+         <font>
+            <Font name="Segoe Script" size="10.0" />
+         </font>
+      </Label>
+      <Label fx:id="name_4" alignment="CENTER" layoutX="454.0" layoutY="458.0" prefHeight="26.0" prefWidth="146.0" textFill="WHITE">
+         <font>
+            <Font name="Segoe Script" size="10.0" />
+         </font>
+      </Label>
+      <ProgressBar fx:id="progress" layoutX="627.0" layoutY="485.0" prefHeight="18.0" prefWidth="146.0" progress="0.0" />
+      <Label alignment="CENTER" layoutX="648.0" layoutY="458.0" prefHeight="26.0" prefWidth="104.0" text="Progress" textFill="WHITE">
+         <font>
+            <Font name="Segoe Script" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="star_1" fitHeight="51.0" fitWidth="56.0" layoutX="623.0" layoutY="531.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="star_3" fitHeight="51.0" fitWidth="56.0" layoutX="675.0" layoutY="508.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="star_2" fitHeight="51.0" fitWidth="56.0" layoutX="727.0" layoutY="531.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="numberHero" alignment="CENTER" layoutX="46.0" layoutY="582.0" prefHeight="7.0" prefWidth="59.0" textFill="WHITE">
+         <font>
+            <Font name="Segoe Script" size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="numberHero2" alignment="CENTER" layoutX="195.0" layoutY="582.0" prefHeight="7.0" prefWidth="59.0" textFill="WHITE">
+         <font>
+            <Font name="Segoe Script" size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="numberHero3" alignment="CENTER" layoutX="345.0" layoutY="582.0" prefHeight="7.0" prefWidth="59.0" textFill="WHITE">
+         <font>
+            <Font name="Segoe Script" size="11.0" />
+         </font>
+      </Label>
+      <Label fx:id="numberHero4" alignment="CENTER" layoutX="497.0" layoutY="582.0" prefHeight="7.0" prefWidth="59.0" textFill="WHITE">
+         <font>
+            <Font name="Segoe Script" size="11.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

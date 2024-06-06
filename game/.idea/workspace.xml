@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="af8125d7-6521-4a45-8aa6-6ded62a218e8" name="Changes" comment="complete database , fix some bugs , add attack for first elf" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Rq0jS4shLMEAXLlJFLB4d4QtK3" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/mysql-connector-java-8.0.30.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.game.HelloApplication" />
+      <module name="game" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.game.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.HelloApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="af8125d7-6521-4a45-8aa6-6ded62a218e8" name="Changes" comment="" />
+      <created>1687962442542</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1687962442542</updated>
+      <workItem from="1688078727440" duration="1704000" />
+      <workItem from="1688392091926" duration="9000" />
+    </task>
+    <task id="LOCAL-00001" summary="create characters ,create the class , specify the photo of them">
+      <option name="closed" value="true" />
+      <created>1687991178819</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1687991178819</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add all pictures of characters !">
+      <option name="closed" value="true" />
+      <created>1687991202328</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1687991202328</updated>
+    </task>
+    <task id="LOCAL-00003" summary="database class is complete for test">
+      <option name="closed" value="true" />
+      <created>1687994980130</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1687994980130</updated>
+    </task>
+    <task id="LOCAL-00004" summary="complete the crate acc page">
+      <option name="closed" value="true" />
+      <created>1687995638383</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1687995638383</updated>
+    </task>
+    <task id="LOCAL-00005" summary="make database online">
+      <option name="closed" value="true" />
+      <created>1688029074473</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1688029074473</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add animation to first page , fix some bugs">
+      <option name="closed" value="true" />
+      <created>1688043233608</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1688043233608</updated>
+    </task>
+    <task id="LOCAL-00007" summary="make after login page">
+      <option name="closed" value="true" />
+      <created>1688043353043</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1688043353043</updated>
+    </task>
+    <task id="LOCAL-00008" summary="now show character info , some func in main pages , info of each character is completed!">
+      <option name="closed" value="true" />
+      <created>1688060069552</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1688060069552</updated>
+    </task>
+    <task id="LOCAL-00009" summary="now show character info , some func in main pages , info of each character is completed!">
+      <option name="closed" value="true" />
+      <created>1688060075633</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1688060075633</updated>
+    </task>
+    <task id="LOCAL-00010" summary="profile is complete !! (just should set map )!!">
+      <option name="closed" value="true" />
+      <created>1688063773365</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1688063773365</updated>
+    </task>
+    <task id="LOCAL-00011" summary="edit 2 map , add image of map to create acc page , add photo of map of user to profile page">
+      <option name="closed" value="true" />
+      <created>1688117608325</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1688117608325</updated>
+    </task>
+    <task id="LOCAL-00012" summary="choose map for battle">
+      <option name="closed" value="true" />
+      <created>1688125849677</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1688125849677</updated>
+    </task>
+    <task id="LOCAL-00013" summary="choose character page is complete!">
+      <option name="closed" value="true" />
+      <created>1688133408869</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1688133408869</updated>
+    </task>
+    <task id="LOCAL-00014" summary="edit layout of hero">
+      <option name="closed" value="true" />
+      <created>1688133456147</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1688133456147</updated>
+    </task>
+    <task id="LOCAL-00015" summary="add picture of heroes to fxml file of map">
+      <option name="closed" value="true" />
+      <created>1688161451682</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1688161451682</updated>
+    </task>
+    <task id="LOCAL-00016" summary="change image of elf and add Test User for start Attack Test">
+      <option name="closed" value="true" />
+      <created>1688224034243</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1688224034243</updated>
+    </task>
+    <task id="LOCAL-00017" summary="fix some bugs of map controller and edit fxml file of them&#10;add drag and drop test for light jungle map">
+      <option name="closed" value="true" />
+      <created>1688236533456</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1688236533456</updated>
+    </task>
+    <task id="LOCAL-00018" summary="change thread and the function of tower !">
+      <option name="closed" value="true" />
+      <created>1688345798161</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1688345798161</updated>
+    </task>
+    <task id="LOCAL-00019" summary="change some func">
+      <option name="closed" value="true" />
+      <created>1688346308645</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1688346308645</updated>
+    </task>
+    <task id="LOCAL-00020" summary="change some func">
+      <option name="closed" value="true" />
+      <created>1688346352645</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1688346352645</updated>
+    </task>
+    <task id="LOCAL-00021" summary="change some func">
+      <option name="closed" value="true" />
+      <created>1688346447762</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1688346447762</updated>
+    </task>
+    <task id="LOCAL-00022" summary="change some item in jungle tower for attack on heroes">
+      <option name="closed" value="true" />
+      <created>1688377947749</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1688377947749</updated>
+    </task>
+    <task id="LOCAL-00023" summary="start attack of heroes">
+      <option name="closed" value="true" />
+      <created>1688409468850</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1688409468850</updated>
+    </task>
+    <task id="LOCAL-00024" summary="testing">
+      <option name="closed" value="true" />
+      <created>1688420945878</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1688420945878</updated>
+    </task>
+    <task id="LOCAL-00025" summary="add some function to first elf for attacking !!">
+      <option name="closed" value="true" />
+      <created>1688423753113</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1688423753113</updated>
+    </task>
+    <task id="LOCAL-00026" summary="attack elf to towers">
+      <option name="closed" value="true" />
+      <created>1688428561192</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1688428561192</updated>
+    </task>
+    <task id="LOCAL-00027" summary="attack elf to towers">
+      <option name="closed" value="true" />
+      <created>1688434181158</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1688434181158</updated>
+    </task>
+    <task id="LOCAL-00028" summary="attack elf to towers">
+      <option name="closed" value="true" />
+      <created>1688434722011</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1688434722011</updated>
+    </task>
+    <task id="LOCAL-00029" summary="change attack elf">
+      <option name="closed" value="true" />
+      <created>1688452036984</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1688452036984</updated>
+    </task>
+    <task id="LOCAL-00030" summary="change attack elf">
+      <option name="closed" value="true" />
+      <created>1688456812343</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1688456812343</updated>
+    </task>
+    <task id="LOCAL-00031" summary="change attack elf">
+      <option name="closed" value="true" />
+      <created>1688456863470</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1688456863470</updated>
+    </task>
+    <task id="LOCAL-00032" summary="change attack elf">
+      <option name="closed" value="true" />
+      <created>1688459417634</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1688459417634</updated>
+    </task>
+    <task id="LOCAL-00033" summary="complete database , fix some bugs , add attack for first elf">
+      <option name="closed" value="true" />
+      <created>1688478276870</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1688478276870</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="create characters ,create the class , specify the photo of them" />
+    <MESSAGE value="add all pictures of characters !" />
+    <MESSAGE value="database class is complete for test" />
+    <MESSAGE value="complete the crate acc page" />
+    <MESSAGE value="make database online" />
+    <MESSAGE value="add animation to first page , fix some bugs" />
+    <MESSAGE value="make after login page" />
+    <MESSAGE value="now show character info , some func in main pages , info of each character is completed!" />
+    <MESSAGE value="profile is complete !! (just should set map )!!" />
+    <MESSAGE value="edit 2 map , add image of map to create acc page , add photo of map of user to profile page" />
+    <MESSAGE value="choose map for battle" />
+    <MESSAGE value="choose character page is complete!" />
+    <MESSAGE value="edit layout of hero" />
+    <MESSAGE value="add picture of heroes to fxml file of map" />
+    <MESSAGE value="change image of elf and add Test User for start Attack Test" />
+    <MESSAGE value="fix some bugs of map controller and edit fxml file of them&#10;add drag and drop test for light jungle map" />
+    <MESSAGE value="change thread and the function of tower !" />
+    <MESSAGE value="change some func" />
+    <MESSAGE value="change some item in jungle tower for attack on heroes" />
+    <MESSAGE value="start attack of heroes" />
+    <MESSAGE value="testing" />
+    <MESSAGE value="add some function to first elf for attacking !!" />
+    <MESSAGE value="attack elf to towers" />
+    <MESSAGE value="change attack elf" />
+    <MESSAGE value="complete database , fix some bugs , add attack for first elf" />
+    <option name="LAST_COMMIT_MESSAGE" value="complete database , fix some bugs , add attack for first elf" />
+  </component>
+</project>

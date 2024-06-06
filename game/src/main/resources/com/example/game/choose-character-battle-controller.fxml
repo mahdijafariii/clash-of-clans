@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="485.0" prefWidth="804.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ViewPackage.ChooseCharacterBattleController">
+   <children>
+      <ImageView fitHeight="558.0" fitWidth="881.0" layoutX="-53.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/signUp.png" />
+         </image>
+      </ImageView>
+      <Ellipse fill="#020f1b" layoutX="132.0" layoutY="182.0" radiusX="57.0" radiusY="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Ellipse fill="#020f1b" layoutX="272.0" layoutY="182.0" radiusX="57.0" radiusY="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Ellipse fill="#020f1b" layoutX="408.0" layoutY="182.0" radiusX="57.0" radiusY="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Ellipse fill="#020f1b" layoutX="542.0" layoutY="182.0" radiusX="57.0" radiusY="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Ellipse fill="#020f1b" layoutX="674.0" layoutY="182.0" radiusX="57.0" radiusY="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Ellipse fill="#020f1b" layoutX="272.0" layoutY="286.0" radiusX="57.0" radiusY="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Ellipse fill="#020f1b" layoutX="406.0" layoutY="286.0" radiusX="57.0" radiusY="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <Ellipse fill="#020f1b" layoutX="542.0" layoutY="285.0" radiusX="57.0" radiusY="3.0" stroke="BLACK" strokeType="INSIDE" />
+      <HBox layoutX="136.0" layoutY="426.0" prefHeight="119.0" prefWidth="526.0">
+         <children>
+            <ImageView fx:id="character1" fitHeight="116.0" fitWidth="143.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="character2" fitHeight="115.0" fitWidth="155.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="character3" fitHeight="119.0" fitWidth="135.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="character4" fitHeight="108.0" fitWidth="122.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </HBox>
+      <ImageView fitHeight="98.0" fitWidth="172.0" layoutX="46.0" layoutY="108.0" onMouseClicked="#elf1" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Elf_01__Main.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="98.0" fitWidth="172.0" layoutX="186.0" layoutY="104.0" onMouseClicked="#elf2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Elf_02__Main.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="98.0" fitWidth="172.0" layoutX="322.0" layoutY="108.0" onMouseClicked="#elf3" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Elf_03__Main.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="63.0" fitWidth="102.0" layoutX="491.0" layoutY="122.0" onMouseClicked="#warrior1" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Warrior_01__Main.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="68.0" fitWidth="122.0" layoutX="621.0" layoutY="115.0" onMouseClicked="#warrior2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Warrior_02__Main.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="90.0" fitWidth="164.0" layoutX="186.0" layoutY="221.0" onMouseClicked="#knight1" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Knight_01__Main.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="90.0" fitWidth="162.0" layoutX="320.0" layoutY="219.0" onMouseClicked="#knight2" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Knight_02__Main.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="90.0" fitWidth="162.0" layoutX="455.0" layoutY="219.0" onMouseClicked="#knight3" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Images/Knight_03__Main.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="258.0" layoutY="36.0" text="Choose your character " textFill="#969595">
+         <font>
+            <Font name="Freestyle Script" size="51.0" />
+         </font>
+      </Label>
+      <Button layoutX="740.0" layoutY="473.0" mnemonicParsing="false" onAction="#startBattle" prefHeight="54.0" prefWidth="66.0" style="-fx-background-color: #000000;">
+         <graphic>
+            <ImageView fitHeight="53.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/2_ax_.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="14.0" layoutY="504.0" mnemonicParsing="false" onAction="#backFromChooseHero" style="-fx-background-radius: 20;" text="Back">
+         <font>
+            <Font name="Bodoni MT Condensed" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="104.0" layoutY="468.0" mnemonicParsing="false" onAction="#deleteChoose" style="-fx-background-radius: 20;" text="Delete">
+         <font>
+            <Font name="Bodoni MT Condensed" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="753.0" layoutY="420.0" prefHeight="55.0" prefWidth="48.0" text="Start" textFill="#969595">
+         <font>
+            <Font name="Freestyle Script" size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="104.0" layoutY="166.0" prefHeight="55.0" prefWidth="74.0" text="Elf Shooter" textFill="#969595">
+         <font>
+            <Font name="Freestyle Script" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="234.0" layoutY="166.0" prefHeight="55.0" prefWidth="94.0" text="Elf Swordsman" textFill="#969595">
+         <font>
+            <Font name="Freestyle Script" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="375.0" layoutY="166.0" prefHeight="55.0" prefWidth="94.0" text="Elf Magician" textFill="#969595">
+         <font>
+            <Font name="Freestyle Script" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="224.0" layoutY="272.0" prefHeight="55.0" prefWidth="94.0" text="German Spearman" textFill="#969595">
+         <font>
+            <Font name="Freestyle Script" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="366.0" layoutY="272.0" prefHeight="55.0" prefWidth="94.0" text="Arab Warrior" textFill="#969595">
+         <font>
+            <Font name="Freestyle Script" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="504.0" layoutY="272.0" prefHeight="55.0" prefWidth="94.0" text="Armored Iron" textFill="#969595">
+         <font>
+            <Font name="Freestyle Script" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="495.0" layoutY="166.0" prefHeight="55.0" prefWidth="94.0" text="Woman Warrior" textFill="#969595">
+         <font>
+            <Font name="Freestyle Script" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="645.0" layoutY="166.0" prefHeight="55.0" prefWidth="94.0" text="Knife Woman" textFill="#969595">
+         <font>
+            <Font name="Freestyle Script" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="371.0" layoutY="367.0" text="your choose " textFill="#969595">
+         <font>
+            <Font name="Freestyle Script" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="623.0" layoutY="244.0" prefHeight="55.0" prefWidth="192.0" text="Elf Shooter , Elf Swordsman ,Elf Magician" textFill="#969595">
+         <font>
+            <Font name="Freestyle Script" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="680.0" layoutY="308.0" prefHeight="55.0" prefWidth="74.0" text="Woman Warrior" textFill="#969595">
+         <font>
+            <Font name="Freestyle Script" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="617.0" layoutY="362.0" prefHeight="55.0" prefWidth="200.0" text="German Spearman ,Arab Warrior ,Armored Iron" textFill="#969595">
+         <font>
+            <Font name="Freestyle Script" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="693.0" layoutY="221.0" prefHeight="55.0" prefWidth="48.0" text="level &lt;2" textFill="#969595">
+         <font>
+            <Font name="Freestyle Script" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="693.0" layoutY="293.0" prefHeight="55.0" prefWidth="48.0" text="level &gt;=2" textFill="#969595">
+         <font>
+            <Font name="Freestyle Script" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="693.0" layoutY="345.0" prefHeight="55.0" prefWidth="48.0" text="level &gt;=3" textFill="#969595">
+         <font>
+            <Font name="Freestyle Script" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="687.0" layoutY="261.0" prefHeight="55.0" prefWidth="94.0" text="Knife Woman" textFill="#969595">
+         <font>
+            <Font name="Freestyle Script" size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
